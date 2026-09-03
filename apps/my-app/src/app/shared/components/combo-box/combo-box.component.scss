@@ -1,7 +1,0 @@
-@import '@taiga-ui/styles/mixins/miscellaneous';
-
-.scroll {
-  @include scrollbar-hidden();
-  min-height: 64px;
-  max-height: 180px;
-}

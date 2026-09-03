@@ -2,6 +2,7 @@ import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/
 import { provideRouter } from '@angular/router';
 import { provideHttpClient, withFetch, withInterceptors } from '@angular/common/http';
 import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { provideTaiga } from '@taiga-ui/core';
 
 import { routes } from './app.routes';
 import { apiInterceptor, authInterceptor } from './core/interceptors/api.interceptor';
@@ -18,5 +19,6 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(withEventReplay()),
     provideHttpClient(withFetch(), withInterceptors([apiInterceptor, authInterceptor])),
     { provide: LOCALE_ID, useValue: 'vi-VN' },
+    provideTaiga(),
   ],
 };

@@ -22,7 +22,11 @@
             "input": "apps/my-app/public"
           }
         ],
-        "styles": ["apps/my-app/src/styles.scss"],
+        "styles": [
+          "node_modules/@taiga-ui/styles/taiga-ui-theme.less",
+          "node_modules/@taiga-ui/styles/taiga-ui-fonts.less",
+          "apps/my-app/src/styles.scss"
+        ],
         "server": "apps/my-app/src/main.server.ts",
         "outputMode": "server",
         "security": {
