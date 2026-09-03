@@ -1,0 +1,56 @@
+{
+  "name": "/api/v1/reg/getBranchCustomerPriority",
+  "request": {
+    "url": "/api/v1/reg/getBranchCustomerPriority",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "code": 0,
+        "desc": "Thành công",
+        "data": {
+          "status": 2,
+          "province": {
+            "province_ID": 467,
+            "province_NAME": "Hà Nội",
+            "province_NAME_EN": "Ha Noi",
+            "pcode": "HNO"
+          },
+          "district": {
+            "province_ID": 467,
+            "district_ID": 1506,
+            "district_NAME": "H. Gia Lâm"
+          },
+          "office": {
+            "insurance_STATUS": "0",
+            "crm_CREDIT_STATUS": "0",
+            "crm_INSURANCE_STATUS": "0",
+            "crm_DEBIT_STATUS": "0",
+            "branch_ID": 21,
+            "costcenter": 200,
+            "credit_STATUS": "0",
+            "office_NAME": "Trụ sở CN Hà Nội",
+            "rlos_STATUS": "1",
+            "district_ID": 1506,
+            "debit_STATUS": "0",
+            "crm_LOAN_STATUS": "0",
+            "loan_STATUS": "0",
+            "last_UPDATE_DATE": "2026-04-01 00:00:00.0",
+            "available_STATUS": "2",
+            "office_ID": 173,
+            "address": "Tầng 1 đến tầng 5, số 11B Cát Linh, Phường Quốc Tử Giám, Quận Đống Đa, thành phố Hà Nội.",
+            "office_NAME_EN": "Ha Noi Branch",
+            "status": 1,
+            "latitude": "20.741896",
+            "address_EN": "No. 11B Cat Linh, Quoc Tu Giam Ward, Dong Da District, Ha Noi City.",
+            "longitude": "106.060913",
+            "slots": "07:30|08:00|08:30|09:00|09:30|10:00|10:30|11:00|13:00|13:30|14:00|14:30|15:00|15:30|16:00"
+          }
+        }
+      }
+    }
+  }
+}

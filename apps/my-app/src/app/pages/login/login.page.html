@@ -1,0 +1,35 @@
+<main class="page">
+  <app-image name="login_bg" alt="Login Background" class="login-bg"></app-image>
+
+  <section class="login-card">
+    <header class="login-header">
+      <button type="button" class="back-button" aria-label="Quay lai" (click)="goBack()">
+        <app-icon name="ic_back" [size]="24" alt=""></app-icon>
+      </button>
+
+      <h1 class="title_medium">Đăng nhập hệ thống</h1>
+      <span class="header-spacer" aria-hidden="true"></span>
+    </header>
+
+    <section class="login-note" aria-label="Thông báo đăng nhập">
+      <p class="body_small_regular">
+        Quý khách vui lòng nhập các thông tin dưới đây để thực hiện đăng ký trực tuyến sản phẩm dịch vụ tại
+        Vietcombank. Trường hợp Quý khách đã có yêu cầu, vui lòng tra cứu thông tin
+        <a class="body_small_semibold" href="#">tại đây</a>
+      </p>
+    </section>
+
+    <form class="login-form" (submit)="$event.preventDefault(); onLogin()">
+      <app-text-input label="Số giấy tờ tùy thân" placeholder="Nhập số giấy tờ tùy thân" autocomplete="off"
+        [required]="true" [requiredErrorMessage]="validationMessages.documentIdRequired" [submitted]="submitAttempted()"
+        [value]="documentId()" (valueChange)="onDocumentIdChange($event)"></app-text-input>
+
+      <app-text-input label="Số điện thoại" placeholder="Nhập số điện thoại" autocomplete="tel" inputmode="numeric"
+        [pattern]="phonePattern" [required]="true" [requiredErrorMessage]="validationMessages.phoneRequired"
+        [patternErrorMessage]="validationMessages.phonePattern" [submitted]="submitAttempted()" [value]="phoneNumber()"
+        (valueChange)="onPhoneNumberChange($event)"></app-text-input>
+      <app-button label="Đăng nhập" [disabled]="!canLogin()" (pressed)="onLogin()"></app-button>
+    </form>
+  </section>
+</main>
+<app-footer />

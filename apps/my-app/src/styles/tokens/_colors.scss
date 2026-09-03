@@ -1,0 +1,63 @@
+:root {
+  --color-text-default: #262626;
+  --color-text-subtle: #5a5a5a;
+  --color-text-primary: #181d27;
+  --color-text-secondary: #414651;
+  --color-text-placeholder: #717680;
+  --color-text-error: #d92d20;
+  --color-border-error-subtle: #FDA29B;
+  --color-text-disable: #717680;
+  --color-border-disable: #D5D7DA;
+  --color-bg-disable: #F5F5F5;
+  --color-text-brand-primary: #006b3b;
+  --color-text-accent-green: #008047;
+  --color-text-inverse: #ffffff;
+  --color-bg-info: #ddf4ff;
+  --color-bg-accent-gray-subtle: #ddf4ff;
+  --color-bg-primary: #d5d7da;
+  --color-border-input-primary: #d5d7da;
+  --color-bg-surface-primary: #ffffff;
+  --color-bg-brand-primary: #cce6da;
+  --color-fg-brand-primary-pressed: #F5F5F5;
+  --color-fg-disable: #717680;
+  --color-border-disable-subtle: #E9EAEB;
+  --color-border-primary-bold: #A4A7AE;
+  --color-bg-brand-secondary-solid: #000000;
+  --color-bg-brand-primary-solid: #008047;
+  --gradient-bg-solid-leading: #84BD00;
+  --gradient-bg-solid-trailing: #008047;
+  --Gradient-bg-solid-leading_hover: #99C82A;
+  --Gradient-bg-solid-trailing_hover: #2A9566;
+  --Gradient-Hover: linear-gradient(
+    90deg,
+    var(--Gradient-bg-solid-leading_hover, #99C82A) 0%,
+    var(--Gradient-bg-solid-trailing_hover, #2A9566) 100%
+  );
+  --color-border-primary: #006b3b;
+  --color-border-primary-brand: #d5d7da;
+  --color-border-primary_bold: #d5d7da;
+  --color-border-brand-primary-subtle: #55aa84;
+  --color-border-brand-primary: #006B3B;
+  --color-gray-40: #d9d9d9;
+  --color-gray-200: #F3F3F3;
+  --color-gray-500: #939393;
+  --color-blue-800: #033d8b;
+  --color-icon-subtle: #5a5a5a;
+  --color-line-100: #ECF2D7;
+  --gradient-button: linear-gradient(246deg, #F6FFE5 15.23%, #B6E99C 46.88%, #91D9BA 84.77%);
+  --color-border-warning: #DC6803;
+  --color-bg-error: #FEE4E2;
+  --color-fg-brand-secondary: #6E9E00;
+  --color-bg-app-default: #F3F7ED;
+  --color-bg-brand-secondary: #E6F2CC;
+  --color-bg-accent-lime-subtle: #ECF2D7;
+  --color-bg-lime-800: #6B8025;
+  --color-bg-select: #E4F3EC;
+  --color-text-success: #079455;
+  --color-basic-bg: #363A3D;
+  --color-bg-secondary: #FAFAFA;
+  --color-bg-default: #F4F5F7;
+  --color-linear-header: linear-gradient(180deg, #FFF 63.6%, #E0EABD 254.41%)
+  --color-fg-quaternary: #A4A7AE
+  --color-bg-quarternary: #E9EAEB
+}

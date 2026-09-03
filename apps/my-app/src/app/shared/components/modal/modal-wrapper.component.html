@@ -1,0 +1,19 @@
+<div class="modal-backdrop" (click)="onBackdropClick($event)">
+  <div class="modal-container" [style.width]="config.width || '520px'" role="dialog" aria-modal="true"
+    [attr.aria-labelledby]="'modal-title-' + instanceId" (click)="$event.stopPropagation()">
+    <!-- Header -->
+    <div class="modal-header">
+      <h2 class="modal-title" [id]="'modal-title-' + instanceId">{{ config.title }}</h2>
+      <button *ngIf="config.showCloseButton !== false" class="modal-close-btn" (click)="onClose()"
+        aria-label="Đóng modal" title="Đóng">
+        <iconify-icon [style.color]="'#121212'" icon="material-symbols:close" width="20"
+        height="20"></iconify-icon>
+      </button>
+    </div>
+
+    <!-- Dynamic content -->
+    <div class="modal-body">
+      <ng-container #contentHost></ng-container>
+    </div>
+  </div>
+</div>

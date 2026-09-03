@@ -1,0 +1,60 @@
+{
+  "name": "/api/v1/reg/processNewCustomerProfile",
+  "request": {
+    "url": "/api/v1/reg/processNewCustomerProfile",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "code": 0,
+        "desc": "Thành công",
+        "data": {
+          "id": 528,
+          "firstName": "phan thi ",
+          "midName": null,
+          "lastName": null,
+          "fullName": "phan thi ",
+          "listService": null,
+          "customerCIF": "20008787",
+          "dob": "1988-12-31T17:00:00.000+00:00",
+          "national": "VN",
+          "gender": "F",
+          "maritalStatus": "1",
+          "email": "linhvn.ho@vietcombank.dev",
+          "idType": "IC",
+          "customerID": "C1067040",
+          "customerID1": "001096030298",
+          "customerID2": "",
+          "customerID3": "",
+          "idType1": "CCCD",
+          "idType2": "IC",
+          "idType3": "IC",
+          "issDate": "2015-11-16T17:00:00.000+00:00",
+          "issDate1": "2022-07-01T00:00:00.000+00:00",
+          "issDate2": null,
+          "issDate3": null,
+          "expDate": "2025-11-16T17:00:00.000+00:00",
+          "expDate1": null,
+          "expDate2": null,
+          "expDate3": null,
+          "nationalId": "VN",
+          "nationalId1": "VN",
+          "nationalId2": "VN",
+          "nationalId3": "VN",
+          "placeId": "999",
+          "placeId1": "002",
+          "placeId2": "002",
+          "placeId3": "002",
+          "phone": "0374551426",
+          "otherPhone": "0982469217",
+          "address": "lb_hn",
+          "lastProcess": "2022-12-05",
+          "monthlyIncome": "150000000"
+        }
+      }
+    }
+  }
+}

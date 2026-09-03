@@ -1,0 +1,106 @@
+{
+  "name": "my-app",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/my-app/src",
+  "prefix": "app",
+  "generators": {
+    "@schematics/angular:component": {
+      "style": "scss"
+    }
+  },
+  "targets": {
+    "build": {
+      "executor": "@angular/build:application",
+      "options": {
+        "browser": "apps/my-app/src/main.ts",
+        "tsConfig": "apps/my-app/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "apps/my-app/public"
+          }
+        ],
+        "styles": ["apps/my-app/src/styles.scss"],
+        "server": "apps/my-app/src/main.server.ts",
+        "outputMode": "server",
+        "security": {
+          "allowedHosts": []
+        },
+        "ssr": {
+          "entry": "apps/my-app/src/server.ts"
+        },
+        "outputPath": "dist/my-app"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/my-app/src/environments/environment.ts",
+              "with": "apps/my-app/src/environments/environment.prod.ts"
+            }
+          ],
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kB",
+              "maximumError": "1MB"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "4kB",
+              "maximumError": "8kB"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "uat": {
+          "fileReplacements": [
+            {
+              "replace": "apps/my-app/src/environments/environment.ts",
+              "with": "apps/my-app/src/environments/environment.uat.ts"
+            }
+          ],
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        },
+        "development": {
+          "optimization": false,
+          "extractLicenses": false,
+          "sourceMap": true
+        }
+      },
+      "defaultConfiguration": "production",
+      "outputs": ["{options.outputPath}"]
+    },
+    "serve": {
+      "executor": "@angular/build:dev-server",
+      "options": {
+        "proxyConfig": "apps/my-app/proxy.conf.json"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "my-app:build:production"
+        },
+        "uat": {
+          "buildTarget": "my-app:build:uat"
+        },
+        "development": {
+          "buildTarget": "my-app:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "mock-api": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "node apps/my-app/src/app/mock-api-server.mjs"
+      }
+    },
+    "test": {
+      "executor": "@angular/build:unit-test"
+    }
+  }
+}

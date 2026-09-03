@@ -1,0 +1,359 @@
+{
+  "name": "/api/v1/reg/fetchRLOSProvinces",
+  "request": {
+    "url": "/api/v1/reg/fetchRLOSProvinces",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "code": 0,
+        "desc": "Thành công",
+        "data": [
+          {
+            "id": 5000165,
+            "code": "87",
+            "name": "tỉnh Đồng Tháp"
+          },
+          {
+            "id": 5000172,
+            "code": "75",
+            "name": "tỉnh Đồng Nai"
+          },
+          {
+            "id": 5000176,
+            "code": "67",
+            "name": "tỉnh Đắk Nông"
+          },
+          {
+            "id": 5000177,
+            "code": "66",
+            "name": "tỉnh Đắk Lắk"
+          },
+          {
+            "id": 5000280,
+            "code": "11",
+            "name": "tỉnh Điện Biên"
+          },
+          {
+            "id": 5000143,
+            "code": "15",
+            "name": "tỉnh Yên Bái"
+          },
+          {
+            "id": 5000152,
+            "code": "26",
+            "name": "tỉnh Vĩnh Phúc"
+          },
+          {
+            "id": 5000192,
+            "code": "86",
+            "name": "tỉnh Vĩnh Long"
+          },
+          {
+            "id": 5000174,
+            "code": "72",
+            "name": "tỉnh Tây Ninh"
+          },
+          {
+            "id": 5000120,
+            "code": "8",
+            "name": "tỉnh Tuyên Quang"
+          },
+          {
+            "id": 5000166,
+            "code": "84",
+            "name": "tỉnh Trà Vinh"
+          },
+          {
+            "id": 5000168,
+            "code": "82",
+            "name": "tỉnh Tiền Giang"
+          },
+          {
+            "id": 5000187,
+            "code": "46",
+            "name": "tỉnh Thừa Thiên Huế"
+          },
+          {
+            "id": 5000156,
+            "code": "19",
+            "name": "tỉnh Thái Nguyên"
+          },
+          {
+            "id": 5000195,
+            "code": "34",
+            "name": "tỉnh Thái Bình"
+          },
+          {
+            "id": 5000191,
+            "code": "38",
+            "name": "tỉnh Thanh Hóa"
+          },
+          {
+            "id": 5000144,
+            "code": "14",
+            "name": "tỉnh Sơn La"
+          },
+          {
+            "id": 5000160,
+            "code": "94",
+            "name": "tỉnh Sóc Trăng"
+          },
+          {
+            "id": 5000188,
+            "code": "45",
+            "name": "tỉnh Quảng Trị"
+          },
+          {
+            "id": 5000154,
+            "code": "22",
+            "name": "tỉnh Quảng Ninh"
+          },
+          {
+            "id": 5000184,
+            "code": "51",
+            "name": "tỉnh Quảng Ngãi"
+          },
+          {
+            "id": 5000185,
+            "code": "49",
+            "name": "tỉnh Quảng Nam"
+          },
+          {
+            "id": 5000194,
+            "code": "44",
+            "name": "tỉnh Quảng Bình"
+          },
+          {
+            "id": 5000182,
+            "code": "54",
+            "name": "tỉnh Phú Yên"
+          },
+          {
+            "id": 5000196,
+            "code": "25",
+            "name": "tỉnh Phú Thọ"
+          },
+          {
+            "id": 5000180,
+            "code": "58",
+            "name": "tỉnh Ninh Thuận"
+          },
+          {
+            "id": 5000145,
+            "code": "37",
+            "name": "tỉnh Ninh Bình"
+          },
+          {
+            "id": 5000190,
+            "code": "40",
+            "name": "tỉnh Nghệ An"
+          },
+          {
+            "id": 5000146,
+            "code": "36",
+            "name": "tỉnh Nam Định"
+          },
+          {
+            "id": 5000155,
+            "code": "20",
+            "name": "tỉnh Lạng Sơn"
+          },
+          {
+            "id": 5000175,
+            "code": "68",
+            "name": "tỉnh Lâm Đồng"
+          },
+          {
+            "id": 5000100,
+            "code": "10",
+            "name": "tỉnh Lào Cai"
+          },
+          {
+            "id": 5000169,
+            "code": "80",
+            "name": "tỉnh Long An"
+          },
+          {
+            "id": 5000102,
+            "code": "12",
+            "name": "tỉnh Lai Châu"
+          },
+          {
+            "id": 5000179,
+            "code": "62",
+            "name": "tỉnh Kon Tum"
+          },
+          {
+            "id": 5000163,
+            "code": "91",
+            "name": "tỉnh Kiên Giang"
+          },
+          {
+            "id": 5000181,
+            "code": "56",
+            "name": "tỉnh Khánh Hòa"
+          },
+          {
+            "id": 5000161,
+            "code": "93",
+            "name": "tỉnh Hậu Giang"
+          },
+          {
+            "id": 5000150,
+            "code": "30",
+            "name": "tỉnh Hải Dương"
+          },
+          {
+            "id": 5000148,
+            "code": "33",
+            "name": "tỉnh Hưng Yên"
+          },
+          {
+            "id": 5000197,
+            "code": "17",
+            "name": "tỉnh Hòa Bình"
+          },
+          {
+            "id": 5000189,
+            "code": "42",
+            "name": "tỉnh Hà Tĩnh"
+          },
+          {
+            "id": 5000147,
+            "code": "35",
+            "name": "tỉnh Hà Nam"
+          },
+          {
+            "id": 5000198,
+            "code": "02",
+            "name": "tỉnh Hà Giang"
+          },
+          {
+            "id": 5000178,
+            "code": "64",
+            "name": "tỉnh Gia Lai"
+          },
+          {
+            "id": 5000080,
+            "code": "96",
+            "name": "tỉnh Cà Mau"
+          },
+          {
+            "id": 5000140,
+            "code": "04",
+            "name": "tỉnh Cao Bằng"
+          },
+          {
+            "id": 5000167,
+            "code": "83",
+            "name": "tỉnh Bến Tre"
+          },
+          {
+            "id": 5000151,
+            "code": "27",
+            "name": "tỉnh Bắc Ninh"
+          },
+          {
+            "id": 5000141,
+            "code": "06",
+            "name": "tỉnh Bắc Kạn"
+          },
+          {
+            "id": 5000153,
+            "code": "24",
+            "name": "tỉnh Bắc Giang"
+          },
+          {
+            "id": 5000199,
+            "code": "95",
+            "name": "tỉnh Bạc Liêu"
+          },
+          {
+            "id": 5000183,
+            "code": "52",
+            "name": "tỉnh Bình Định"
+          },
+          {
+            "id": 6500000,
+            "code": "60",
+            "name": "tỉnh Bình Thuận"
+          },
+          {
+            "id": 5000220,
+            "code": "666",
+            "name": "tỉnh Bình Thuận"
+          },
+          {
+            "id": 5000193,
+            "code": "70",
+            "name": "tỉnh Bình Phước"
+          },
+          {
+            "id": 5000173,
+            "code": "74",
+            "name": "tỉnh Bình Dương"
+          },
+          {
+            "id": 5000171,
+            "code": "77",
+            "name": "tỉnh Bà Rịa - Vũng Tàu"
+          },
+          {
+            "id": 5000380,
+            "code": "99",
+            "name": "tỉnh Buôn Hồ"
+          },
+          {
+            "id": 5000164,
+            "code": "89",
+            "name": "tỉnh An Giang"
+          },
+          {
+            "id": 5000186,
+            "code": "48",
+            "name": "thành phố Đà Nẵng"
+          },
+          {
+            "id": 5000170,
+            "code": "79",
+            "name": "thành phố Hồ Chí Minh"
+          },
+          {
+            "id": 5000149,
+            "code": "31",
+            "name": "thành phố Hải Phòng"
+          },
+          {
+            "id": 5000142,
+            "code": "01",
+            "name": "thành phố Hà Nội"
+          },
+          {
+            "id": 5000162,
+            "code": "92",
+            "name": "thành phố Cần Thơ"
+          },
+          {
+            "id": 5000340,
+            "code": "UP",
+            "name": "Uttar Pradesh"
+          },
+          {
+            "id": 5000320,
+            "code": "2369",
+            "name": "TesterXYZ"
+          },
+          {
+            "id": 5000381,
+            "code": "03",
+            "name": "Sông Bé (Bình Dương Bình Phước)"
+          }
+        ]
+      }
+    }
+  }
+}

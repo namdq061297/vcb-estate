@@ -1,0 +1,236 @@
+{
+  "name": "/api/v1/reg/fetchRLOSDistricts",
+  "request": {
+    "url": "/api/v1/reg/fetchRLOSDistricts",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "code": 0,
+        "desc": "Thành công",
+        "data": [
+          {
+            "id": 5000259,
+            "code": "269",
+            "provinceid": 5000142,
+            "name": "thị xã Sơn Tây",
+            "zipcode": "12700"
+          },
+          {
+            "id": 5000247,
+            "code": "006",
+            "provinceid": 5000142,
+            "name": "quận Đống Đa",
+            "zipcode": "11500"
+          },
+          {
+            "id": 5000244,
+            "code": "003",
+            "provinceid": 5000142,
+            "name": "quận Tây Hồ",
+            "zipcode": "11200"
+          },
+          {
+            "id": 5002159,
+            "code": "010",
+            "provinceid": 5000142,
+            "name": "quận Thành Công",
+            "zipcode": null
+          },
+          {
+            "id": 5000250,
+            "code": "009",
+            "provinceid": 5000142,
+            "name": "quận Thanh Xuân",
+            "zipcode": "11400"
+          },
+          {
+            "id": 5000254,
+            "code": "019",
+            "provinceid": 5000142,
+            "name": "quận Nam Từ Liêm",
+            "zipcode": "12000"
+          },
+          {
+            "id": 5000245,
+            "code": "004",
+            "provinceid": 5000142,
+            "name": "quận Long Biên",
+            "zipcode": "11800"
+          },
+          {
+            "id": 5000258,
+            "code": "268",
+            "provinceid": 5000142,
+            "name": "quận Hà Đông",
+            "zipcode": "12100"
+          },
+          {
+            "id": 5000249,
+            "code": "008",
+            "provinceid": 5000142,
+            "name": "quận Hoàng Mai",
+            "zipcode": "11700"
+          },
+          {
+            "id": 5000243,
+            "code": "002",
+            "provinceid": 5000142,
+            "name": "quận Hoàn Kiếm",
+            "zipcode": "11000"
+          },
+          {
+            "id": 5000248,
+            "code": "007",
+            "provinceid": 5000142,
+            "name": "quận Hai Bà Trưng",
+            "zipcode": "11600"
+          },
+          {
+            "id": 5000246,
+            "code": "005",
+            "provinceid": 5000142,
+            "name": "quận Cầu Giấy",
+            "zipcode": "11300"
+          },
+          {
+            "id": 5000256,
+            "code": "021",
+            "provinceid": 5000142,
+            "name": "quận Bắc Từ Liêm",
+            "zipcode": "11900"
+          },
+          {
+            "id": 5000242,
+            "code": "001",
+            "provinceid": 5000142,
+            "name": "quận Ba Đình",
+            "zipcode": "11100"
+          },
+          {
+            "id": 5000270,
+            "code": "281",
+            "provinceid": 5000142,
+            "name": "huyện Ứng Hòa",
+            "zipcode": "13800"
+          },
+          {
+            "id": 5000252,
+            "code": "017",
+            "provinceid": 5000142,
+            "name": "huyện Đông Anh",
+            "zipcode": "12300"
+          },
+          {
+            "id": 5000262,
+            "code": "273",
+            "provinceid": 5000142,
+            "name": "huyện Đan Phượng",
+            "zipcode": "13000"
+          },
+          {
+            "id": 5000265,
+            "code": "276",
+            "provinceid": 5000142,
+            "name": "huyện Thạch Thất",
+            "zipcode": "13100"
+          },
+          {
+            "id": 5000268,
+            "code": "279",
+            "provinceid": 5000142,
+            "name": "huyện Thường Tín",
+            "zipcode": "13600"
+          },
+          {
+            "id": 5000255,
+            "code": "020",
+            "provinceid": 5000142,
+            "name": "huyện Thanh Trì",
+            "zipcode": "12500"
+          },
+          {
+            "id": 5000267,
+            "code": "278",
+            "provinceid": 5000142,
+            "name": "huyện Thanh Oai",
+            "zipcode": "13500"
+          },
+          {
+            "id": 5000251,
+            "code": "016",
+            "provinceid": 5000142,
+            "name": "huyện Sóc Sơn",
+            "zipcode": "12200"
+          },
+          {
+            "id": 5000264,
+            "code": "275",
+            "provinceid": 5000142,
+            "name": "huyện Quốc Oai",
+            "zipcode": "13300"
+          },
+          {
+            "id": 5000261,
+            "code": "272",
+            "provinceid": 5000142,
+            "name": "huyện Phúc Thọ",
+            "zipcode": "12800"
+          },
+          {
+            "id": 5000269,
+            "code": "280",
+            "provinceid": 5000142,
+            "name": "huyện Phú Xuyên",
+            "zipcode": "13900"
+          },
+          {
+            "id": 5000271,
+            "code": "282",
+            "provinceid": 5000142,
+            "name": "huyện Mỹ Đức",
+            "zipcode": "13700"
+          },
+          {
+            "id": 5000257,
+            "code": "250",
+            "provinceid": 5000142,
+            "name": "huyện Mê Linh",
+            "zipcode": "12900"
+          },
+          {
+            "id": 5000263,
+            "code": "274",
+            "provinceid": 5000142,
+            "name": "huyện Hoài Đức",
+            "zipcode": "13200"
+          },
+          {
+            "id": 5000253,
+            "code": "018",
+            "provinceid": 5000142,
+            "name": "huyện Gia Lâm",
+            "zipcode": "12400"
+          },
+          {
+            "id": 5000266,
+            "code": "277",
+            "provinceid": 5000142,
+            "name": "huyện Chương Mỹ",
+            "zipcode": "13400"
+          },
+          {
+            "id": 5000260,
+            "code": "271",
+            "provinceid": 5000142,
+            "name": "huyện Ba Vì",
+            "zipcode": "12600"
+          }
+        ]
+      }
+    }
+  }
+}

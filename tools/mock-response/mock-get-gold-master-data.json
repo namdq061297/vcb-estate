@@ -1,0 +1,65 @@
+{
+  "name": "/api/v1/gold/get-gold-master-data",
+  "request": {
+    "url": "/api/v1/gold/get-gold-master-data",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "code": 0,
+        "desc": "Thành công",
+        "data": {
+          "nextWorkingDay": "29/07/2024",
+          "goldPrice": {
+            "currCode": "",
+            "sellPrice": 7850000,
+            "buyPrice": 7850000,
+            "bookPrice": 7850000,
+            "syncTime": ""
+          },
+          "listJob": [
+            {
+              "name": "Công chức, viên chức",
+              "code": "N0001"
+            },
+            {
+              "name": "Lực lượng vũ trang",
+              "code": "N0002"
+            },
+            {
+              "name": "Bác sỹ, dược sỹ, y tá, nhân viên y tế",
+              "code": "Bác sỹ, dược sỹ, y tá, nhân viên y tế"
+            }
+          ],
+          "listJobTitle": [
+            {
+              "name": "Ban lãnh đạo đơn vị (HĐQT, TGĐ/PTGĐ/GĐ/PGĐ/KTT và các chức danh tương đương)",
+              "code": "A0001"
+            },
+            {
+              "name": "Cán bộ quản lý cấp trung (TP,PP/Trưởng Ban,Phó trưởng ban/Trung tâm và các chức danh tương đương)",
+              "code": "A0002"
+            },
+            {
+              "name": "Cán bộ quản lý sơ cấp (Tổ trưởng, trưởng nhóm và các chức danh tương đương)",
+              "code": "A0003"
+            },
+            {
+              "name": "Cán bộ nhân viên",
+              "code": "A0004"
+            },
+            {
+              "name": "Khác",
+              "code": "A0005"
+            }
+          ],
+          "paymentNumber": 400000000,
+          "maxGoldQty": 1
+        }
+      }
+    }
+  }
+}

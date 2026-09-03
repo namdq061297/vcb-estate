@@ -1,0 +1,55 @@
+{
+  "name": "/api/v1/reg/processCustomerDetail",
+  "request": {
+    "url": "/api/v1/reg/processCustomerDetail",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "code": 0,
+        "desc": "Thành công",
+        "data": {
+          "id": null,
+          "customer_ID": "C1067040",
+          "customer_PHONE": null,
+          "branch_OFFICE_ID": 173,
+          "last_PROCESS": "2022-12-02T15:24:27.398881",
+          "email": null,
+          "ref_ID": "BeUsVGeI6R",
+          "app_ID": "sDGndTfdHJ",
+          "national": "VIET NAM",
+          "city": "",
+          "district": "",
+          "ward": "",
+          "address_DETAIL": "",
+          "address_TYPE": "",
+          "branch_ID": 2,
+          "branch_DISTRICT_ID": 1315,
+          "branch_PROVINCE_ID": 467,
+          "card_LIMIT": "0",
+          "card_TYPE": "",
+          "consult_TYPE": "Q",
+          "consult_UNIT": "",
+          "contact_TYPE": "",
+          "expire_TIME": "",
+          "expire_TIME_TYPE": "Tháng",
+          "product": "",
+          "receiver_TYPE": "5",
+          "resident": "",
+          "service_TYPE": "2",
+          "amount_REQ": "",
+          "have_INSUR": "",
+          "product_TYPE": "14",
+          "purpose": "",
+          "purpose_CODE": null,
+          "ranger_TIME": null,
+          "register_DATE": null,
+          "card_PROD": null
+        }
+      }
+    }
+  }
+}

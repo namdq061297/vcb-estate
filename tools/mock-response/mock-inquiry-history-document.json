@@ -1,0 +1,35 @@
+{
+  "name": "/api/v1/reg/inquiryHistoryDocument",
+  "request": {
+    "url": "/api/v1/reg/inquiryHistoryDocument",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "code": 0,
+        "desc": "Thành công",
+        "data": [
+          {
+            "document_TYPE": "15",
+            "document_NAME": "Xác nhận thông tin cư trú/ Giấy tờ tương đương",
+            "last_SIZE_UPDATE_DOCUMENT": "4375"
+          },
+          {
+
+            "document_TYPE": "11",
+            "document_NAME": "Chứng minh nhân dân",
+            "last_SIZE_UPDATE_DOCUMENT": "4375"
+          },
+          {
+            "document_TYPE": "13",
+            "document_NAME": "Hộ chiếu",
+            "last_SIZE_UPDATE_DOCUMENT": "4375"
+          }
+        ]
+      }
+    }
+  }
+}

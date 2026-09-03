@@ -1,0 +1,127 @@
+{
+  "name": "/api/v1/reg/fetchRLOSWard",
+  "request": {
+    "url": "/api/v1/reg/fetchRLOSWard",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "code": 0,
+        "desc": "Thành công",
+        "data": [
+          {
+            "id": 5041074,
+            "code": "00280",
+            "district_ID": 5000248,
+            "name": "phường Đồng Tâm"
+          },
+          {
+            "id": 5041067,
+            "code": "00259",
+            "district_ID": 5000248,
+            "name": "phường Đồng Nhân"
+          },
+          {
+            "id": 5041069,
+            "code": "00265",
+            "district_ID": 5000248,
+            "name": "phường Đống Mác"
+          },
+          {
+            "id": 5041075,
+            "code": "00283",
+            "district_ID": 5000248,
+            "name": "phường Vĩnh Tuy"
+          },
+          {
+            "id": 5041080,
+            "code": "00298",
+            "district_ID": 5000248,
+            "name": "phường Trương Định"
+          },
+          {
+            "id": 5041071,
+            "code": "00271",
+            "district_ID": 5000248,
+            "name": "phường Thanh Nhàn"
+          },
+          {
+            "id": 5041070,
+            "code": "00268",
+            "district_ID": 5000248,
+            "name": "phường Thanh Lương"
+          },
+          {
+            "id": 5041077,
+            "code": "00289",
+            "district_ID": 5000248,
+            "name": "phường Quỳnh Mai"
+          },
+          {
+            "id": 5041078,
+            "code": "00292",
+            "district_ID": 5000248,
+            "name": "phường Quỳnh Lôi"
+          },
+          {
+            "id": 5041068,
+            "code": "00262",
+            "district_ID": 5000248,
+            "name": "phường Phố Huế"
+          },
+          {
+            "id": 5041065,
+            "code": "00247",
+            "district_ID": 5000248,
+            "name": "phường Phạm Đình Hổ"
+          },
+          {
+            "id": 5041063,
+            "code": "00241",
+            "district_ID": 5000248,
+            "name": "phường Nguyễn Du"
+          },
+          {
+            "id": 5041079,
+            "code": "00295",
+            "district_ID": 5000248,
+            "name": "phường Minh Khai"
+          },
+          {
+            "id": 5041066,
+            "code": "00256",
+            "district_ID": 5000248,
+            "name": "phường Lê Đại Hành"
+          },
+          {
+            "id": 5041072,
+            "code": "00274",
+            "district_ID": 5000248,
+            "name": "phường Cầu Dền"
+          },
+          {
+            "id": 5041064,
+            "code": "00244",
+            "district_ID": 5000248,
+            "name": "phường Bạch Đằng"
+          },
+          {
+            "id": 5041076,
+            "code": "00286",
+            "district_ID": 5000248,
+            "name": "phường Bạch Mai"
+          },
+          {
+            "id": 5041073,
+            "code": "00277",
+            "district_ID": 5000248,
+            "name": "phường Bách Khoa"
+          }
+        ]
+      }
+    }
+  }
+}

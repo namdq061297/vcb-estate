@@ -1,0 +1,37 @@
+{
+  "name": "/api/v1/reg/updateDocument",
+  "request": {
+    "url": "/api/v1/reg/updateDocument",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "code": 0,
+        "desc": "Thành công",
+        "data": {
+          "id": 495,
+          "customer_CIF": "20008787",
+          "document_STATUS": null,
+          "document_STATUS_CODE": null,
+          "document_REF": "eGDneTgfAE",
+          "upload_COUNT": 1,
+          "document_TYPE": "1",
+          "document_NAME": "vcbdigibank-banner20-xmas-thg-en.png",
+          "document_SIZE": 1029,
+          "document_DATE_CHECKIN": "1671160080971",
+          "document_CREATED_BY": "ecm_user3",
+          "document_DATE_MODIFIED": "1671160080970",
+          "document_MIME_TYPE": "image/png",
+          "ecm_OBJECT_ID": "idd_20E71885-0000-CE33-A50E-7301B7A9D45F",
+          "last_USER_MODIFIED": "ecm_user3",
+          "last_UPDATE_DOCUMENT": "2022-12-16T10:08:01.78533",
+          "service_TYPE": "2",
+          "product_TYPE": "14"
+        }
+      }
+    }
+  }
+}

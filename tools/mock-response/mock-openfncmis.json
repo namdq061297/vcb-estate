@@ -1,0 +1,489 @@
+{
+  "name": "/openfncmis",
+  "request": {
+    "url": "/openfncmis",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "properties": {
+          "CmIsMarkedForDeletion": {
+            "id": "CmIsMarkedForDeletion",
+            "localName": "CmIsMarkedForDeletion",
+            "displayName": "ÄÆ°Æ¡Ì£c Ä‘aÌnh dÃ¢Ìu Ä‘ÃªÌ‰ xoÌa",
+            "queryName": "CmIsMarkedForDeletion",
+            "type": "boolean",
+            "cardinality": "single",
+            "value": false
+          },
+          "cmis:lastModificationDate": {
+            "id": "cmis:lastModificationDate",
+            "localName": "DateLastModified",
+            "displayName": "NgaÌ€y Ä‘iÃªÌ€u chiÌ‰nh lÃ¢Ì€n cuÃ´Ìi",
+            "queryName": "cmis:lastModificationDate",
+            "type": "datetime",
+            "cardinality": "single",
+            "value": 1671160080970
+          },
+          "cus_name": {
+            "id": "cus_name",
+            "localName": "cus_name",
+            "displayName": "Customer Name",
+            "queryName": "cus_name",
+            "type": "string",
+            "cardinality": "single",
+            "value": null
+          },
+          "MajorVersionNumber": {
+            "id": "MajorVersionNumber",
+            "localName": "MajorVersionNumber",
+            "displayName": "SÃ´Ì phiÃªn baÌ‰n chiÌnh",
+            "queryName": "MajorVersionNumber",
+            "type": "integer",
+            "cardinality": "single",
+            "value": 1
+          },
+          "uploaded_by": {
+            "id": "uploaded_by",
+            "localName": "uploaded_by",
+            "displayName": "Uploaded By",
+            "queryName": "uploaded_by",
+            "type": "string",
+            "cardinality": "single",
+            "value": null
+          },
+          "CmIndexingFailureCode": {
+            "id": "CmIndexingFailureCode",
+            "localName": "CmIndexingFailureCode",
+            "displayName": "MaÌƒ lÃ´Ìƒi lÃ¢Ì£p chiÌ‰ muÌ£c",
+            "queryName": "CmIndexingFailureCode",
+            "type": "integer",
+            "cardinality": "single",
+            "value": null
+          },
+          "legal_id": {
+            "id": "legal_id",
+            "localName": "legal_id",
+            "displayName": "Legal ID Number",
+            "queryName": "legal_id",
+            "type": "string",
+            "cardinality": "single",
+            "value": null
+          },
+          "instance_id": {
+            "id": "instance_id",
+            "localName": "instance_id",
+            "displayName": "BPM Instance id",
+            "queryName": "instance_id",
+            "type": "string",
+            "cardinality": "single",
+            "value": null
+          },
+          "ContentRetentionDate": {
+            "id": "ContentRetentionDate",
+            "localName": "ContentRetentionDate",
+            "displayName": "NgaÌ€y lÆ°u trÆ°Ìƒ nÃ´Ì£i dung",
+            "queryName": "ContentRetentionDate",
+            "type": "datetime",
+            "cardinality": "single",
+            "value": null
+          },
+          "cmis:creationDate": {
+            "id": "cmis:creationDate",
+            "localName": "DateCreated",
+            "displayName": "NgaÌ€y taÌ£o",
+            "queryName": "cmis:creationDate",
+            "type": "datetime",
+            "cardinality": "single",
+            "value": 1671160080970
+          },
+          "IndexationId": {
+            "id": "IndexationId",
+            "localName": "IndexationId",
+            "displayName": "Id lÃ¢Ì£p chiÌ‰ muÌ£c",
+            "queryName": "IndexationId",
+            "type": "id",
+            "cardinality": "single",
+            "value": null
+          },
+          "cmis:isLatestVersion": {
+            "id": "cmis:isLatestVersion",
+            "localName": "IsCurrentVersion",
+            "displayName": "PhiÃªn baÌ‰n hiÃªÌ£n thÆ¡Ì€i",
+            "queryName": "cmis:isLatestVersion",
+            "type": "boolean",
+            "cardinality": "single",
+            "value": true
+          },
+          "cmis:createdBy": {
+            "id": "cmis:createdBy",
+            "localName": "Creator",
+            "displayName": "NgÆ°Æ¡Ì€i taÌ£o",
+            "queryName": "cmis:createdBy",
+            "type": "string",
+            "cardinality": "single",
+            "value": "ecm_user3"
+          },
+          "cmis:lastModifiedBy": {
+            "id": "cmis:lastModifiedBy",
+            "localName": "LastModifier",
+            "displayName": "NgÆ°Æ¡Ì€i Ä‘iÃªÌ€u chiÌ‰nh lÃ¢Ì€n cuÃ´Ìi",
+            "queryName": "cmis:lastModifiedBy",
+            "type": "string",
+            "cardinality": "single",
+            "value": "ecm_user3"
+          },
+          "cif": {
+            "id": "cif",
+            "localName": "cif",
+            "displayName": "Cif",
+            "queryName": "cif",
+            "type": "string",
+            "cardinality": "single",
+            "value": null
+          },
+          "branch_no": {
+            "id": "branch_no",
+            "localName": "branch_no",
+            "displayName": "Branch Number",
+            "queryName": "branch_no",
+            "type": "string",
+            "cardinality": "single",
+            "value": null
+          },
+          "VersionStatus": {
+            "id": "VersionStatus",
+            "localName": "VersionStatus",
+            "displayName": "TraÌ£ng thaÌi phiÃªn baÌ‰n",
+            "queryName": "VersionStatus",
+            "type": "integer",
+            "cardinality": "single",
+            "value": 1
+          },
+          "IsInExceptionState": {
+            "id": "IsInExceptionState",
+            "localName": "IsInExceptionState",
+            "displayName": "Æ Ì‰ traÌ£ng thaÌi ngoaÌ£i lÃªÌ£",
+            "queryName": "IsInExceptionState",
+            "type": "boolean",
+            "cardinality": "single",
+            "value": false
+          },
+          "service_id": {
+            "id": "service_id",
+            "localName": "service_id",
+            "displayName": "Service Id",
+            "queryName": "service_id",
+            "type": "string",
+            "cardinality": "single",
+            "value": null
+          },
+          "IsVersioningEnabled": {
+            "id": "IsVersioningEnabled",
+            "localName": "IsVersioningEnabled",
+            "displayName": "LÃ¢Ì£p phiÃªn baÌ‰n Ä‘Æ°Æ¡Ì£c bÃ¢Ì£t",
+            "queryName": "IsVersioningEnabled",
+            "type": "boolean",
+            "cardinality": "single",
+            "value": true
+          },
+          "DocumentTitle": {
+            "id": "DocumentTitle",
+            "localName": "DocumentTitle",
+            "displayName": "TiÃªu Ä‘ÃªÌ€ taÌ€i liÃªÌ£u",
+            "queryName": "DocumentTitle",
+            "type": "string",
+            "cardinality": "single",
+            "value": "vcbdigibank-banner20-xmas-thg-en.png"
+          },
+          "IsReserved": {
+            "id": "IsReserved",
+            "localName": "IsReserved",
+            "displayName": "ÄÆ°Æ¡Ì£c baÌ‰o lÆ°u",
+            "queryName": "IsReserved",
+            "type": "boolean",
+            "cardinality": "single",
+            "value": false
+          },
+          "cmis:objectId": {
+            "id": "cmis:objectId",
+            "localName": "Id",
+            "displayName": "ID",
+            "queryName": "cmis:objectId",
+            "type": "id",
+            "cardinality": "single",
+            "value": "idd_20E71885-0000-CE33-A50E-7301B7A9D45F"
+          },
+          "DateCheckedIn": {
+            "id": "DateCheckedIn",
+            "localName": "DateCheckedIn",
+            "displayName": "NgaÌ€y kiÃªÌ‰m nhÃ¢Ì£p",
+            "queryName": "DateCheckedIn",
+            "type": "datetime",
+            "cardinality": "single",
+            "value": 1671160080971
+          },
+          "MinorVersionNumber": {
+            "id": "MinorVersionNumber",
+            "localName": "MinorVersionNumber",
+            "displayName": "SÃ´Ì phiÃªn baÌ‰n phuÌ£",
+            "queryName": "MinorVersionNumber",
+            "type": "integer",
+            "cardinality": "single",
+            "value": 0
+          },
+          "product_id": {
+            "id": "product_id",
+            "localName": "product_id",
+            "displayName": "Product Id",
+            "queryName": "product_id",
+            "type": "string",
+            "cardinality": "single",
+            "value": null
+          },
+          "cost_center": {
+            "id": "cost_center",
+            "localName": "cost_center",
+            "displayName": "Cost center",
+            "queryName": "cost_center",
+            "type": "string",
+            "cardinality": "single",
+            "value": null
+          },
+          "CurrentState": {
+            "id": "CurrentState",
+            "localName": "CurrentState",
+            "displayName": "TraÌ£ng thaÌi hiÃªÌ£n thÆ¡Ì€i",
+            "queryName": "CurrentState",
+            "type": "string",
+            "cardinality": "single",
+            "value": null
+          },
+          "cif_no": {
+            "id": "cif_no",
+            "localName": "cif_no",
+            "displayName": "Cif No",
+            "queryName": "cif_no",
+            "type": "string",
+            "cardinality": "single",
+            "value": null
+          },
+          "DateContentLastAccessed": {
+            "id": "DateContentLastAccessed",
+            "localName": "DateContentLastAccessed",
+            "displayName": "NgaÌ€y nÃ´Ì£i dung Ä‘Æ°Æ¡Ì£c truy cÃ¢Ì£p lÃ¢Ì€n cuÃ´Ìi",
+            "queryName": "DateContentLastAccessed",
+            "type": "datetime",
+            "cardinality": "single",
+            "value": null
+          },
+          "ReservationType": {
+            "id": "ReservationType",
+            "localName": "ReservationType",
+            "displayName": "KiÃªÌ‰u baÌ‰o lÆ°u",
+            "queryName": "ReservationType",
+            "type": "integer",
+            "cardinality": "single",
+            "value": null
+          },
+          "ClassificationStatus": {
+            "id": "ClassificationStatus",
+            "localName": "ClassificationStatus",
+            "displayName": "TraÌ£ng thaÌi phÃ¢n loaÌ£i",
+            "queryName": "ClassificationStatus",
+            "type": "integer",
+            "cardinality": "single",
+            "value": 0
+          },
+          "ref_id": {
+            "id": "ref_id",
+            "localName": "ref_id",
+            "displayName": "Reference Id",
+            "queryName": "ref_id",
+            "type": "string",
+            "cardinality": "single",
+            "value": null
+          },
+          "cmis:name": {
+            "id": "cmis:name",
+            "localName": "Name",
+            "displayName": "TÃªn",
+            "queryName": "cmis:name",
+            "type": "string",
+            "cardinality": "single",
+            "value": "vcbdigibank-banner20-xmas-thg-en.png"
+          },
+          "cmis:isImmutable": {
+            "id": "cmis:isImmutable",
+            "localName": "IsFrozenVersion",
+            "displayName": "PhiÃªn baÌ‰n Ä‘oÌng bÄƒng",
+            "queryName": "cmis:isImmutable",
+            "type": "boolean",
+            "cardinality": "single",
+            "value": false
+          },
+          "cmis:baseTypeId": {
+            "id": "cmis:baseTypeId",
+            "localName": "",
+            "displayName": "cmis:baseTypeId",
+            "queryName": "cmis:baseTypeId",
+            "type": "id",
+            "cardinality": "single",
+            "value": "cmis:document"
+          },
+          "cmis:objectTypeId": {
+            "id": "cmis:objectTypeId",
+            "localName": "",
+            "displayName": "cmis:objectTypeId",
+            "queryName": "cmis:objectTypeId",
+            "type": "id",
+            "cardinality": "single",
+            "value": "SK106"
+          },
+          "cmis:changeToken": {
+            "id": "cmis:changeToken",
+            "localName": "",
+            "displayName": "cmis:changeToken",
+            "queryName": "cmis:changeToken",
+            "type": "string",
+            "cardinality": "single",
+            "value": "0"
+          },
+          "cmis:checkinComment": {
+            "id": "cmis:checkinComment",
+            "localName": "",
+            "displayName": "cmis:checkinComment",
+            "queryName": "cmis:checkinComment",
+            "type": "string",
+            "cardinality": "single",
+            "value": null
+          },
+          "cmis:contentStreamLength": {
+            "id": "cmis:contentStreamLength",
+            "localName": "ContentSize",
+            "displayName": "KiÌch cÆ¡Ìƒ nÃ´Ì£i dung",
+            "queryName": "cmis:contentStreamLength",
+            "type": "integer",
+            "cardinality": "single",
+            "value": 102938
+          },
+          "cmis:contentStreamId": {
+            "id": "cmis:contentStreamId",
+            "localName": "",
+            "displayName": "cmis:contentStreamId",
+            "queryName": "cmis:contentStreamId",
+            "type": "id",
+            "cardinality": "single",
+            "value": "-1"
+          },
+          "cmis:contentStreamMimeType": {
+            "id": "cmis:contentStreamMimeType",
+            "localName": "MimeType",
+            "displayName": "KiÃªÌ‰u Mime",
+            "queryName": "cmis:contentStreamMimeType",
+            "type": "string",
+            "cardinality": "single",
+            "value": "image\/png"
+          },
+          "cmis:contentStreamFileName": {
+            "id": "cmis:contentStreamFileName",
+            "localName": "",
+            "displayName": "cmis:contentStreamFileName",
+            "queryName": "cmis:contentStreamFileName",
+            "type": "string",
+            "cardinality": "single",
+            "value": "vcbdigibank-banner20-xmas-thg-en.png"
+          },
+          "cmis:versionSeriesId": {
+            "id": "cmis:versionSeriesId",
+            "localName": "VersionSeries",
+            "displayName": "SÃªri phiÃªn baÌ‰n",
+            "queryName": "cmis:versionSeriesId",
+            "type": "id",
+            "cardinality": "single",
+            "value": "idv_20E71885-0000-C1AF-9534-49AD7AE1C274"
+          },
+          "cmis:versionLabel": {
+            "id": "cmis:versionLabel",
+            "localName": "",
+            "displayName": "cmis:versionLabel",
+            "queryName": "cmis:versionLabel",
+            "type": "string",
+            "cardinality": "single",
+            "value": "1.0"
+          },
+          "cmis:isMajorVersion": {
+            "id": "cmis:isMajorVersion",
+            "localName": "",
+            "displayName": "cmis:isMajorVersion",
+            "queryName": "cmis:isMajorVersion",
+            "type": "boolean",
+            "cardinality": "single",
+            "value": true
+          },
+          "cmis:isLatestMajorVersion": {
+            "id": "cmis:isLatestMajorVersion",
+            "localName": "",
+            "displayName": "cmis:isLatestMajorVersion",
+            "queryName": "cmis:isLatestMajorVersion",
+            "type": "boolean",
+            "cardinality": "single",
+            "value": true
+          },
+          "cmis:versionSeriesCheckedOutBy": {
+            "id": "cmis:versionSeriesCheckedOutBy",
+            "localName": "",
+            "displayName": "cmis:versionSeriesCheckedOutBy",
+            "queryName": "cmis:versionSeriesCheckedOutBy",
+            "type": "string",
+            "cardinality": "single",
+            "value": null
+          },
+          "cmis:versionSeriesCheckedOutId": {
+            "id": "cmis:versionSeriesCheckedOutId",
+            "localName": "",
+            "displayName": "cmis:versionSeriesCheckedOutId",
+            "queryName": "cmis:versionSeriesCheckedOutId",
+            "type": "id",
+            "cardinality": "single",
+            "value": null
+          },
+          "cmis:isVersionSeriesCheckedOut": {
+            "id": "cmis:isVersionSeriesCheckedOut",
+            "localName": "",
+            "displayName": "cmis:isVersionSeriesCheckedOut",
+            "queryName": "cmis:isVersionSeriesCheckedOut",
+            "type": "boolean",
+            "cardinality": "single",
+            "value": false
+          },
+          "cmis:isPrivateWorkingCopy": {
+            "id": "cmis:isPrivateWorkingCopy",
+            "localName": "",
+            "displayName": "cmis:isPrivateWorkingCopy",
+            "queryName": "cmis:isPrivateWorkingCopy",
+            "type": "boolean",
+            "cardinality": "single",
+            "value": false
+          },
+          "cmis:description": {
+            "id": "cmis:description",
+            "localName": "",
+            "displayName": "cmis:description",
+            "queryName": "cmis:description",
+            "type": "string",
+            "cardinality": "single",
+            "value": null
+          }
+        },
+        "propertiesExtension": {
+          "GUID": "{20E71885-0000-CE33-A50E-7301B7A9D45F}"
+        },
+        "ClassDisplayName": "SK106"
+      }
+    }
+  }
+}

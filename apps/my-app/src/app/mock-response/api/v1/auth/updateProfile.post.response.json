@@ -1,0 +1,11 @@
+{
+  "statusCode": 200,
+  "delayMs": 200,
+  "body": {
+    "code": 0,
+    "desc": "Success",
+    "data": {
+      "success": true
+    }
+  }
+}

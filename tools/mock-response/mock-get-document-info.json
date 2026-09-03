@@ -1,0 +1,27 @@
+{
+  "name": "/api/v1/reg/getDocumentInfo",
+  "request": {
+    "url": "/api/v1/reg/getDocumentInfo",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "code": 0,
+        "desc": "Thành công",
+        "data": {
+          "product_ID": 14,
+          "ref_ID": "eGDneTgfAE",
+          "app_ID": "sDGndTfdHJ",
+          "process_STATUS": "CHƯA XỬ LÝ",
+          "process_ERRORCODE": null,
+          "process_ERRORMSG": null,
+          "process_STATUS_CODE": "0",
+          "service_ID": 2
+        }
+      }
+    }
+  }
+}

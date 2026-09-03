@@ -1,0 +1,3264 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "OpenAPI definition",
+        "version": "v0"
+    },
+    "servers": [
+        {
+            "url": "http://10.1.133.12:9002/sk106-reg-service",
+            "description": "Generated server url"
+        }
+    ],
+    "paths": {
+        "/api/v1/verify": {
+            "post": {
+                "tags": [
+                    "captcha-controller"
+                ],
+                "operationId": "verifyCaptcha",
+                "parameters": [
+                    {
+                        "name": "captcha",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/verify/{sessionId}": {
+            "post": {
+                "tags": [
+                    "captcha-controller"
+                ],
+                "operationId": "verifyCaptcha_1",
+                "parameters": [
+                    {
+                        "name": "sessionId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "captcha",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/updateDocument": {
+            "post": {
+                "tags": [
+                    "document-controller"
+                ],
+                "operationId": "updateDocument",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/SK106Document"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/sendInforToNewCustomer": {
+            "post": {
+                "tags": [
+                    "document-controller"
+                ],
+                "operationId": "sendInforToNewCustomer",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "refID",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "cusId",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/sendInforToCustomer": {
+            "post": {
+                "tags": [
+                    "document-controller"
+                ],
+                "operationId": "sendInforToCustomer",
+                "parameters": [
+                    {
+                        "name": "refID",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "cif",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/processNewCustomerProfile": {
+            "post": {
+                "tags": [
+                    "customer-detail-controller"
+                ],
+                "operationId": "processNewCustomerProfile",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CustomerInforProfile"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/processNewCustomerDetail": {
+            "post": {
+                "tags": [
+                    "customer-detail-controller"
+                ],
+                "operationId": "processNewCustomerDetail",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CustomerDetail"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/processCustomerProfile": {
+            "post": {
+                "tags": [
+                    "customer-detail-controller"
+                ],
+                "operationId": "processCustomerProfile",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CustomerInforProfile"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/processCustomerDetail": {
+            "post": {
+                "tags": [
+                    "customer-detail-controller"
+                ],
+                "operationId": "processCustomerDetail",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CustomerDetail"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/inquiryHistoryDocument": {
+            "post": {
+                "tags": [
+                    "document-controller"
+                ],
+                "operationId": "inquiryHistoryDocument",
+                "parameters": [
+                    {
+                        "name": "refID",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/getNewDocument": {
+            "post": {
+                "tags": [
+                    "document-controller"
+                ],
+                "operationId": "getNewDocument",
+                "parameters": [
+                    {
+                        "name": "refID",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "customerId",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/getNewCustomerDocumentTotalCount": {
+            "post": {
+                "tags": [
+                    "customer-detail-controller"
+                ],
+                "operationId": "getNewCustomerDocumentTotalCount",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DocumentCheckRuleDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/getNewCustomerDocumentDetail": {
+            "post": {
+                "tags": [
+                    "customer-detail-controller"
+                ],
+                "operationId": "getNewCustomerDocumentDetail",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DocumentDetailRequest"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/getListHoliday": {
+            "post": {
+                "tags": [
+                    "customer-detail-controller"
+                ],
+                "operationId": "getListHoliday",
+                "parameters": [
+                    {
+                        "name": "fromDate",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string",
+                            "default": "2022-01-01"
+                        }
+                    },
+                    {
+                        "name": "toDate",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/getListDocument": {
+            "post": {
+                "tags": [
+                    "customer-detail-controller"
+                ],
+                "operationId": "getListDocument",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DocumentCheckRuleDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/getDocument": {
+            "post": {
+                "tags": [
+                    "document-controller"
+                ],
+                "operationId": "getDocument",
+                "parameters": [
+                    {
+                        "name": "refID",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "cif",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/getDocumentTotalCount": {
+            "post": {
+                "tags": [
+                    "customer-detail-controller"
+                ],
+                "operationId": "getDocumentTotalCount",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DocumentCheckRuleDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/getDocumentInfo": {
+            "post": {
+                "tags": [
+                    "customer-detail-controller"
+                ],
+                "operationId": "getDocumentInfo",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DocumentProfileDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/getDocumentDetail": {
+            "post": {
+                "tags": [
+                    "document-controller"
+                ],
+                "operationId": "getDocumentDetail",
+                "parameters": [
+                    {
+                        "name": "refID",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/getBranchCustomerPriority": {
+            "post": {
+                "tags": [
+                    "customer-detail-controller"
+                ],
+                "operationId": "getCustomerPriorityBranchInfoAllService",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/getBranchCustomerInsuranceInfo": {
+            "post": {
+                "tags": [
+                    "customer-detail-controller"
+                ],
+                "operationId": "getCustomerPriorityBranchInfo",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/getBranchCustomerCreditCardInfo": {
+            "post": {
+                "tags": [
+                    "customer-detail-controller"
+                ],
+                "operationId": "getBranchCustomerCreditCardInfo",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/fetchTermAndCond": {
+            "post": {
+                "tags": [
+                    "term-and-cond-controller"
+                ],
+                "operationId": "fetchProvinces",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/fetchRlosActiveProvinces": {
+            "post": {
+                "tags": [
+                    "office-controller"
+                ],
+                "operationId": "fetchRlosActiveProvinces",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/fetchRlosActiveOffices": {
+            "post": {
+                "tags": [
+                    "office-controller"
+                ],
+                "operationId": "fetchRlosActiveOffices",
+                "parameters": [
+                    {
+                        "name": "districtID",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/fetchRlosActiveDistricts": {
+            "post": {
+                "tags": [
+                    "office-controller"
+                ],
+                "operationId": "fetchRlosActiveDistricts",
+                "parameters": [
+                    {
+                        "name": "provinceID",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/fetchRLOSWard": {
+            "post": {
+                "tags": [
+                    "office-controller"
+                ],
+                "operationId": "fetchRLOSWard",
+                "parameters": [
+                    {
+                        "name": "districtID",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/fetchRLOSProvinces": {
+            "post": {
+                "tags": [
+                    "office-controller"
+                ],
+                "operationId": "fetchRLOSProvinces",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/fetchRLOSNationality": {
+            "post": {
+                "tags": [
+                    "office-controller"
+                ],
+                "operationId": "fetchRLOSNationality",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/fetchRLOSDistricts": {
+            "post": {
+                "tags": [
+                    "office-controller"
+                ],
+                "operationId": "fetchRLOSDistricts",
+                "parameters": [
+                    {
+                        "name": "provinceID",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/fetchProvinces": {
+            "post": {
+                "tags": [
+                    "office-controller"
+                ],
+                "operationId": "fetchProvinces_1",
+                "parameters": [
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "customerType",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/fetchOffices": {
+            "post": {
+                "tags": [
+                    "office-controller"
+                ],
+                "operationId": "fetchOffices",
+                "parameters": [
+                    {
+                        "name": "districtID",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "customerType",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/fetchInfoRlosProfile": {
+            "post": {
+                "tags": [
+                    "customer-detail-controller"
+                ],
+                "operationId": "fetchInfoRlosProfile",
+                "parameters": [
+                    {
+                        "name": "applicationID",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/fetchDistricts": {
+            "post": {
+                "tags": [
+                    "office-controller"
+                ],
+                "operationId": "fetchDistricts",
+                "parameters": [
+                    {
+                        "name": "provinceID",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "customerType",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/fetchCustomerDetail": {
+            "post": {
+                "tags": [
+                    "customer-detail-controller"
+                ],
+                "operationId": "fetchCustomerDetail",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CustomerDetailDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/fetchCRCWard": {
+            "post": {
+                "tags": [
+                    "office-controller"
+                ],
+                "operationId": "fetchCRCWard",
+                "parameters": [
+                    {
+                        "name": "districtID",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/fetchCRCProvinces": {
+            "post": {
+                "tags": [
+                    "office-controller"
+                ],
+                "operationId": "fetchCRCProvinces",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/fetchCRCDistricts": {
+            "post": {
+                "tags": [
+                    "office-controller"
+                ],
+                "operationId": "fetchCRCDistricts",
+                "parameters": [
+                    {
+                        "name": "provinceID",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reg/createCustomerDetail": {
+            "post": {
+                "tags": [
+                    "customer-detail-controller"
+                ],
+                "operationId": "createCustomerDetail",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CustomerDetailDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/gold/re-send": {
+            "post": {
+                "tags": [
+                    "gold-deposit-controller"
+                ],
+                "operationId": "reSend",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/gold/push-json-message": {
+            "post": {
+                "tags": [
+                    "gold-payment-controller"
+                ],
+                "operationId": "pushJsonMessage",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ResponseMessageRabbitMQ"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/gold/processPaymentGold": {
+            "post": {
+                "tags": [
+                    "gold-payment-controller"
+                ],
+                "operationId": "processPaymentGold",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/GoldCustomerDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/gold/processCustomerDepositGold": {
+            "post": {
+                "tags": [
+                    "gold-deposit-controller"
+                ],
+                "operationId": "processCustomerDepositGold",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "captcha",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sessionId",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/GoldCustomerDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/gold/isAvailableDigibank": {
+            "post": {
+                "tags": [
+                    "gold-deposit-controller"
+                ],
+                "operationId": "isAvailableDigibank",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/gold/integrateBookingByDigibank": {
+            "post": {
+                "tags": [
+                    "gold-payment-controller"
+                ],
+                "operationId": "integrateBookingByDigibank",
+                "parameters": [
+                    {
+                        "name": "refId",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "status",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/gold/adjustCustomerBooking": {
+            "post": {
+                "tags": [
+                    "gold-deposit-controller"
+                ],
+                "operationId": "adjustCustomerBooking",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/gold/adjustCustInfoBySsoDigi": {
+            "post": {
+                "tags": [
+                    "gold-payment-controller"
+                ],
+                "operationId": "adjustCustInfoBySsoDigi",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/CustomerSsoDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/hcm/sync/{code}": {
+            "get": {
+                "tags": [
+                    "sysn-data-hcm-controller"
+                ],
+                "operationId": "sync",
+                "parameters": [
+                    {
+                        "name": "code",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "param",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/hcm/sync/canbo": {
+            "get": {
+                "tags": [
+                    "sysn-data-hcm-controller"
+                ],
+                "operationId": "getProfile",
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32",
+                            "default": 0
+                        }
+                    },
+                    {
+                        "name": "size",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32",
+                            "default": 1000
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HcmMessageResponseMapStringObject"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/hcm/get/{code}": {
+            "get": {
+                "tags": [
+                    "sysn-data-hcm-controller"
+                ],
+                "operationId": "getData",
+                "parameters": [
+                    {
+                        "name": "code",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "param",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/MessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/hcm/get/orgchart": {
+            "get": {
+                "tags": [
+                    "sysn-data-hcm-controller"
+                ],
+                "operationId": "getData_1",
+                "parameters": [
+                    {
+                        "name": "macn",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "madv",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "maphong",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/MessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/hcm/get/listprofile": {
+            "get": {
+                "tags": [
+                    "sysn-data-hcm-controller"
+                ],
+                "operationId": "getListProfile",
+                "parameters": [
+                    {
+                        "name": "listStaffCode",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HcmMessageResponseMapStringObject"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/hcm/count/{code}": {
+            "get": {
+                "tags": [
+                    "sysn-data-hcm-controller"
+                ],
+                "operationId": "countData",
+                "parameters": [
+                    {
+                        "name": "code",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HcmMessageResponseMapStringObject"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/gold/unHoldGoldPayment": {
+            "get": {
+                "tags": [
+                    "gold-payment-controller"
+                ],
+                "operationId": "unHoldGoldPayment",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "refId",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/gold/triggerGoldPayment": {
+            "get": {
+                "tags": [
+                    "gold-payment-controller"
+                ],
+                "operationId": "triggerGoldPayment",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "refId",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/gold/scanQueueToProcess": {
+            "get": {
+                "tags": [
+                    "gold-payment-controller"
+                ],
+                "operationId": "scanQueueToProcess",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/gold/scanDepositTimeout": {
+            "get": {
+                "tags": [
+                    "gold-payment-controller"
+                ],
+                "operationId": "scanDepositTimeout",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/gold/getListTimeSlot": {
+            "get": {
+                "tags": [
+                    "gold-deposit-controller"
+                ],
+                "operationId": "getListTimeSlot",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "officeId",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "bookingDate",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/gold/getGoldQttyByOffice": {
+            "get": {
+                "tags": [
+                    "gold-deposit-controller"
+                ],
+                "operationId": "getGoldQttyByOffice",
+                "parameters": [
+                    {
+                        "name": "officeId",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/gold/getGoldCustomerDetailResponse": {
+            "get": {
+                "tags": [
+                    "gold-deposit-controller"
+                ],
+                "operationId": "getGoldCustomerDetailResponse",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "customerID",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "refID",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/gold/get-next-working-day": {
+            "get": {
+                "tags": [
+                    "gold-parameter-controller"
+                ],
+                "operationId": "getNextWorkingDay",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/gold/get-gold-price-sk106": {
+            "get": {
+                "tags": [
+                    "gold-parameter-controller"
+                ],
+                "operationId": "getGoldPriceSk106",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/gold/get-gold-master-data": {
+            "get": {
+                "tags": [
+                    "gold-parameter-controller"
+                ],
+                "operationId": "getGoldMasterData",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/gold/get-booking-time": {
+            "get": {
+                "tags": [
+                    "gold-parameter-controller"
+                ],
+                "operationId": "getBookingTime",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/GoldBookingTimeRes"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/gold/gen-jwt-token": {
+            "get": {
+                "tags": [
+                    "gold-payment-controller"
+                ],
+                "operationId": "genJWTToken",
+                "parameters": [
+                    {
+                        "name": "dataEncr",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/gold/fetchProvinces": {
+            "get": {
+                "tags": [
+                    "gold-office-controller"
+                ],
+                "operationId": "fetchProvinces_2",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/gold/fetchOffices": {
+            "get": {
+                "tags": [
+                    "gold-office-controller"
+                ],
+                "operationId": "fetchOffices_1",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "districtId",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/gold/fetchOfficesGold": {
+            "get": {
+                "tags": [
+                    "gold-deposit-controller"
+                ],
+                "operationId": "fetchOffices_2",
+                "parameters": [
+                    {
+                        "name": "districtID",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/gold/fetchOfficesByProvinceId": {
+            "get": {
+                "tags": [
+                    "gold-office-controller"
+                ],
+                "operationId": "fetchOfficesByProvinceId",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "provinceId",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/gold/fetchDistricts": {
+            "get": {
+                "tags": [
+                    "gold-office-controller"
+                ],
+                "operationId": "fetchDistricts_1",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "provinceId",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/gold/check-booking-time": {
+            "get": {
+                "tags": [
+                    "gold-parameter-controller"
+                ],
+                "operationId": "checkBookingTime",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "*/*": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/BodyMessageResponse"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/captcha": {
+            "get": {
+                "tags": [
+                    "captcha-controller"
+                ],
+                "operationId": "getCaptcha",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/octet-stream": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string",
+                                        "format": "byte"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/captcha/{sessionId}": {
+            "get": {
+                "tags": [
+                    "captcha-controller"
+                ],
+                "operationId": "getCaptcha_1",
+                "parameters": [
+                    {
+                        "name": "sessionId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "content": {
+                            "application/octet-stream": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string",
+                                        "format": "byte"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "BodyMessageResponse": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "desc": {
+                        "type": "string"
+                    },
+                    "data": {
+                        "type": "object"
+                    }
+                }
+            },
+            "SK106Document": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "last_UPDATE_DOCUMENT": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "document_APP_ID": {
+                        "type": "string"
+                    },
+                    "document_STATUS": {
+                        "type": "string"
+                    },
+                    "document_STATUS_CODE": {
+                        "type": "string"
+                    },
+                    "document_REF": {
+                        "type": "string"
+                    },
+                    "customer_CIF": {
+                        "type": "string"
+                    },
+                    "upload_COUNT": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "document_TYPE": {
+                        "type": "string"
+                    },
+                    "document_NAME": {
+                        "type": "string"
+                    },
+                    "document_SIZE": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "document_DATE_CHECKIN": {
+                        "type": "string"
+                    },
+                    "document_CREATED_BY": {
+                        "type": "string"
+                    },
+                    "document_DATE_MODIFIED": {
+                        "type": "string"
+                    },
+                    "document_MIME_TYPE": {
+                        "type": "string"
+                    },
+                    "ecm_OBJECT_ID": {
+                        "type": "string"
+                    },
+                    "last_USER_MODIFIED": {
+                        "type": "string"
+                    },
+                    "service_TYPE": {
+                        "type": "string"
+                    },
+                    "product_TYPE": {
+                        "type": "string"
+                    }
+                }
+            },
+            "CustomerInforProfile": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "firstName": {
+                        "type": "string"
+                    },
+                    "midName": {
+                        "type": "string"
+                    },
+                    "lastName": {
+                        "type": "string"
+                    },
+                    "fullName": {
+                        "type": "string"
+                    },
+                    "listService": {
+                        "type": "string"
+                    },
+                    "customerCIF": {
+                        "type": "string"
+                    },
+                    "dob": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "national": {
+                        "type": "string"
+                    },
+                    "gender": {
+                        "type": "string"
+                    },
+                    "maritalStatus": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "idType": {
+                        "type": "string"
+                    },
+                    "customerID": {
+                        "type": "string"
+                    },
+                    "customerID1": {
+                        "type": "string"
+                    },
+                    "customerID2": {
+                        "type": "string"
+                    },
+                    "customerID3": {
+                        "type": "string"
+                    },
+                    "idType1": {
+                        "type": "string"
+                    },
+                    "idType2": {
+                        "type": "string"
+                    },
+                    "idType3": {
+                        "type": "string"
+                    },
+                    "issDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "issDate1": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "issDate2": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "issDate3": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "expDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "expDate1": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "expDate2": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "expDate3": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "nationalId": {
+                        "type": "string"
+                    },
+                    "nationalId1": {
+                        "type": "string"
+                    },
+                    "nationalId2": {
+                        "type": "string"
+                    },
+                    "nationalId3": {
+                        "type": "string"
+                    },
+                    "placeId": {
+                        "type": "string"
+                    },
+                    "placeId1": {
+                        "type": "string"
+                    },
+                    "placeId2": {
+                        "type": "string"
+                    },
+                    "placeId3": {
+                        "type": "string"
+                    },
+                    "phone": {
+                        "type": "string"
+                    },
+                    "otherPhone": {
+                        "type": "string"
+                    },
+                    "address": {
+                        "type": "string"
+                    },
+                    "lastProcess": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "source": {
+                        "type": "string"
+                    },
+                    "monthlyIncome": {
+                        "type": "string"
+                    },
+                    "isServiceActive": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "taxCode": {
+                        "type": "string"
+                    },
+                    "job": {
+                        "type": "string"
+                    },
+                    "jobTitle": {
+                        "type": "string"
+                    },
+                    "priorityRank": {
+                        "type": "string"
+                    },
+                    "costCenter": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "rmCode": {
+                        "type": "string"
+                    }
+                }
+            },
+            "CustomerDetail": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "national_ID": {
+                        "type": "string"
+                    },
+                    "r_NATIONAL_ID": {
+                        "type": "string"
+                    },
+                    "last_PROCESS": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "app_ID": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "ranger_TIME": {
+                        "type": "string"
+                    },
+                    "national": {
+                        "type": "string"
+                    },
+                    "city": {
+                        "type": "string"
+                    },
+                    "district": {
+                        "type": "string"
+                    },
+                    "ward": {
+                        "type": "string"
+                    },
+                    "address_DETAIL": {
+                        "type": "string"
+                    },
+                    "address_TYPE": {
+                        "type": "string"
+                    },
+                    "branch_ID": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "branch_DISTRICT_ID": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "branch_PROVINCE_ID": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "card_LIMIT": {
+                        "type": "string"
+                    },
+                    "card_TYPE": {
+                        "type": "string"
+                    },
+                    "consult_TYPE": {
+                        "type": "string"
+                    },
+                    "consult_UNIT": {
+                        "type": "string"
+                    },
+                    "contact_TYPE": {
+                        "type": "string"
+                    },
+                    "expire_TIME": {
+                        "type": "string"
+                    },
+                    "expire_TIME_TYPE": {
+                        "type": "string"
+                    },
+                    "product": {
+                        "type": "string"
+                    },
+                    "receiver_TYPE": {
+                        "type": "string"
+                    },
+                    "resident": {
+                        "type": "string"
+                    },
+                    "service_TYPE": {
+                        "type": "string"
+                    },
+                    "amount_REQ": {
+                        "type": "string"
+                    },
+                    "have_INSUR": {
+                        "type": "string"
+                    },
+                    "product_TYPE": {
+                        "type": "string"
+                    },
+                    "purpose": {
+                        "type": "string"
+                    },
+                    "purpose_CODE": {
+                        "type": "string"
+                    },
+                    "channel_ID": {
+                        "type": "string"
+                    },
+                    "sender_ID": {
+                        "type": "string"
+                    },
+                    "transaction_ID": {
+                        "type": "string"
+                    },
+                    "register_DATE": {
+                        "type": "string"
+                    },
+                    "card_PROD": {
+                        "type": "string"
+                    },
+                    "customer_PHONE": {
+                        "type": "string"
+                    },
+                    "customer_ID": {
+                        "type": "string"
+                    },
+                    "ref_ID": {
+                        "type": "string"
+                    },
+                    "branch_OFFICE_ID": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                }
+            },
+            "DocumentCheckRuleDTO": {
+                "type": "object",
+                "properties": {
+                    "custId": {
+                        "type": "string"
+                    },
+                    "phoneNumber": {
+                        "type": "string"
+                    },
+                    "serviceId": {
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                }
+            },
+            "DocumentDetailRequest": {
+                "type": "object",
+                "properties": {
+                    "customerId": {
+                        "type": "string"
+                    },
+                    "refId": {
+                        "type": "string"
+                    }
+                }
+            },
+            "DocumentProfileDTO": {
+                "type": "object",
+                "properties": {
+                    "customerID": {
+                        "type": "string"
+                    },
+                    "refID": {
+                        "type": "string"
+                    }
+                }
+            },
+            "CustomerDetailDTO": {
+                "type": "object",
+                "properties": {
+                    "customerID": {
+                        "type": "string"
+                    },
+                    "phoneNumber": {
+                        "type": "string"
+                    }
+                }
+            },
+            "AdditionInfo": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "type": "string"
+                    },
+                    "channel": {
+                        "type": "string"
+                    }
+                }
+            },
+            "BaseRequestHeader": {
+                "type": "object",
+                "properties": {
+                    "msgID": {
+                        "type": "string"
+                    },
+                    "msgName": {
+                        "type": "string"
+                    },
+                    "appId": {
+                        "type": "string"
+                    },
+                    "requestTime": {
+                        "type": "string"
+                    }
+                }
+            },
+            "BookingInfo": {
+                "type": "object",
+                "properties": {
+                    "REFNumberIsReserve": {
+                        "type": "string"
+                    },
+                    "exRate": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "receiveBranch": {
+                        "type": "string"
+                    },
+                    "dateReceive": {
+                        "type": "string"
+                    },
+                    "amountXAU": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "amountVND": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "costCenter": {
+                        "type": "string"
+                    }
+                }
+            },
+            "GoldPaymentResult": {
+                "type": "object",
+                "properties": {
+                    "personalInfo": {
+                        "$ref": "#/components/schemas/PersonalInfo"
+                    },
+                    "bookingInfo": {
+                        "$ref": "#/components/schemas/BookingInfo"
+                    },
+                    "transactionInfo": {
+                        "$ref": "#/components/schemas/TransactionInfo"
+                    },
+                    "additionInfo": {
+                        "$ref": "#/components/schemas/AdditionInfo"
+                    },
+                    "ResultDetail": {
+                        "$ref": "#/components/schemas/ResultDetail"
+                    }
+                }
+            },
+            "PersonalInfo": {
+                "type": "object",
+                "properties": {
+                    "cifNo": {
+                        "type": "string"
+                    },
+                    "mobileNo": {
+                        "type": "string"
+                    },
+                    "customerName": {
+                        "type": "string"
+                    },
+                    "idNumber": {
+                        "type": "string"
+                    },
+                    "idType": {
+                        "type": "string"
+                    },
+                    "idIssueDate": {
+                        "type": "string"
+                    },
+                    "address": {
+                        "type": "string"
+                    },
+                    "birthday": {
+                        "type": "string"
+                    },
+                    "career": {
+                        "type": "string"
+                    },
+                    "position": {
+                        "type": "string"
+                    },
+                    "taxCode": {
+                        "type": "string"
+                    }
+                }
+            },
+            "ResponseMessageRabbitMQ": {
+                "type": "object",
+                "properties": {
+                    "header": {
+                        "$ref": "#/components/schemas/BaseRequestHeader"
+                    },
+                    "payload": {
+                        "$ref": "#/components/schemas/GoldPaymentResult"
+                    },
+                    "signature": {
+                        "type": "string"
+                    }
+                }
+            },
+            "ResultDetail": {
+                "type": "object",
+                "properties": {
+                    "resCode": {
+                        "type": "string"
+                    },
+                    "resMessage": {
+                        "type": "string"
+                    }
+                }
+            },
+            "TransactionInfo": {
+                "type": "object",
+                "properties": {
+                    "cifNo": {
+                        "type": "string"
+                    },
+                    "debitAccount": {
+                        "type": "string"
+                    },
+                    "debitCurrency": {
+                        "type": "string"
+                    },
+                    "debitAccountType": {
+                        "type": "string"
+                    },
+                    "creditAccount": {
+                        "type": "string"
+                    },
+                    "creditCurrency": {
+                        "type": "string"
+                    },
+                    "creditAccountType": {
+                        "type": "string"
+                    },
+                    "debitAmount": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "creditAmount": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "exRate": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "teller": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "sequence": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "hostDate": {
+                        "type": "string"
+                    },
+                    "pcTime": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "alpha2": {
+                        "type": "string"
+                    },
+                    "remark": {
+                        "type": "string"
+                    },
+                    "transCode": {
+                        "type": "string"
+                    },
+                    "GLCostCenter": {
+                        "type": "string"
+                    }
+                }
+            },
+            "GoldCustomerDTO": {
+                "type": "object",
+                "properties": {
+                    "refId": {
+                        "type": "string"
+                    },
+                    "cif": {
+                        "type": "string"
+                    },
+                    "fullName": {
+                        "type": "string"
+                    },
+                    "gender": {
+                        "type": "string"
+                    },
+                    "dob": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "nationality": {
+                        "type": "string"
+                    },
+                    "legalIdType": {
+                        "type": "string"
+                    },
+                    "legalId": {
+                        "type": "string"
+                    },
+                    "issuerDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "issuerPlace": {
+                        "type": "string"
+                    },
+                    "phoneNumber": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "provinceId": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "districtId": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "branchId": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "officeId": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "timeSlot": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "goldQtty": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "goldPrice": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "depositPercent": {
+                        "type": "number",
+                        "format": "float"
+                    },
+                    "depositValue": {
+                        "type": "integer",
+                        "format": "int64"
+                    },
+                    "depositDate": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                }
+            },
+            "CustomerSsoDTO": {
+                "type": "object",
+                "properties": {
+                    "fullName": {
+                        "type": "string"
+                    },
+                    "cif": {
+                        "type": "string"
+                    },
+                    "legalId": {
+                        "type": "string"
+                    },
+                    "phone": {
+                        "type": "string"
+                    },
+                    "refId": {
+                        "type": "string"
+                    }
+                }
+            },
+            "HcmMessageResponseMapStringObject": {
+                "type": "object",
+                "properties": {
+                    "respCode": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "respDesc": {
+                        "type": "string"
+                    },
+                    "respData": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "object"
+                        }
+                    }
+                }
+            },
+            "MessageResponse": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "desc": {
+                        "type": "string"
+                    },
+                    "data": {
+                        "type": "object"
+                    }
+                }
+            },
+            "GoldBookingTime": {
+                "type": "object",
+                "properties": {
+                    "startTime": {
+                        "type": "string"
+                    },
+                    "endTime": {
+                        "type": "string"
+                    }
+                }
+            },
+            "GoldBookingTimeRes": {
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "desc": {
+                        "type": "string"
+                    },
+                    "goldBookingTime": {
+                        "$ref": "#/components/schemas/GoldBookingTime"
+                    }
+                }
+            }
+        }
+    }
+}

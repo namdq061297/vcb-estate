@@ -1,0 +1,14 @@
+{
+  "name": "/api/v1/captcha",
+  "request": {
+    "url": "/api/v1/captcha",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": []
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "name": "/api/v1/reg/getDetailDocument",
+  "request": {
+    "url": "/api/v1/reg/getDetailDocument",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "code": 0,
+        "desc": "Thành công",
+        "data": {
+          "id": 562,
+          "term": "111",
+          "process_STATUS": "KHÁCH HÀNG TỪ CHỐI",
+          "process_ERRORCODE": null,
+          "process_ERRORMSG": null,
+          "process_STATUS_CODE": "2",
+          "process_TELLER": null,
+          "process_TELLER_PHONE": null,
+          "instance_ID": null,
+          "process_UPD_TIME": null,
+          "app_ID": null,
+          "national_LOAN": "2",
+          "province_LOAN": "32",
+          "distric_LOAN": "479",
+          "ward_LOAN": null,
+          "detail_ADDRESS_LOAN": "oooo",
+          "resident_TYPE": "1",
+          "prefer_MODE_COM": "2",
+          "amount_REQUEST": "11200000",
+          "expire": null,
+          "ranger_TIME": null,
+          "register_DATE": null,
+          "card_PROD": null,
+          "card_NETWORK": null,
+          "service_ID": 4,
+          "folder_ECM_OBJECT_ID": "idf_70702F83-0000-C311-85D6-DEBF33796536",
+          "created_DATE": "2022-09-12T09:04:02",
+          "ref_ID": "iVcSJFjBRD",
+          "cust_NAME": "phan thi",
+          "advise_PERSON": null,
+          "advise_TYPE": null,
+          "cif": "20008787",
+          "cost_CENTER": 100,
+          "legal_ID": "C1067040",
+          "phone_NUMBER": "0374551426",
+          "product_ID": 45,
+          "sex": "F",
+          "legal_ID_TYPE": "IC",
+          "is_USED_INSURRANCE": null,
+          "nationality": null,
+          "reg_STATUS": null,
+          "reg_ERRORCODE": null,
+          "reg_MESSAGE": null,
+          "branch_OFFICE_ID": "429",
+          "email": "tesst@hhh.com",
+          "address_TYPE": "4",
+          "branch_ID": "1",
+          "branch_DISTRICT_ID": "1321",
+          "branch_PROVINCE_ID": "467",
+          "receiver_TYPE": "5",
+          "purpose": "Cấp tín dụng bổ sung vốn lưu động phục vụ SXKD",
+          "purpose_CODE": null
+        }
+      }
+    }
+  }
+}

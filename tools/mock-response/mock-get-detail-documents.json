@@ -1,0 +1,43 @@
+{
+  "name": "/api/v1/reg/getDocumentDetail",
+  "request": {
+    "url": "/api/v1/reg/getDocumentDetail",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "code": 0,
+        "desc": "Thành công",
+        "data": {
+          "code": 0,
+          "desc": "Thành công",
+          "data": [
+            {
+              "id": 556,
+              "service_TYPE": "2",
+              "product_TYPE": "13",
+              "document_REF": "J14QUuNSQR",
+              "customer_CIF": "20008787",
+              "upload_COUNT": 0,
+              "document_TYPE": "1",
+              "document_NAME": "test-word.docx",
+              "document_SIZE": 11919,
+              "document_DATE_CHECKIN": "1672047094795",
+              "document_CREATED_BY": "ecm_user3",
+              "document_DATE_MODIFIED": "1672047094794",
+              "document_MIME_TYPE": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+              "ecm_OBJECT_ID": "idd_E0C54D85-0000-C31F-900A-955395DEEAAD",
+              "last_USER_MODIFIED": "ecm_user3",
+              "last_UPDATE_DOCUMENT": "2022-12-26T16:31:35",
+              "document_STATUS": null,
+              "document_STATUS_CODE": null
+            }
+          ]
+        }
+      }
+    }
+  }
+}

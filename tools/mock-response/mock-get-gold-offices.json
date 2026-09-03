@@ -1,0 +1,39 @@
+{
+  "name": "/api/v1/gold/fetchOffices",
+  "request": {
+    "url": "/api/v1/gold/fetchOffices",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "code": 0,
+        "desc": "Thành công",
+        "data": [
+          {
+            "costcenter": 200,
+            "branch_ID": 2,
+            "district_ID": 1315,
+            "office_ID": 173,
+            "office_NAME": "Trụ sở CN Hà Nội",
+            "address": "Tầng 1 đến tầng 5, số 11B Cát Linh, Phường Quốc Tử Giám, Quận Đống Đa, thành phố Hà Nội.",
+            "latitude": "20.9990168",
+            "longitude": "105.8172884",
+            "slots": "08:00|08:30|09:00|09:30|10:00|10:30|11:00|11:30|13:00|13:30|14:00|14:30|15:00|15:30|16:00",
+            "status": 1,
+            "ccname": "VCB Ha Noi-Tru so CN",
+            "sms": "Tru so CN VCB Ha Noi",
+            "office_NAME_EN": "Ha Noi Branch",
+            "address_EN": "1st floor to 5th floor, 11B Cat Linh, Quoc Tu Giam Ward, Dong Da District, Hanoi city. ",
+            "emaillist": "hoantm.han@vietcombank.com.vn",
+            "last_UPDATE_DATE": "2022-11-30 15:55:04.0",
+            "email_KYC": "linhptt.ho@vietcombank.com.vn",
+            "available_STATUS": "2"
+          }
+        ]
+      }
+    }
+  }
+}

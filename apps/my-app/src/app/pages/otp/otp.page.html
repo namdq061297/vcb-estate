@@ -1,0 +1,35 @@
+<main class="page">
+  <app-image name="login_bg" alt="Login Background" class="login-bg"></app-image>
+
+  <section class="login-card">
+    <header class="login-header">
+      <button type="button" class="back-button" aria-label="Quay lai" (click)="goBack()">
+        <app-icon name="ic_back" [size]="24" alt=""></app-icon>
+      </button>
+
+      <h1 class="title_medium">Nhập mã OTP</h1>
+      <span class="header-spacer" aria-hidden="true"></span>
+    </header>
+
+    <section aria-label="Thông báo đăng nhập">
+      <p class=" text-center">
+        Vui lòng nhập mã OTP vừa được gửi đến số<br> điện thoại <b>{{ phoneNumber() }}</b>
+      </p>
+    </section>
+
+    <form [formGroup]="form">
+      <ngx-otp-input formControlName="otp" [length]="6" [status]="status" class="otp-input"
+        (otpComplete)="verifyOtp($event)"></ngx-otp-input>
+    </form>
+    <p class="register-copy ">
+      Chưa nhận được mã OTP? Gửi lại sau
+      <a class="body_small_semibold">(01:59)</a>
+    </p>
+
+    <div class="grid w-full grid-cols-2 gap-4">
+      <app-button (pressed)="goBack()" label="Huỷ" type="secondary-grey" variant="secondary-grey"></app-button>
+      <app-button (pressed)="onConfirm()" [disabled]="otp().length !== 6" label="Xác nhận"></app-button>
+    </div>
+  </section>
+</main>
+<app-footer />

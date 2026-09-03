@@ -1,0 +1,174 @@
+{
+  "name": "/api/v1/reg/getListHoliday",
+  "request": {
+    "url": "/api/v1/reg/getListHoliday",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "code": 0,
+        "desc": "Thành công",
+        "data": [
+          {
+            "id": 1,
+            "datevalue": "2022-12-02T17:00:00.000+00:00",
+            "description": "WEEKEND"
+          },
+          {
+            "id": 2,
+            "datevalue": "2022-12-03T17:00:00.000+00:00",
+            "description": "WEEKEND"
+          },
+          {
+            "id": 3,
+            "datevalue": "2022-12-09T17:00:00.000+00:00",
+            "description": "WEEKEND"
+          },
+          {
+            "id": 4,
+            "datevalue": "2022-12-10T17:00:00.000+00:00",
+            "description": "WEEKEND"
+          },
+          {
+            "id": 5,
+            "datevalue": "2022-12-16T17:00:00.000+00:00",
+            "description": "WEEKEND"
+          },
+          {
+            "id": 6,
+            "datevalue": "2022-12-17T17:00:00.000+00:00",
+            "description": "WEEKEND"
+          },
+          {
+            "id": 7,
+            "datevalue": "2022-12-23T17:00:00.000+00:00",
+            "description": "WEEKEND"
+          },
+          {
+            "id": 8,
+            "datevalue": "2022-12-24T17:00:00.000+00:00",
+            "description": "WEEKEND"
+          },
+          {
+            "id": 9,
+            "datevalue": "2022-12-30T17:00:00.000+00:00",
+            "description": "WEEKEND"
+          },
+          {
+            "id": 10,
+            "datevalue": "2022-12-31T17:00:00.000+00:00",
+            "description": "HOLIDAY"
+          },
+          {
+            "id": 11,
+            "datevalue": "2023-01-01T17:00:00.000+00:00",
+            "description": "HOLIDAY"
+          },
+          {
+            "id": 12,
+            "datevalue": "2023-01-06T17:00:00.000+00:00",
+            "description": "WEEKEND"
+          },
+          {
+            "id": 13,
+            "datevalue": "2023-01-07T17:00:00.000+00:00",
+            "description": "WEEKEND"
+          },
+          {
+            "id": 14,
+            "datevalue": "2023-01-13T17:00:00.000+00:00",
+            "description": "WEEKEND"
+          },
+          {
+            "id": 15,
+            "datevalue": "2023-01-14T17:00:00.000+00:00",
+            "description": "WEEKEND"
+          },
+          {
+            "id": 17,
+            "datevalue": "2023-01-20T17:00:00.000+00:00",
+            "description": "HOLIDAY"
+          },
+          {
+            "id": 18,
+            "datevalue": "2023-01-21T17:00:00.000+00:00",
+            "description": "HOLIDAY"
+          },
+          {
+            "id": 19,
+            "datevalue": "2023-01-22T17:00:00.000+00:00",
+            "description": "HOLIDAY"
+          },
+          {
+            "id": 20,
+            "datevalue": "2023-01-23T17:00:00.000+00:00",
+            "description": "HOLIDAY"
+          },
+          {
+            "id": 21,
+            "datevalue": "2023-01-24T17:00:00.000+00:00",
+            "description": "HOLIDAY"
+          },
+          {
+            "id": 22,
+            "datevalue": "2023-01-25T17:00:00.000+00:00",
+            "description": "HOLIDAY"
+          },
+          {
+            "id": 23,
+            "datevalue": "2023-01-27T17:00:00.000+00:00",
+            "description": "WEEKEND"
+          },
+          {
+            "id": 24,
+            "datevalue": "2023-01-28T17:00:00.000+00:00",
+            "description": "WEEKEND"
+          },
+          {
+            "id": 25,
+            "datevalue": "2023-02-03T17:00:00.000+00:00",
+            "description": "WEEKEND"
+          },
+          {
+            "id": 26,
+            "datevalue": "2023-02-04T17:00:00.000+00:00",
+            "description": "WEEKEND"
+          },
+          {
+            "id": 27,
+            "datevalue": "2023-02-10T17:00:00.000+00:00",
+            "description": "WEEKEND"
+          },
+          {
+            "id": 28,
+            "datevalue": "2023-02-11T17:00:00.000+00:00",
+            "description": "WEEKEND"
+          },
+          {
+            "id": 29,
+            "datevalue": "2023-02-17T17:00:00.000+00:00",
+            "description": "WEEKEND"
+          },
+          {
+            "id": 30,
+            "datevalue": "2023-02-18T17:00:00.000+00:00",
+            "description": "WEEKEND"
+          },
+          {
+            "id": 31,
+            "datevalue": "2023-02-24T17:00:00.000+00:00",
+            "description": "WEEKEND"
+          },
+          {
+            "id": 32,
+            "datevalue": "2023-02-25T17:00:00.000+00:00",
+            "description": "WEEKEND"
+          }
+        ]
+      }
+    }
+  }
+}

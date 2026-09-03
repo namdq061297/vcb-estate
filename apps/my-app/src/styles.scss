@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/fonts/Inter/Inter-Regular.otf') format('opentype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/fonts/Inter/Inter-Medium.otf') format('opentype');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/fonts/Inter/Inter-SemiBold.otf') format('opentype');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@import './styles/tokens/index';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  // background: var(--color-bg-info);
+  color: var(--color-text-default);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-16);
+  line-height: var(--line-height-base);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: var(--color-text-primary);
+  line-height: var(--line-height-tight);
+}
+
+h1 {
+  font-size: var(--font-size-30);
+  font-weight: 700;
+}
+
+p {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-16);
+}
+
+a {
+  color: var(--color-text-accent-green);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  color: var(--color-text-brand-primary);
+}

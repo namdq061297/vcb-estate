@@ -1,0 +1,57 @@
+.page {
+  padding: 24px 16px 40px;
+  display: grid;
+  gap: 18px;
+  
+}
+
+.request-search {
+  border-radius: 14px;
+  padding: 20px 20px 18px;
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+}
+
+.request-search__input {
+  // width: min(100%, 610px);
+}
+
+.request-search__input ::ng-deep .text-input__control {
+  border-radius: 999px;
+  min-height: 48px;
+  width: 400px;
+}
+
+.request-search__status {
+  margin: 0;
+  color: #475467;
+  font-size: 0.92rem;
+}
+
+.request-search__status--error {
+  color: #b42318;
+}
+
+.request-search__result {
+  margin: 0;
+  width: min(100%, 900px);
+  overflow: auto;
+  border-radius: 14px;
+  background: #0f172a;
+  color: #dbeafe;
+  padding: 14px;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 16px 10px 24px;
+    gap: 14px;
+  }
+
+  .request-search {
+    padding: 16px 12px;
+  }
+}

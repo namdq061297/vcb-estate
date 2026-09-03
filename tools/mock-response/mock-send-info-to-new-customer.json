@@ -1,0 +1,18 @@
+{
+  "name": "/api/v1/reg/sendInforToNewCustomer",
+  "request": {
+    "url": "/api/v1/reg/sendInforToNewCustomer",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "code": 0,
+        "desc": "Thành công",
+        "data": null
+      }
+    }
+  }
+}

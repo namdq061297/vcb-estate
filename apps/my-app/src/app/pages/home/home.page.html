@@ -1,0 +1,20 @@
+<main class="page">
+	<section class="request-search">
+		<h1 class="title_small">Trang chủ</h1>
+
+		<div class="request-search__input">
+			<app-text-input [isSearch]="true" [label]="''" [value]="searchValue()" [placeholder]="'Nhập từ khoá để tìm kiếm'"
+				(valueChange)="onSearchChange($event)" />
+		</div>
+
+		@if (isLoadingProfile()) {
+		<p class="request-search__status">Đang gọi API...</p>
+		} @else if (profileError()) {
+		<p class="request-search__status request-search__status--error">{{ profileError() }}</p>
+		} @else if (customerProfile()) {
+		<p class="request-search__status">Hồ sơ khách hàng load thành công</p>
+		<!-- <pre class="request-search__result">{{ customerProfile() | json }}</pre> -->
+		}
+	</section>
+</main>
+<app-footer />

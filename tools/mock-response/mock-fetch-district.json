@@ -1,0 +1,139 @@
+{
+  "name": "/api/v1/reg/fetchDistricts",
+  "request": {
+    "url": "/api/v1/reg/fetchDistricts",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "code": 0,
+        "desc": "Thành công",
+        "data": [
+          {
+            "district_ID": 1506,
+            "district_NAME": "H. Gia Lâm",
+            "province_ID": 467,
+            "district_NAME_EN": null
+          },
+          {
+            "district_ID": 1313,
+            "district_NAME": "H. Hoài Đức",
+            "province_ID": 467,
+            "district_NAME_EN": null
+          },
+          {
+            "district_ID": 1353,
+            "district_NAME": "H. Mê Linh",
+            "province_ID": 467,
+            "district_NAME_EN": null
+          },
+          {
+            "district_ID": 1354,
+            "district_NAME": "H. Sóc Sơn",
+            "province_ID": 467,
+            "district_NAME_EN": null
+          },
+          {
+            "district_ID": 1654,
+            "district_NAME": "H. Thường Tín",
+            "province_ID": 467,
+            "district_NAME_EN": null
+          },
+          {
+            "district_ID": 1487,
+            "district_NAME": "H. Đan Phượng",
+            "province_ID": 467,
+            "district_NAME_EN": null
+          },
+          {
+            "district_ID": 1507,
+            "district_NAME": "H. Đông Anh",
+            "province_ID": 467,
+            "district_NAME_EN": null
+          },
+          {
+            "district_ID": 1321,
+            "district_NAME": "Q. Ba Đình",
+            "province_ID": 467,
+            "district_NAME_EN": null
+          },
+          {
+            "district_ID": 1323,
+            "district_NAME": "Q. Bắc Từ Liêm",
+            "province_ID": 467,
+            "district_NAME_EN": null
+          },
+          {
+            "district_ID": 1316,
+            "district_NAME": "Q. Cầu Giấy",
+            "province_ID": 467,
+            "district_NAME_EN": null
+          },
+          {
+            "district_ID": 1412,
+            "district_NAME": "Q. Hai Bà Trưng",
+            "province_ID": 467,
+            "district_NAME_EN": null
+          },
+          {
+            "district_ID": 1355,
+            "district_NAME": "Q. Hoàn Kiếm",
+            "province_ID": 467,
+            "district_NAME_EN": null
+          },
+          {
+            "district_ID": 1411,
+            "district_NAME": "Q. Hoàng Mai",
+            "province_ID": 467,
+            "district_NAME_EN": null
+          },
+          {
+            "district_ID": 1488,
+            "district_NAME": "Q. Hà Đông",
+            "province_ID": 467,
+            "district_NAME_EN": null
+          },
+          {
+            "district_ID": 1514,
+            "district_NAME": "Q. Long Biên",
+            "province_ID": 467,
+            "district_NAME_EN": null
+          },
+          {
+            "district_ID": 1322,
+            "district_NAME": "Q. Nam Từ Liêm",
+            "province_ID": 467,
+            "district_NAME_EN": null
+          },
+          {
+            "district_ID": 1317,
+            "district_NAME": "Q. Thanh Xuân",
+            "province_ID": 467,
+            "district_NAME_EN": null
+          },
+          {
+            "district_ID": 1324,
+            "district_NAME": "Q. Tây Hồ",
+            "province_ID": 467,
+            "district_NAME_EN": null
+          },
+          {
+            "district_ID": 1315,
+            "district_NAME": "Q. Đống Đa",
+            "province_ID": 467,
+            "district_NAME_EN": null
+          },
+          {
+            "district_ID": 1698,
+            "district_NAME": "TX. Sơn Tây",
+            "province_ID": 467,
+            "district_NAME_EN": null
+          }
+        ]
+      }
+    }
+  }
+}

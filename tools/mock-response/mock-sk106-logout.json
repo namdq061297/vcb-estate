@@ -1,0 +1,14 @@
+{
+  "name": "/sk106-logout",
+  "request": {
+    "url": "/sk106-logout",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {}
+    }
+  }
+}

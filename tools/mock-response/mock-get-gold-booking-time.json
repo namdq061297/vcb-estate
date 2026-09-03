@@ -1,0 +1,21 @@
+{
+  "name": "/api/v1/gold/get-booking-time",
+  "request": {
+    "url": "/api/v1/gold/get-booking-time",
+    "method": "GET"
+  },
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "code": 0,
+        "desc": "Thành công",
+        "goldBookingTime": {
+          "startTime": "8:00",
+          "endTime": "23:00"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,427 @@
+{
+  "name": "/api/v1/reg/fetchProvinces",
+  "request": {
+    "url": "/api/v1/reg/fetchProvinces",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "code": 0,
+        "desc": "Thành công",
+        "data": [
+          {
+            "province_NAME": "Yên Bái",
+            "pcode": "YBA",
+            "province_NAME_EN": "Yen Bai",
+            "province_ID": 523
+          },
+          {
+            "province_NAME": "Vĩnh Phúc",
+            "pcode": "VPH",
+            "province_NAME_EN": "Vinh Phuc",
+            "province_ID": 461
+          },
+          {
+            "province_NAME": "Vĩnh Long",
+            "pcode": "VLO",
+            "province_NAME_EN": "Vinh Long",
+            "province_ID": 462
+          },
+          {
+            "province_NAME": "Trà Vinh",
+            "pcode": "TVI",
+            "province_NAME_EN": "Tra Vinh",
+            "province_ID": 464
+          },
+          {
+            "province_NAME": "Thừa Thiên - Huế",
+            "pcode": "TTH",
+            "province_NAME_EN": "Thua Thien - Hue",
+            "province_ID": 495
+          },
+          {
+            "province_NAME": "Tuyên Quang",
+            "pcode": "TQU",
+            "province_NAME_EN": "Tuyen Quang",
+            "province_ID": 457
+          },
+          {
+            "province_NAME": "Tây Ninh",
+            "pcode": "TNI",
+            "province_NAME_EN": "Tay Ninh",
+            "province_ID": 470
+          },
+          {
+            "province_NAME": "Thái Nguyên",
+            "pcode": "TNG",
+            "province_NAME_EN": "Thai Nguyen",
+            "province_ID": 468
+          },
+          {
+            "province_NAME": "Thanh Hóa",
+            "pcode": "THO",
+            "province_NAME_EN": "Thanh Hoa",
+            "province_ID": 458
+          },
+          {
+            "province_NAME": "Tiền Giang",
+            "pcode": "TGI",
+            "province_NAME_EN": "Tien Giang",
+            "province_ID": 465
+          },
+          {
+            "province_NAME": "Thái Bình",
+            "pcode": "TBI",
+            "province_NAME_EN": "Thai Binh",
+            "province_ID": 469
+          },
+          {
+            "province_NAME": "Sóc Trăng",
+            "pcode": "STR",
+            "province_NAME_EN": "Soc Trang",
+            "province_ID": 472
+          },
+          {
+            "province_NAME": "Sơn La",
+            "pcode": "SLA",
+            "province_NAME_EN": "Son La",
+            "province_ID": 521
+          },
+          {
+            "province_NAME": "Quảng Trị",
+            "pcode": "QTR",
+            "province_NAME_EN": "Quang Tri",
+            "province_ID": 473
+          },
+          {
+            "province_NAME": "Quảng Ninh",
+            "pcode": "QNI",
+            "province_NAME_EN": "Quang Ninh",
+            "province_ID": 474
+          },
+          {
+            "province_NAME": "Quảng Ngãi",
+            "pcode": "QNG",
+            "province_NAME_EN": "Quang Ngai",
+            "province_ID": 475
+          },
+          {
+            "province_NAME": "Quảng Nam",
+            "pcode": "QNA",
+            "province_NAME_EN": "Quang Nam",
+            "province_ID": 476
+          },
+          {
+            "province_NAME": "Quảng Bình",
+            "pcode": "QBI",
+            "province_NAME_EN": "Quang Binh",
+            "province_ID": 477
+          },
+          {
+            "province_NAME": "Phú Thọ",
+            "pcode": "PTH",
+            "province_NAME_EN": "Phu Tho",
+            "province_ID": 479
+          },
+          {
+            "province_NAME": "Phú Yên",
+            "pcode": "PHY",
+            "province_NAME_EN": "Phu Yen",
+            "province_ID": 478
+          },
+          {
+            "province_NAME": "Phú Khánh",
+            "pcode": "PHK",
+            "province_NAME_EN": "Phu Khanh",
+            "province_ID": 520
+          },
+          {
+            "province_NAME": "Ninh Thuận",
+            "pcode": "NTH",
+            "province_NAME_EN": "Ninh Thuan",
+            "province_ID": 483
+          },
+          {
+            "province_NAME": "Tỉnh thành Mới Nổi",
+            "pcode": "NEW",
+            "province_NAME_EN": "New Rising province",
+            "province_ID": 524
+          },
+          {
+            "province_NAME": "Nam Định",
+            "pcode": "NDI",
+            "province_NAME_EN": "Nam Dinh",
+            "province_ID": 488
+          },
+          {
+            "province_NAME": "Ninh Bình",
+            "pcode": "NBI",
+            "province_NAME_EN": "Ninh Binh",
+            "province_ID": 484
+          },
+          {
+            "province_NAME": "Nghệ An",
+            "pcode": "NAN",
+            "province_NAME_EN": "Nghe An",
+            "province_ID": 463
+          },
+          {
+            "province_NAME": "Lạng Sơn",
+            "pcode": "LSO",
+            "province_NAME_EN": "Lang Son",
+            "province_ID": 492
+          },
+          {
+            "province_NAME": "Lâm Đồng",
+            "pcode": "LDO",
+            "province_NAME_EN": "Lam Dong",
+            "province_ID": 493
+          },
+          {
+            "province_NAME": "Lai Châu",
+            "pcode": "LCH",
+            "province_NAME_EN": "Lai Chau",
+            "province_ID": 519
+          },
+          {
+            "province_NAME": "Lào Cai",
+            "pcode": "LCA",
+            "province_NAME_EN": "Lao Cai",
+            "province_ID": 491
+          },
+          {
+            "province_NAME": "Long An",
+            "pcode": "LAN",
+            "province_NAME_EN": "Long An",
+            "province_ID": 490
+          },
+          {
+            "province_NAME": "Kon Tum",
+            "pcode": "KTU",
+            "province_NAME_EN": "Kon Tum",
+            "province_ID": 494
+          },
+          {
+            "province_NAME": "Khánh Hoà",
+            "pcode": "KHO",
+            "province_NAME_EN": "Khanh Hoa",
+            "province_ID": 486
+          },
+          {
+            "province_NAME": "Kiên Giang",
+            "pcode": "KGI",
+            "province_NAME_EN": "Kien Giang",
+            "province_ID": 481
+          },
+          {
+            "province_NAME": "Hưng Yên",
+            "pcode": "HYE",
+            "province_NAME_EN": "Hung Yen",
+            "province_ID": 482
+          },
+          {
+            "province_NAME": "Hà Tĩnh",
+            "pcode": "HTI",
+            "province_NAME_EN": "Ha Tinh",
+            "province_ID": 497
+          },
+          {
+            "province_NAME": "Hà Tây",
+            "pcode": "HTA",
+            "province_NAME_EN": "Ha Tay",
+            "province_ID": 516
+          },
+          {
+            "province_NAME": "Hải Phòng",
+            "pcode": "HPH",
+            "province_NAME_EN": "Hai Phong",
+            "province_ID": 487
+          },
+          {
+            "province_NAME": "Hà Nội",
+            "pcode": "HNO",
+            "province_NAME_EN": "Ha Noi",
+            "province_ID": 467
+          },
+          {
+            "province_NAME": "Hà Nam",
+            "pcode": "HNA",
+            "province_NAME_EN": "Ha Nam",
+            "province_ID": 498
+          },
+          {
+            "province_NAME": "Hà Giang",
+            "pcode": "HGI",
+            "province_NAME_EN": "Ha Giang",
+            "province_ID": 515
+          },
+          {
+            "province_NAME": "Hậu Giang",
+            "pcode": "HGA",
+            "province_NAME_EN": "Hau Giang",
+            "province_ID": 517
+          },
+          {
+            "province_NAME": "Hải Dương",
+            "pcode": "HDU",
+            "province_NAME_EN": "Hai Duong",
+            "province_ID": 496
+          },
+          {
+            "province_NAME": "Hồ Chí Minh",
+            "pcode": "HCM",
+            "province_NAME_EN": "Ho Chi Minh",
+            "province_ID": 466
+          },
+          {
+            "province_NAME": "Hòa Bình",
+            "pcode": "HBI",
+            "province_NAME_EN": "Hoa Binh",
+            "province_ID": 518
+          },
+          {
+            "province_NAME": "Hà Bắc",
+            "pcode": "HBA",
+            "province_NAME_EN": "Ha Bac",
+            "province_ID": 514
+          },
+          {
+            "province_NAME": "Gia Lai",
+            "pcode": "GLA",
+            "province_NAME_EN": "Gia Lai",
+            "province_ID": 499
+          },
+          {
+            "province_NAME": "Đồng Tháp",
+            "pcode": "DTH",
+            "province_NAME_EN": "Dong Thap",
+            "province_ID": 500
+          },
+          {
+            "province_NAME": "Dak Nông",
+            "pcode": "DNO",
+            "province_NAME_EN": "Dak Nong",
+            "province_ID": 512
+          },
+          {
+            "province_NAME": "Đồng Nai",
+            "pcode": "DNA",
+            "province_NAME_EN": "Dong Nai",
+            "province_ID": 485
+          },
+          {
+            "province_NAME": "Đắk Lắk",
+            "pcode": "DLA",
+            "province_NAME_EN": "Dak Lak",
+            "province_ID": 501
+          },
+          {
+            "province_NAME": "Điện Biên",
+            "pcode": "DBI",
+            "province_NAME_EN": "Dien Bien",
+            "province_ID": 513
+          },
+          {
+            "province_NAME": "Đà Nẵng",
+            "pcode": "DAN",
+            "province_NAME_EN": "Da Nang",
+            "province_ID": 489
+          },
+          {
+            "province_NAME": "Cần Thơ",
+            "pcode": "CTH",
+            "province_NAME_EN": "Can Tho",
+            "province_ID": 471
+          },
+          {
+            "province_NAME": "Cà Mau",
+            "pcode": "CMA",
+            "province_NAME_EN": "Ca Mau",
+            "province_ID": 503
+          },
+          {
+            "province_NAME": "Cao Bằng",
+            "pcode": "CBA",
+            "province_NAME_EN": "Cao Bang",
+            "province_ID": 511
+          },
+          {
+            "province_NAME": "Bến Tre",
+            "pcode": "BTR",
+            "province_NAME_EN": "Ben Tre",
+            "province_ID": 506
+          },
+          {
+            "province_NAME": "Bình Thuận",
+            "pcode": "BTH",
+            "province_NAME_EN": "Binh Thuan",
+            "province_ID": 504
+          },
+          {
+            "province_NAME": "Bà Rịa - Vũng Tàu",
+            "pcode": "BRV",
+            "province_NAME_EN": "Ba Ria - Vung Tau",
+            "province_ID": 460
+          },
+          {
+            "province_NAME": "Bình Phước",
+            "pcode": "BPH",
+            "province_NAME_EN": "Binh Phuoc",
+            "province_ID": 505
+          },
+          {
+            "province_NAME": "Bắc Ninh",
+            "pcode": "BNI",
+            "province_NAME_EN": "Bac Ninh",
+            "province_ID": 507
+          },
+          {
+            "province_NAME": "Bạc Liêu",
+            "pcode": "BLI",
+            "province_NAME_EN": "Bac Lieu",
+            "province_ID": 508
+          },
+          {
+            "province_NAME": "Bắc Giang",
+            "pcode": "BGI",
+            "province_NAME_EN": "Bac Giang",
+            "province_ID": 509
+          },
+          {
+            "province_NAME": "Bình Dương",
+            "pcode": "BDU",
+            "province_NAME_EN": "Binh Duong",
+            "province_ID": 459
+          },
+          {
+            "province_NAME": "Bình Định",
+            "pcode": "BDI",
+            "province_NAME_EN": "Binh Dinh",
+            "province_ID": 480
+          },
+          {
+            "province_NAME": "Bắc Cạn",
+            "pcode": "BCA",
+            "province_NAME_EN": "Bac Can",
+            "province_ID": 510
+          },
+          {
+            "province_NAME": "An Giang ",
+            "pcode": "AGI",
+            "province_NAME_EN": "An Giang ",
+            "province_ID": 502
+          },
+          {
+            "province_NAME": "Unknown",
+            "pcode": "999",
+            "province_NAME_EN": "Unknown",
+            "province_ID": 522
+          }
+        ]
+      }
+    }
+  }
+}

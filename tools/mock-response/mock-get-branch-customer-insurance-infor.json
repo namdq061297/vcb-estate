@@ -1,0 +1,57 @@
+{
+  "name": "/api/v1/reg/getBranchCustomerInsuranceInfo",
+  "request": {
+    "url": "/api/v1/reg/getBranchCustomerInsuranceInfo",
+    "method": "POST"
+  },
+  "responses": {
+    "success": {
+      "default": true,
+      "status": 200,
+      "data": {
+        "code": 0,
+        "desc": "Success",
+        "data": {
+          "status" : 2,
+          "province": {
+            "province_ID": 467,
+            "province_NAME": "",
+            "pcode": "",
+            "province_NAME_EN": ""
+          },
+          "district": {
+            "district_ID": 1315,
+            "district_NAME": "",
+            "province_ID": "",
+            "district_NAME_EN": ""
+          },
+          "office": {
+            "district_ID": 1321,
+            "branch_ID": 1,
+            "costcenter": 100,
+            "office_NAME": "Trụ sở CN Sở giao dịch",
+            "office_ID": 173,
+            "address": "Số 11 Láng Hạ, phường Thành Công, quận Ba Đình, thành phố Hà Nội",
+            "latitude": "21.021441",
+            "longitude": "105.818422",
+            "slots": "08:00|08:30|09:00|09:30|10:00|10:30|11:00|11:30|13:00|13:30|14:00|14:30|15:00|15:30|16:00",
+            "status": 1,
+            "ccname": "VCB So giao dich-Tru so CN",
+            "sms": "Tru so CN VCB So giao dich",
+            "office_NAME_EN": "So giao dich Branch",
+            "address_EN": "No. 11 Lang Ha, Thanh Cong Ward, Ba Dinh District, Ha Noi City ",
+            "emaillist": "trangpt1.ho@vietcombank.com.vn",
+            "last_UPDATE_DATE": "2023-02-24 16:45:15.0",
+            "email_KYC": "linhptt.ho@vietcombank.com.vn",
+            "available_STATUS": "3",
+            "rlos_STATUS": "1",
+            "debit_STATUS": "0",
+            "insurance_STATUS": "0",
+            "credit_STATUS": "0",
+            "loan_STATUS": "0"
+          }
+        }
+      }
+    }
+  }
+}
