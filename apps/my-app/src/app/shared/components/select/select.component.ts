@@ -14,7 +14,7 @@ import { TuiChevron, TuiDataListWrapper, TuiSelect } from '@taiga-ui/kit';
 import { TuiDataList, TuiError, TuiLoader, TUI_VALIDATION_ERRORS, TuiDropdown } from '@taiga-ui/core';
 import { ErrorMessages } from '../form-controls.const';
 import { TuiContext, TuiStringHandler } from '@taiga-ui/cdk';
-import { DisabledControlDirective } from '@vcb/shared/directives';
+import { DisabledControlDirective } from '@app/shared/directives';
 
 export interface SelectItem<T = string> {
   value: T;

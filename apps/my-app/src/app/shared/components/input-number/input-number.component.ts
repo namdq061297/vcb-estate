@@ -18,7 +18,7 @@ import {
 import { TuiInputNumber } from '@taiga-ui/kit';
 import { ErrorMessages, InputNumberMaxValue } from '../form-controls.const';
 import { TUI_NUMBER_FORMAT, TuiError, TUI_VALIDATION_ERRORS } from '@taiga-ui/core';
-import { DisabledControlDirective } from '@vcb/shared/directives';
+import { DisabledControlDirective } from '@app/shared/directives';
 
 @Component({
   selector: 'vcb-input-number',

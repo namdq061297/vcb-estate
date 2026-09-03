@@ -11,7 +11,7 @@ import {
 } from '@angular/forms';
 import { ErrorMessages } from '../form-controls.const';
 import { TuiError, TuiInput, TuiLabel, TUI_VALIDATION_ERRORS } from '@taiga-ui/core';
-import { DisabledControlDirective } from '@vcb/shared/directives';
+import { DisabledControlDirective } from '@app/shared/directives';
 
 @Component({
   selector: 'vcb-input',

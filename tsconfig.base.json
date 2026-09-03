@@ -9,7 +9,7 @@
     "paths": {
       "@icons": ["./apps/my-app/public/assets/icons/index.ts"],
       "@images": ["./apps/my-app/public/assets/images/index.ts"],
-      "@vcb/shared/directives": ["./apps/my-app/src/app/shared/directives/src/index.ts"]
+      "@app/shared/directives": ["./apps/my-app/src/app/shared/directives/src/index.ts"]
     }
   }
 }

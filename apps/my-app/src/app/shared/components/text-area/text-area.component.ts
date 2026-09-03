@@ -12,7 +12,7 @@ import {
 import { TuiTextarea } from '@taiga-ui/kit';
 import { ErrorMessages } from '../form-controls.const';
 import { TuiError, TUI_VALIDATION_ERRORS } from '@taiga-ui/core';
-import { DisabledControlDirective } from '@vcb/shared/directives';
+import { DisabledControlDirective } from '@app/shared/directives';
 
 @Component({
   selector: 'vcb-text-area',

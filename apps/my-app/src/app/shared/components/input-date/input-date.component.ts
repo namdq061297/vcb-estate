@@ -31,7 +31,7 @@ import {
   TUI_VALIDATION_ERRORS,
 } from '@taiga-ui/core';
 import { tuiControlValue, TuiDay, TuiValueTransformer } from '@taiga-ui/cdk';
-import { DisabledControlDirective } from '@vcb/shared/directives';
+import { DisabledControlDirective } from '@app/shared/directives';
 import { PolymorpheusComponent } from '@tinkoff/ng-polymorpheus';
 import { TuiMobileCalendar, TUI_CALENDAR_DATE_STREAM } from '@taiga-ui/addon-mobile';
 import { map, Observable } from 'rxjs';

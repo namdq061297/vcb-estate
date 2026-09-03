@@ -11,7 +11,7 @@ import {
 } from '@angular/forms';
 import { ErrorMessages } from '../form-controls.const';
 import { TuiError, TUI_VALIDATION_ERRORS } from '@taiga-ui/core';
-import { ClickStopPropagationDirective } from '@vcb/shared/directives';
+import { ClickStopPropagationDirective } from '@app/shared/directives';
 
 export interface TimeSlot {
   label: string;
@@ -20,7 +20,7 @@ export interface TimeSlot {
 
 const MAX_SELECTED = 2;
 
-// TODO: thay bằng dữ liệu thật từ @vcb/http-access/customer/models khi lib đó được tạo
+// TODO: thay bằng dữ liệu thật từ @app/http-access/customer/models khi lib đó được tạo
 const LabelByTimeSlotId: Record<number, string> = {
   1: '07:00 - 08:00',
   2: '08:00 - 09:00',

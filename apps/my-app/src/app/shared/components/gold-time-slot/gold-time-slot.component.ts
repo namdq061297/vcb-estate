@@ -11,14 +11,14 @@ import {
 } from '@angular/forms';
 import { ErrorMessages } from '../form-controls.const';
 import { TuiError, TuiLoader, TUI_VALIDATION_ERRORS } from '@taiga-ui/core';
-import { ClickStopPropagationDirective } from '@vcb/shared/directives';
+import { ClickStopPropagationDirective } from '@app/shared/directives';
 
 export interface GoldTimeSlot {
   label: string;
   value: number;
 }
 
-// TODO: thay bằng dữ liệu thật từ @vcb/http-access/customer/models khi lib đó được tạo
+// TODO: thay bằng dữ liệu thật từ @app/http-access/customer/models khi lib đó được tạo
 const LabelByTimeSlotIdGold: Record<number, string> = {
   3: '09:00 - 10:00',
   4: '10:00 - 11:00',

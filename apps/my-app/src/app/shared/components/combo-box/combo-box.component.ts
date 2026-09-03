@@ -31,7 +31,7 @@ import {
   TuiFilterByInputPipe,
   TuiDropdown,
 } from '@taiga-ui/core';
-import { DisabledControlDirective } from '@vcb/shared/directives';
+import { DisabledControlDirective } from '@app/shared/directives';
 import Fuse from 'fuse.js';
 import { combineLatest, filter, ReplaySubject, startWith } from 'rxjs';
 import { ScrollingModule } from '@angular/cdk/scrolling';
