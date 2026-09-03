@@ -1,0 +1,14 @@
+<tui-textfield>
+  <label tuiLabel>{{ label }} <b *ngIf='required' class='text-red-500'>*</b></label>
+  <textarea
+    tuiTextarea
+    [formControl]='control'
+    [disabledControl]='disabledControl'
+    [placeholder]='placeholder'
+  ></textarea>
+</tui-textfield>
+
+<tui-error
+  *ngIf='control.touched'
+  [formControl]='control'
+></tui-error>

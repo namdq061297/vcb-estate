@@ -1,0 +1,17 @@
+<tui-textfield>
+  <label tuiLabel>{{ label }} <b *ngIf='required' class='text-red-500'>*</b></label>
+  <input
+    tuiInput
+    type="text"
+    [formControl]='control'
+    [disabledControl]='disabledControl'
+    [placeholder]='placeholder'
+    (change)="modelChange()"
+    [attr.maxLength]='maxLength ? maxLength : null'
+  />
+</tui-textfield>
+
+<tui-error
+  *ngIf='control.touched'
+  [formControl]='control'
+></tui-error>

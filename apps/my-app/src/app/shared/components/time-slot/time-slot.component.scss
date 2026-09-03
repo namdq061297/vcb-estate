@@ -1,0 +1,20 @@
+.default {
+  @apply border-gray-300;
+}
+
+.selected {
+  @apply border-primary text-primary bg-primary/10
+}
+
+button:disabled {
+  @apply bg-gray-200 text-gray-500
+}
+
+.time-slots {
+  @apply grid grid-cols-2 md:grid-cols-4 gap-5;
+  .slot {
+    button {
+      @apply w-full h-full;
+    }
+  }
+}

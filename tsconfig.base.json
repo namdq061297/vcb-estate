@@ -9,11 +9,7 @@
     "paths": {
       "@icons": ["./apps/my-app/public/assets/icons/index.ts"],
       "@images": ["./apps/my-app/public/assets/images/index.ts"],
-      "@vcb/shared/pipes": ["./apps/my-app/src/app/shared/pipes/src/index.ts"],
-      "@vcb/shared/directives": ["./apps/my-app/src/app/shared/directives/src/index.ts"],
-      "@vcb/shared/form-controls": [
-        "./apps/my-app/src/app/shared/components/form-controls/src/index.ts"
-      ]
+      "@vcb/shared/directives": ["./apps/my-app/src/app/shared/directives/src/index.ts"]
     }
   }
 }
