@@ -1,0 +1,27 @@
+{
+  "name": "shared-pipes",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/shared/pipes/src",
+  "prefix": "vcb",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/pipes"],
+      "options": {
+        "jestConfig": "libs/shared/pipes/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/pipes/**/*.ts",
+          "libs/shared/pipes/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

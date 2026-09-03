@@ -1,0 +1,20 @@
+<label [tuiLabel]='tmpLabel'>
+  <tui-text-area
+    [formControl]='control'
+    [tuiTextfieldLabelOutside]='true'
+    [disabledControl]='disabledControl'
+    [expandable]="true"
+  >
+    {{ placeholder }}
+  </tui-text-area>
+
+  <tui-error
+    *ngIf='control.touched'
+    [formControl]='control'
+    [error]="[] | tuiFieldError | async"
+  ></tui-error>
+</label>
+
+<ng-template #tmpLabel>
+  {{ label }} <b *ngIf='required' class='text-red-500'>*</b>
+</ng-template>

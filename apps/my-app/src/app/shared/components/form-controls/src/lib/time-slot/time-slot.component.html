@@ -1,0 +1,25 @@
+<label [tuiLabel]='tmpLabel' style='min-height: 0' class="mb-3"></label>
+<div class='time-slots'>
+  <div *ngFor='let item of TimeSlots' class='slot'>
+    <button
+      class='flex justify-center border rounded-full py-3 cursor-pointer'
+      [class.default]='!control.value.includes(item.value)'
+      [class.selected]='control.value.includes(item.value)'
+      vcbClickStopPropagation
+      (click)='onTimeSlotSelect(item.value)'
+      [disabled]='disabledControl'
+    >
+      {{ item.label }}
+    </button>
+  </div>
+</div>
+
+<tui-error
+  *ngIf='control.touched'
+  [formControl]='control'
+  [error]="[] | tuiFieldError | async"
+></tui-error>
+
+<ng-template #tmpLabel>
+  {{ label }} <b *ngIf='required' class='text-red-500'>*</b>
+</ng-template>

@@ -1,0 +1,30 @@
+.default {
+  @apply border-gray-300;
+}
+
+.selected {
+  @apply border-primary text-primary bg-primary/10
+}
+
+button:disabled {
+  @apply bg-gray-200 text-gray-500
+}
+
+.time-slots-container {
+  .time-slots {
+    &:first-child {
+      margin-bottom: var(--bs-gutter-y);
+    }
+  }
+}
+
+.time-slots {
+  @apply row g-5;
+  .slot {
+    flex: 0 0 auto;
+    @apply w-[50%] lg:w-[20%];
+    button {
+      @apply w-full h-full;
+    }
+  }
+}

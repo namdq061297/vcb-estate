@@ -1,0 +1,19 @@
+<tui-checkbox-labeled
+  [formControl]='control'
+  size="l"
+>
+  <ng-container *ngIf='!isLabelTemplate; else tmpLabel'>
+    {{ label }} <b *ngIf='required' class='text-red-500'>*</b>
+  </ng-container>
+</tui-checkbox-labeled>
+
+<tui-error
+  *ngIf='control.touched'
+  [formControl]='control'
+  [error]="[] | tuiFieldError | async"
+></tui-error>
+
+<ng-template #tmpLabel>
+  <ng-container *ngTemplateOutlet='$any(label)'></ng-container>
+  <b *ngIf='required' class='text-red-500'>*</b>
+</ng-template>
