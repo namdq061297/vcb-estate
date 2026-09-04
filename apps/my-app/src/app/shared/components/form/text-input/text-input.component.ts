@@ -67,10 +67,12 @@ let nextInputId = 0;
     `
       :host {
         display: block;
+        width: 100%;
       }
 
       .text-input {
         display: grid;
+        grid-template-columns: minmax(0, 1fr);
         gap: 6px;
       }
 
@@ -118,7 +120,7 @@ let nextInputId = 0;
         border-radius: 8px;
         border: 1px solid var(--color-border-primary-brand, #d5d7da);
         background: var(--color-bg-surface-primary, #ffffff);
-        padding: 10px 14px;
+        padding: 12px 10px;
         color: var(--color-text-primary, #181d27);
         font-family: var(--font-family-base, sans-serif);
         font-size: var(--font-size-14, 0.875rem);

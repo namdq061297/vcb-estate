@@ -14,7 +14,8 @@
 }
 
 .request-search__input {
-  // width: min(100%, 610px);
+  width: 400px;
+  max-width: 100%;
 }
 
 .request-search__input ::ng-deep .text-input__control {

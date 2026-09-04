@@ -5,10 +5,10 @@ import { AuthStateService } from '../../core/services/auth-state.service';
 import { ButtonComponent } from '../../shared/components/button/button.component';
 import { IconComponent } from '../../shared/components/icon/icon.component';
 import { ImageComponent } from '../../shared/components/image/image.component';
-import { TextInputComponent } from '../../shared/components/text-input/text-input.component';
 import { FooterComponent } from '../../shared/components/footer/footer.component';
 import { PHONE_PATTERN_SOURCE } from '../../shared/validation/phone.validation';
 import { LOGIN_VALIDATION_MESSAGES } from '../../shared/validation/validation-messages';
+import { TextInputComponent } from '../../shared/components/form/text-input/text-input.component';
 
 @Component({
   selector: 'app-login-page',

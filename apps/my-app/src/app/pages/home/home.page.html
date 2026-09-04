@@ -3,8 +3,15 @@
 		<h1 class="title_small">Trang chủ</h1>
 
 		<div class="request-search__input">
-			<app-text-input [isSearch]="true" [label]="''" [value]="searchValue()" [placeholder]="'Nhập từ khoá để tìm kiếm'"
+			<app-text-input [isSearch]="true" [label]="" [value]="searchValue()" [placeholder]="'Nhập từ khoá để tìm kiếm'"
 				(valueChange)="onSearchChange($event)" />
+				<app-text-input [required]="true" [label]="" [placeholder]="'Nhập từ khoá để tìm kiếm'"
+				 />
+		</div>
+
+		<div class="request-search__input">
+			<app-select-input [required]="true" label="Tỉnh/Thành phố" placeholder="Chọn tỉnh/thành phố" [items]="cityOptions"
+				[value]="cityValue()" (valueChange)="onCityChange($event)" />
 		</div>
 
 		@if (isLoadingProfile()) {
