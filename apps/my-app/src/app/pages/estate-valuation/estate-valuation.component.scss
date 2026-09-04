@@ -86,16 +86,52 @@
   }
 }
 
-::ng-deep .purpose-modal__options tui-radio-block {
+.purpose-option {
+  display: flex;
+  // flex-direction: row-reverse;
+  align-items: center;
+  // justify-content: space-between;
+  gap: 12px;
+  border: 1px solid var(--color-border-disable-subtle, #e9eaeb);
   border-radius: 12px;
-  .t-label {
-    margin-bottom: 0 !important;
-    font-size: 14px;
-  }
-  .t-content {
-    tui-radio {
-      margin-top: 15px !important;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: var(--color-text-primary);
+  cursor: pointer;
+
+  input[type='radio'] {
+    appearance: none;
+    -webkit-appearance: none;
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 2px solid var(--color-border-disable-subtle, #e9eaeb);
+    background-color: var(--color-bg-surface-primary, #fff);
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.15s ease;
+
+    &:hover {
+      border-color: var(--color-border-brand-primary);
     }
+
+    &:checked {
+      border-color: var(--color-border-brand-primary);
+
+      &::after {
+        content: '';
+        position: absolute;
+        inset: 3px;
+        border-radius: 50%;
+        background-color: var(--color-border-brand-primary);
+      }
+    }
+  }
+
+  &--selected {
+    border-color: var(--color-border-brand-primary);
   }
 }
 
@@ -104,12 +140,16 @@
     display: flex;
     align-items: flex-start;
     gap: 8px;
-    background: color-mix(in srgb, var(--color-border-warning) 12%, white);
+    background: var(--color-bg-warning);
     border-radius: 12px;
     padding: 12px 14px;
     font-size: 13px;
     color: var(--color-border-warning);
     line-height: 1.5;
+
+    p {
+      color: var(--color-border-warning);
+    }
 
     b {
       color: var(--color-border-warning);

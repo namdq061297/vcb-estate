@@ -1,0 +1,89 @@
+// modal.component.scss
+:host {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  pointer-events: none; // mặc định không nhận click khi đóng
+  visibility: hidden;
+
+  &.is-open {
+    pointer-events: auto;
+    visibility: visible;
+  }
+}
+
+.vcb-modal-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease;
+}
+
+:host(.is-open) .vcb-modal-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.vcb-modal {
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  transform: scale(0.96);
+  opacity: 0;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+
+  @media (min-width: 768px) {
+    max-width: var(--vcb-modal-desktop-max-width, 580px);
+  }
+}
+
+:host(.is-open) .vcb-modal {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.vcb-modal__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.vcb-modal__back-icon {
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.vcb-modal__title {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-text-primary, #181d27);
+
+  &--offset {
+    flex: 1;
+    margin-right: 28px;
+  }
+}
+
+.vcb-modal__body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.vcb-modal__footer {
+  display: flex;
+  gap: 12px;
+
+  > * {
+    flex: 1;
+  }
+}

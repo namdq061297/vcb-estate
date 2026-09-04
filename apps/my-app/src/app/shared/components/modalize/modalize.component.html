@@ -1,0 +1,33 @@
+<!-- modal.component.html -->
+<div class="vcb-modal-overlay" (mousedown)="onOverlayMousedown()">
+  <div
+    class="vcb-modal"
+    [style.max-width]="maxWidth"
+    [style.--vcb-modal-desktop-max-width]="desktopMaxWidth"
+    (mousedown)="$event.stopPropagation()"
+  >
+    <div class="vcb-modal__header">
+      <app-icon
+        *ngIf="showBackIcon"
+        class="vcb-modal__back-icon"
+        name="ic_back"
+        [size]="20"
+        (click)="close()"
+      ></app-icon>
+      <p
+        class="vcb-modal__title"
+        [class.vcb-modal__title--offset]="showBackIcon"
+      >
+        {{ title }}
+      </p>
+    </div>
+
+    <div class="vcb-modal__body">
+      <ng-content></ng-content>
+    </div>
+
+    <div class="vcb-modal__footer">
+      <ng-content select="[modal-footer]"></ng-content>
+    </div>
+  </div>
+</div>

@@ -129,9 +129,8 @@
     </form>
   </div>
 
-  <!-- Modal: mục đích tra cứu (tạm thời comment, chưa có vcb-modal) -->
-  <!--
-  <vcb-modal
+  <!-- Modal: mục đích tra cứu -->
+  <app-modalize
     title="Mục đích tra cứu giá bất động sản của Quý khách"
     [open]="showPurposeModal"
     maxWidth="440px"
@@ -143,45 +142,37 @@
     </p>
 
     <div class="purpose-modal__options">
-      <tui-radio-block
+      <label
         *ngFor="let option of purposeOptions"
-        [item]="option.value"
-        [formControl]="purposeControl"
-        size="m"
-        contentAlign="left"
+        class="purpose-option"
+        [class.purpose-option--selected]="purposeControl.value === option.value"
       >
-        {{ option.label }}
-      </tui-radio-block>
+        <input
+          type="radio"
+          name="purpose"
+          [value]="option.value"
+          [formControl]="purposeControl"
+        />
+        <span>{{ option.label }}</span>
+      </label>
     </div>
 
     <div modal-footer class="flex justify-between gap-3 w-full">
-      <button
-        tuiButton
-        type="button"
-        appearance="outline"
-        size="l"
-        (click)="closePurposeModal()"
-        class="flex-1"
-      >
-        Hủy
-      </button>
-      <button
-        tuiButton
-        type="button"
-        appearance="primary"
-        size="l"
-        class="flex-1"
-        (click)="onContinuePurpose()"
-      >
-        Tiếp tục
-      </button>
+      <app-button
+        label="Hủy"
+        type="secondary"
+        (pressed)="closePurposeModal()"
+      ></app-button>
+      <app-button
+        label="Tiếp tục"
+        (pressed)="onContinuePurpose()"
+      ></app-button>
     </div>
-  </vcb-modal>
-  -->
+  </app-modalize>
 
-  <!-- Modal: hết lượt tra cứu (tạm thời comment, chưa có vcb-modal / tui-svg) -->
-  <!--
-  <vcb-modal
+  <!-- Modal: hết lượt tra cứu -->
+
+  <app-modalize
     title="Hết lượt tra cứu"
     [open]="showQuotaModal"
     maxWidth="440px"
@@ -189,10 +180,11 @@
     (closed)="closeQuotaModal()"
   >
     <div class="quota-modal__warning">
-      <tui-svg
+      <app-icon
         class="quota-modal__warning-icon"
-        src="tuiIconWarning"
-      ></tui-svg>
+        name="ic_warning"
+        [size]="20"
+      ></app-icon>
       <p>
         Đã hết lượt tra cứu, quý khách vui lòng quay lại vào ngày hôm sau
         <b>{{ nextAvailableDate }}</b> hoặc liên hệ
@@ -200,17 +192,12 @@
       </p>
     </div>
 
-    <button
-      modal-footer
-      tuiButton
-      type="button"
-      appearance="primary"
-      size="l"
-      (click)="closeQuotaModal()"
-      class="w-full"
+    <app-button
+      label="Đóng"
+      (pressed)="closeQuotaModal()"
     >
       Đóng
-    </button>
-  </vcb-modal>
-  -->
+    </app-button>
+  </app-modalize>
+ 
 </div>

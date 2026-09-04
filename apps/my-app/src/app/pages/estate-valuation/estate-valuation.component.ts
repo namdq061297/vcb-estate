@@ -13,6 +13,8 @@ import {
 } from '../../shared/components/form/select-input/select-input.component';
 import { TextInputComponent } from '../../shared/components/form/text-input/text-input.component';
 import { ButtonComponent } from '../../shared/components/button/button.component';
+import { AppModalizeComponent } from '../../shared/components/modalize/modalize.component';
+import { IconComponent } from '../../shared/components/icon/icon.component';
 
 type EstateTab = 'apartment' | 'land';
 
@@ -29,6 +31,8 @@ interface PurposeOption {
     SelectInputComponent,
     TextInputComponent,
     ButtonComponent,
+    AppModalizeComponent,
+    IconComponent,
   ],
   templateUrl: 'estate-valuation.component.html',
   styleUrls: ['estate-valuation.component.scss'],
