@@ -161,4 +161,65 @@
     flex-shrink: 0;
     margin-top: 2px;
   }
+
+  &__register-link {
+    width: 100%;
+    text-align: center;
+    background: none;
+    border: none;
+    padding: 4px 0 0;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-text-brand-primary);
+    cursor: pointer;
+  }
+}
+
+.download-app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  // border: 1px dashed var(--color-border-brand-primary-subtle, #55aa84);
+  background-image: url('/assets/images/modal_qr_bg.png');
+  border-radius: 12px;
+  padding: 20px;
+
+  &__qr {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+  }
+
+  &__qr-label {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-text-brand-primary);
+  }
+
+  &__info {
+    width: 100%;
+    // border-radius: 12px;
+    // border: 1px dashed var(--color-border-brand-primary-subtle, #55aa84);
+    // background-image: url('/assets/images/modal_qr_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    // padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__info-title {
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--color-text-brand-primary);
+  }
+
+  &__info-desc {
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--color-text-primary, #181d27);
+  }
 }

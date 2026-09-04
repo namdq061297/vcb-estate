@@ -1,9 +1,6 @@
 <div class="estate-valuation">
-  <div class="wrap-title text-center mt-6 md:mt-10 px-4">
-    <p
-      style="color: var(--color-text-brand-primary)"
-      class="font-semibold text-lg md:text-xl mb-1"
-    >
+  <div class="wrap-title text-center pt-10 px-4">
+    <p style="color: var(--color-text-brand-primary)" class="font-semibold text-lg md:text-xl mb-1">
       CÔNG CỤ ƯỚC GIÁ BẤT ĐỘNG SẢN
     </p>
     <p style="color: var(--color-gray-500)" class="text-sm">
@@ -157,26 +154,14 @@
         class="purpose-option"
         [class.purpose-option--selected]="purposeControl.value === option.value"
       >
-        <input
-          type="radio"
-          name="purpose"
-          [value]="option.value"
-          [formControl]="purposeControl"
-        />
+        <input type="radio" name="purpose" [value]="option.value" [formControl]="purposeControl" />
         <span>{{ option.label }}</span>
       </label>
     </div>
 
     <div modal-footer class="flex justify-between gap-3 w-full">
-      <app-button
-        label="Hủy"
-        type="secondary"
-        (pressed)="closePurposeModal()"
-      ></app-button>
-      <app-button
-        label="Tiếp tục"
-        (pressed)="onContinuePurpose()"
-      ></app-button>
+      <app-button label="Hủy" type="secondary" (pressed)="closePurposeModal()"></app-button>
+      <app-button label="Tiếp tục" (pressed)="onContinuePurpose()"></app-button>
     </div>
   </app-modalize>
 
@@ -190,24 +175,56 @@
     (closed)="closeQuotaModal()"
   >
     <div class="quota-modal__warning">
-      <app-icon
-        class="quota-modal__warning-icon"
-        name="ic_warning"
-        [size]="20"
-      ></app-icon>
+      <app-icon class="quota-modal__warning-icon" name="ic_warning" [size]="20"></app-icon>
       <p>
         Đã hết lượt tra cứu, quý khách vui lòng quay lại vào ngày hôm sau
-        <b>{{ nextAvailableDate }}</b> hoặc liên hệ
-        <b>Hotline {{ supportHotline }}</b> để được tư vấn.
+        <b>{{ nextAvailableDate }}</b> hoặc liên hệ <b>Hotline {{ supportHotline }}</b> để được tư
+        vấn.
       </p>
     </div>
 
-    <app-button
-      label="Đóng"
-      (pressed)="closeQuotaModal()"
-    >
-      Đóng
-    </app-button>
+    <app-button label="Đóng" (pressed)="closeQuotaModal()"> Đóng </app-button>
+
+    <button type="button" class="quota-modal__register-link" (click)="openDownloadAppModal()">
+      Đăng ký VCB Digibank ngay
+    </button>
   </app-modalize>
- 
+
+  <!-- Modal: đăng ký VCB Digibank -->
+  <app-modalize
+    title="Hết lượt tra cứu"
+    [open]="showDownloadAppModal"
+    maxWidth="440px"
+    desktopMaxWidth="50vw"
+    (closed)="closeDownloadAppModal()"
+  >
+    <div class="quota-modal__warning">
+      <app-icon class="quota-modal__warning-icon" name="ic_warning" [size]="20"></app-icon>
+      <p>
+        Quý khách đã hết lượt tra cứu trong ngày. Đăng ký dịch vụ ngân hàng điện tử
+        <b>VCB Digibank</b> để nhận thêm lượt tra cứu mỗi ngày.
+      </p>
+    </div>
+
+    <div class="download-app">
+      <div class="w-full flex flex-col items-center justify-center bg-white rounded-lg p-4">
+        <img
+          class="download-app__qr"
+          src="/assets/images/app_qr.png"
+          alt="QR tải app VCB Digibank"
+        />
+        <p class="download-app__qr-label">Quét QR để tải app</p>
+      </div>
+
+      <div class="download-app__info">
+        <p class="download-app__info-title">Ngân hàng số VCB Digibank</p>
+        <p class="download-app__info-desc">
+          Dịch vụ ngân hàng 24/7, giúp khách hàng thực hiện giao dịch bất kỳ mọi lúc mọi nơi, trên
+          mọi thiết bị có kết nối Internet.
+        </p>
+      </div>
+    </div>
+
+    <app-button modal-footer label="Đóng" (pressed)="closeDownloadAppModal()"> Đóng </app-button>
+  </app-modalize>
 </div>

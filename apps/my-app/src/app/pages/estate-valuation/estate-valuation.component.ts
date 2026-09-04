@@ -113,4 +113,15 @@ export class EstateValuationComponent {
   closeQuotaModal(): void {
     this.showQuotaModal = false;
   }
+
+  showDownloadAppModal = false;
+
+  openDownloadAppModal(): void {
+    this.showQuotaModal = false;
+    this.showDownloadAppModal = true;
+  }
+
+  closeDownloadAppModal(): void {
+    this.showDownloadAppModal = false;
+  }
 }
