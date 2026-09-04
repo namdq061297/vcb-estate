@@ -1,0 +1,216 @@
+<div class="estate-valuation">
+  <div class="wrap-title text-center mt-6 md:mt-10 px-4">
+    <p
+      style="color: var(--color-text-brand-primary)"
+      class="font-semibold text-lg md:text-xl mb-1"
+    >
+      CÔNG CỤ ƯỚC GIÁ BẤT ĐỘNG SẢN
+    </p>
+    <p style="color: var(--color-gray-500)" class="text-sm">
+      Tra cứu nhanh khoảng giá tham khảo cho căn hộ hoặc đất tại các khu đô thị
+    </p>
+  </div>
+  <!-- form -->
+  <div class="body mx-auto rounded-2xl bg-white shadow-lg overflow-hidden">
+    <div class="flex flex-row px-6">
+      <button
+        type="button"
+        class="tab-item"
+        [class.tab-item--active]="activeTab === 'apartment'"
+        (click)="onTabChange('apartment')"
+      >
+        BDS Chung cư
+      </button>
+      <button
+        type="button"
+        class="tab-item"
+        [class.tab-item--active]="activeTab === 'land'"
+        (click)="onTabChange('land')"
+      >
+        Quyền sử dụng đất
+      </button>
+    </div>
+
+    <!-- BDS Chung cư -->
+    <form
+      *ngIf="activeTab === 'apartment'"
+      class="form-content"
+      [formGroup]="apartmentForm"
+      (ngSubmit)="onSubmit()"
+    >
+      <app-select-input
+        label="Tỉnh/ Thành phố"
+        placeholder="Nhập Tỉnh/ Thành phố"
+        [items]="provinces"
+        [value]="apartmentForm.get('provinceId')?.value"
+        (valueChange)="apartmentForm.get('provinceId')?.setValue($event)"
+      ></app-select-input>
+      <app-select-input
+        label="Phường/ Xã"
+        placeholder="Nhập Phường/ Xã"
+        [items]="wards"
+        [value]="apartmentForm.get('wardId')?.value"
+        (valueChange)="apartmentForm.get('wardId')?.setValue($event)"
+      ></app-select-input>
+      <app-select-input
+        label="Khu đô thị/ Khu chung cư"
+        placeholder="Nhập khu đô thị/ khu chung cư"
+        [items]="urbanAreas"
+        [value]="apartmentForm.get('urbanAreaId')?.value"
+        (valueChange)="apartmentForm.get('urbanAreaId')?.setValue($event)"
+      ></app-select-input>
+      <app-text-input
+        label="Tên toà nhà"
+        placeholder="Nhập tên toà nhà"
+        [value]="apartmentForm.get('buildingId')?.value"
+        (valueChange)="apartmentForm.get('buildingId')?.setValue($event)"
+      ></app-text-input>
+      <app-text-input
+        label="Số căn hộ"
+        placeholder="Nhập số căn hộ"
+        [value]="apartmentForm.get('apartmentNumber')?.value"
+        (valueChange)="apartmentForm.get('apartmentNumber')?.setValue($event)"
+      ></app-text-input>
+      <app-text-input
+        label="Số điện thoại"
+        placeholder="Nhập số điện thoại"
+        inputmode="numeric"
+        [value]="apartmentForm.get('phoneNumber')?.value"
+        (valueChange)="apartmentForm.get('phoneNumber')?.setValue($event)"
+      ></app-text-input>
+
+      <app-button
+        label="Đăng nhập & Ước giá"
+        class="submit-btn"
+        (pressed)="onSubmit()"
+      ></app-button>
+    </form>
+
+    <!-- Quyền sử dụng đất -->
+    <form
+      *ngIf="activeTab === 'land'"
+      class="form-content"
+      [formGroup]="landForm"
+      (ngSubmit)="onSubmit()"
+    >
+      <app-select-input
+        label="Tỉnh/ Thành phố"
+        placeholder="Nhập Tỉnh/ Thành phố"
+        [items]="provinces"
+        [value]="landForm.get('provinceId')?.value"
+        (valueChange)="landForm.get('provinceId')?.setValue($event)"
+      ></app-select-input>
+      <app-select-input
+        label="Phường/ Xã"
+        placeholder="Nhập Phường/ Xã"
+        [items]="wards"
+        [value]="landForm.get('wardId')?.value"
+        (valueChange)="landForm.get('wardId')?.setValue($event)"
+      ></app-select-input>
+      <app-select-input
+        label="Khu đô thị/ Khu chung cu"
+        placeholder="Nhập khu đô thị/ khu chung cư"
+        [items]="urbanAreas"
+        [value]="landForm.get('urbanAreaId')?.value"
+        (valueChange)="landForm.get('urbanAreaId')?.setValue($event)"
+      ></app-select-input>
+      <app-text-input
+        label="Số nhà/ Số thửa đất/ Số lô"
+        placeholder="Nhập số nhà/ số thửa đất/ số lô"
+        [value]="landForm.get('landLotNumber')?.value"
+        (valueChange)="landForm.get('landLotNumber')?.setValue($event)"
+      ></app-text-input>
+
+      <app-button
+        label="Đăng nhập & Ước giá"
+        class="submit-btn"
+        (pressed)="onSubmit()"
+      ></app-button>
+    </form>
+  </div>
+
+  <!-- Modal: mục đích tra cứu (tạm thời comment, chưa có vcb-modal) -->
+  <!--
+  <vcb-modal
+    title="Mục đích tra cứu giá bất động sản của Quý khách"
+    [open]="showPurposeModal"
+    maxWidth="440px"
+    desktopMaxWidth="580px"
+    (closed)="closePurposeModal()"
+  >
+    <p class="purpose-modal__subtitle">
+      Thông tin này giúp chúng tôi tư vấn phù hợp hơn cho quý khách
+    </p>
+
+    <div class="purpose-modal__options">
+      <tui-radio-block
+        *ngFor="let option of purposeOptions"
+        [item]="option.value"
+        [formControl]="purposeControl"
+        size="m"
+        contentAlign="left"
+      >
+        {{ option.label }}
+      </tui-radio-block>
+    </div>
+
+    <div modal-footer class="flex justify-between gap-3 w-full">
+      <button
+        tuiButton
+        type="button"
+        appearance="outline"
+        size="l"
+        (click)="closePurposeModal()"
+        class="flex-1"
+      >
+        Hủy
+      </button>
+      <button
+        tuiButton
+        type="button"
+        appearance="primary"
+        size="l"
+        class="flex-1"
+        (click)="onContinuePurpose()"
+      >
+        Tiếp tục
+      </button>
+    </div>
+  </vcb-modal>
+  -->
+
+  <!-- Modal: hết lượt tra cứu (tạm thời comment, chưa có vcb-modal / tui-svg) -->
+  <!--
+  <vcb-modal
+    title="Hết lượt tra cứu"
+    [open]="showQuotaModal"
+    maxWidth="440px"
+    desktopMaxWidth="50vw"
+    (closed)="closeQuotaModal()"
+  >
+    <div class="quota-modal__warning">
+      <tui-svg
+        class="quota-modal__warning-icon"
+        src="tuiIconWarning"
+      ></tui-svg>
+      <p>
+        Đã hết lượt tra cứu, quý khách vui lòng quay lại vào ngày hôm sau
+        <b>{{ nextAvailableDate }}</b> hoặc liên hệ
+        <b>Hotline {{ supportHotline }}</b> để được tư vấn.
+      </p>
+    </div>
+
+    <button
+      modal-footer
+      tuiButton
+      type="button"
+      appearance="primary"
+      size="l"
+      (click)="closeQuotaModal()"
+      class="w-full"
+    >
+      Đóng
+    </button>
+  </vcb-modal>
+  -->
+</div>

@@ -1,0 +1,124 @@
+.estate-valuation {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('/assets/images/bg-estate.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-bottom: 32px;
+
+  .header {
+    border-bottom: 1px solid color-mix(in srgb, var(--color-gray-40) 50%, transparent);
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
+  }
+}
+
+.logo {
+  @apply h-8 w-24 md:h-10 md:w-28;
+  background: url('/assets/icons/logo_full.svg') center center no-repeat;
+  background-size: contain;
+}
+
+.body {
+  width: calc(100% - 32px);
+  max-width: 460px;
+  margin: 24px auto 0;
+
+  @media (min-width: 768px) {
+    width: 90%;
+  }
+}
+
+.tab-item {
+  flex: 1;
+  padding: 12px 6px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-gray-500, #939393);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    padding: 14px 8px;
+    font-size: 14px;
+  }
+  border-bottom-color: var(--color-border-disable-subtle, #e9eaeb);
+  border-bottom-width: 1px;
+  &--active {
+    color: var(--color-text-brand-primary);
+    border-bottom-color: var(--color-border-brand-primary);
+    border-bottom-width: 2px;
+  }
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 16px;
+
+  @media (min-width: 768px) {
+    gap: 16px;
+    padding: 24px;
+  }
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.purpose-modal {
+  &__subtitle {
+    font-size: 14px;
+    color: var(--color-gray-500);
+    margin-top: -8px;
+    text-align: center;
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+::ng-deep .purpose-modal__options tui-radio-block {
+  border-radius: 12px;
+  .t-label {
+    margin-bottom: 0 !important;
+    font-size: 14px;
+  }
+  .t-content {
+    tui-radio {
+      margin-top: 15px !important;
+    }
+  }
+}
+
+.quota-modal {
+  &__warning {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: color-mix(in srgb, var(--color-border-warning) 12%, white);
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 13px;
+    color: var(--color-border-warning);
+    line-height: 1.5;
+
+    b {
+      color: var(--color-border-warning);
+    }
+  }
+
+  &__warning-icon {
+    color: var(--color-border-warning);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+}

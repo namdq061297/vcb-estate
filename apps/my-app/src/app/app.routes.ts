@@ -29,6 +29,13 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/home/home.page').then((m) => m.HomePage),
       },
       {
+        path: 'estate-valuation',
+        loadComponent: () =>
+          import('./pages/estate-valuation/estate-valuation.component').then(
+            (m) => m.EstateValuationComponent,
+          ),
+      },
+      {
         path: '**',
         loadComponent: () => import('./pages/not-found/not-found.page').then((m) => m.NotFoundPage),
       },
