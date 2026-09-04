@@ -13,11 +13,11 @@
   }
 }
 
-.logo {
-  @apply h-8 w-24 md:h-10 md:w-28;
-  background: url('/assets/icons/logo_full.svg') center center no-repeat;
-  background-size: contain;
-}
+// .logo {
+//   @apply h-8 w-24 md:h-10 md:w-28;
+//   background: url('/assets/icons/logo_full.svg') center center no-repeat;
+//   background-size: contain;
+// }
 
 .body {
   width: calc(100% - 32px);

@@ -211,6 +211,7 @@ let nextInputId = 0;
       }
 
       .select-input__search {
+        color-scheme: light;
         width: 100%;
         border: none;
         outline: none;
@@ -218,6 +219,11 @@ let nextInputId = 0;
         font-family: var(--font-family-base, sans-serif);
         font-size: var(--font-size-14, 0.875rem);
         color: var(--color-text-primary, #181d27);
+        background-color: var(--color-bg-surface-primary, #ffffff);
+      }
+
+      .select-input__search::placeholder {
+        color: var(--color-text-placeholder, #717680);
       }
 
       .select-input__options {
