@@ -79,16 +79,22 @@ export class EstateValuationComponent {
   readonly nextAvailableDate = '20/06/2026';
   readonly supportHotline = '1900 545413';
 
+  apartmentSubmitted = false;
+  landSubmitted = false;
+
   onTabChange(tab: EstateTab): void {
     this.activeTab = tab;
   }
 
   onSubmit(): void {
-    this.showPurposeModal = true;
-    return;
-
     const form = this.activeTab === 'apartment' ? this.apartmentForm : this.landForm;
     form.markAllAsTouched();
+
+    if (this.activeTab === 'apartment') {
+      this.apartmentSubmitted = true;
+    } else {
+      this.landSubmitted = true;
+    }
 
     if (form.invalid) {
       return;

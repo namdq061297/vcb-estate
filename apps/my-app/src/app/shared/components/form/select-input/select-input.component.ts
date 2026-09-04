@@ -305,7 +305,7 @@ export class SelectInputComponent<T = string> {
   });
 
   protected readonly showError = computed(
-    () => this.submitted() && !this.disabled() && this.required() && this.value() === undefined,
+    () => this.submitted() && !this.disabled() && this.required() && this.value() == null,
   );
 
   protected toggle(): void {

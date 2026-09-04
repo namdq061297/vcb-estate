@@ -40,6 +40,7 @@
         placeholder="Nhập Tỉnh/ Thành phố"
         [items]="provinces"
         [required]="true"
+        [submitted]="apartmentSubmitted"
         [value]="apartmentForm.get('provinceId')?.value"
         (valueChange)="apartmentForm.get('provinceId')?.setValue($event)"
       ></app-select-input>
@@ -48,6 +49,7 @@
         placeholder="Nhập Phường/ Xã"
         [items]="wards"
         [required]="true"
+        [submitted]="apartmentSubmitted"
         [value]="apartmentForm.get('wardId')?.value"
         (valueChange)="apartmentForm.get('wardId')?.setValue($event)"
       ></app-select-input>
@@ -56,12 +58,14 @@
         placeholder="Nhập khu đô thị/ khu chung cư"
         [items]="urbanAreas"
         [required]="true"
+        [submitted]="apartmentSubmitted"
         [value]="apartmentForm.get('urbanAreaId')?.value"
         (valueChange)="apartmentForm.get('urbanAreaId')?.setValue($event)"
       ></app-select-input>
       <app-text-input
         label="Tên toà nhà"
         [required]="true"
+        [submitted]="apartmentSubmitted"
         placeholder="Nhập tên toà nhà"
         [value]="apartmentForm.get('buildingId')?.value"
         (valueChange)="apartmentForm.get('buildingId')?.setValue($event)"
@@ -70,6 +74,7 @@
         label="Số căn hộ"
         placeholder="Nhập số căn hộ"
         [required]="true"
+        [submitted]="apartmentSubmitted"
         [value]="apartmentForm.get('apartmentNumber')?.value"
         (valueChange)="apartmentForm.get('apartmentNumber')?.setValue($event)"
       ></app-text-input>
@@ -77,6 +82,7 @@
         label="Số điện thoại"
         placeholder="Nhập số điện thoại"
         [required]="true"
+        [submitted]="apartmentSubmitted"
         inputmode="numeric"
         [value]="apartmentForm.get('phoneNumber')?.value"
         (valueChange)="apartmentForm.get('phoneNumber')?.setValue($event)"
@@ -102,6 +108,7 @@
         [items]="provinces"
         [value]="landForm.get('provinceId')?.value"
         [required]="true"
+        [submitted]="landSubmitted"
         (valueChange)="landForm.get('provinceId')?.setValue($event)"
       ></app-select-input>
       <app-select-input
@@ -110,6 +117,7 @@
         [items]="wards"
         [value]="landForm.get('wardId')?.value"
         [required]="true"
+        [submitted]="landSubmitted"
         (valueChange)="landForm.get('wardId')?.setValue($event)"
       ></app-select-input>
       <app-select-input
@@ -117,6 +125,7 @@
         placeholder="Nhập khu đô thị/ khu chung cư"
         [items]="urbanAreas"
         [required]="true"
+        [submitted]="landSubmitted"
         [value]="landForm.get('urbanAreaId')?.value"
         (valueChange)="landForm.get('urbanAreaId')?.setValue($event)"
       ></app-select-input>
@@ -124,6 +133,7 @@
         label="Số nhà/ Số thửa đất/ Số lô"
         placeholder="Nhập số nhà/ số thửa đất/ số lô"
         [required]="true"
+        [submitted]="landSubmitted"
         [value]="landForm.get('landLotNumber')?.value"
         (valueChange)="landForm.get('landLotNumber')?.setValue($event)"
       ></app-text-input>

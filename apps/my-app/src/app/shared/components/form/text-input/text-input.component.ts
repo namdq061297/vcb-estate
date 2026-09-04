@@ -8,6 +8,7 @@ import {
   signal,
 } from '@angular/core';
 import 'iconify-icon';
+import { ErrorMessages } from '../../form-controls.const';
 
 let nextInputId = 0;
 
@@ -186,13 +187,13 @@ export class TextInputComponent {
   private readonly generatedId = `app-text-input-${nextInputId++}`;
   private readonly hasFocus = signal(false);
 
-  private readonly normalizedValue = computed(() => this.value().trim());
+  private readonly normalizedValue = computed(() => (this.value() ?? '').trim());
   protected readonly displayValue = computed(() => {
     if (!this.isNumberInput()) {
-      return this.value();
+      return this.value() ?? '';
     }
 
-    const digitsOnly = this.value().replace(/\D+/g, '');
+    const digitsOnly = (this.value() ?? '').replace(/\D+/g, '');
     if (!digitsOnly) {
       return '';
     }
@@ -239,12 +240,12 @@ export class TextInputComponent {
 
   label = input<string>();
   type = input('text');
-  value = input('');
+  value = input<string | null>('');
   placeholder = input('');
   autocomplete = input<string | undefined>(undefined);
   inputmode = input<string | undefined>(undefined);
   pattern = input<string | undefined>(undefined);
-  requiredErrorMessage = input('Trường này là bắt buộc');
+  requiredErrorMessage = input(ErrorMessages.required);
   patternErrorMessage = input('Giá trị không đúng định dạng');
   isSearch = input(false);
   submitted = input(false);
