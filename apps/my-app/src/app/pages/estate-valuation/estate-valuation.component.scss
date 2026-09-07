@@ -74,7 +74,7 @@
 .purpose-modal {
   &__subtitle {
     font-size: 14px;
-    color: var(--color-gray-500);
+    color: var(--color-text-primary, #181d27);
     margin-top: -8px;
     text-align: center;
   }
@@ -133,6 +133,88 @@
   &--selected {
     border-color: var(--color-border-brand-primary);
   }
+}
+
+.otp-modal {
+  &__subtitle {
+    font-size: 14px;
+    color: var(--color-text-primary, #181d27);
+    margin-top: -8px;
+    text-align: center;
+  }
+
+  &__notice {
+    background: var(--color-line-100, #ECF2D7);
+    border-radius: 12px;
+    padding: 12px 14px;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--color-text-default);
+    text-align: center;
+
+    b {
+      // color: var(--color-text-brand-primary);
+    }
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+  }
+
+  &__resend {
+    text-align: center;
+    font-size: 13px;
+    color: var(--color-text-primary, #181d27);
+
+    b {
+      color: var(--color-text-brand-primary);
+    }
+  }
+
+  &__resend-link {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-text-brand-primary);
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+.otp-modal__input ::ng-deep .ngx-otp-input-root {
+  display: block;
+}
+
+.otp-modal__input ::ng-deep .ngx-otp-input-form {
+  width: 100%;
+  justify-content: center;
+  gap: 8px;
+}
+
+.otp-modal__input ::ng-deep .ngx-otp-input-box {
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--color-border-primary-brand, #d5d7da);
+  border-radius: 8px;
+  color: var(--color-text-primary, #181d27);
+  color-scheme: light;
+}
+
+.otp-modal__input ::ng-deep .ngx-otp-input-active {
+  border: 2px solid var(--color-border-brand-primary);
+}
+
+.otp-modal__input ::ng-deep .ngx-otp-input-failed {
+  border-color: var(--color-border-warning);
+  background: var(--color-bg-error);
 }
 
 .quota-modal {

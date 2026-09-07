@@ -175,6 +175,56 @@
     </div>
   </app-modalize>
 
+  <!-- Modal: xác nhận chia sẻ thông tin & OTP -->
+  <app-modalize
+    title="Xác nhận chia sẻ thông tin & OTP"
+    [open]="showOtpModal"
+    maxWidth="440px"
+    desktopMaxWidth="480px"
+    (closed)="closeOtpModal()"
+  >
+    <p class="otp-modal__subtitle">
+      Bằng việc xác nhận, chúng tôi hiểu là quý khách tự nguyện chia sẻ và cho phép chúng tôi sử
+      dụng thông tin quý khách cung cấp
+    </p>
+
+    <p class="otp-modal__notice">
+      Vui lòng nhập mã OTP vừa được gửi đến số điện thoại <b>{{ maskedPhoneNumber }}</b>
+    </p>
+
+    <form [formGroup]="otpForm" class="otp-modal__form">
+      <ngx-otp-input
+        formControlName="otp"
+        [length]="6"
+        [status]="otpStatus"
+        [autoBlur]="false"
+        class="otp-modal__input"
+        (otpComplete)="onOtpComplete($event)"
+      ></ngx-otp-input>
+    </form>
+
+    <p class="otp-modal__resend">
+      <ng-container *ngIf="!canResendOtp(); else resendLink">
+        Chưa nhận được mã OTP? Gửi lại sau <b>({{ resendLabel() }})</b>
+      </ng-container>
+      <ng-template #resendLink>
+        Chưa nhận được mã OTP?
+        <button type="button" class="otp-modal__resend-link" (click)="resendOtp()">
+          Gửi lại mã
+        </button>
+      </ng-template>
+    </p>
+
+    <div modal-footer class="flex justify-between gap-3 w-full">
+      <app-button label="Huỷ" type="secondary" (pressed)="closeOtpModal()"></app-button>
+      <app-button
+        label="Đồng ý & Tiếp tục"
+        [disabled]="otpValue.length !== 6"
+        (pressed)="onConfirmOtp()"
+      ></app-button>
+    </div>
+  </app-modalize>
+
   <!-- Modal: hết lượt tra cứu -->
 
   <app-modalize

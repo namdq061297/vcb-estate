@@ -18,7 +18,7 @@
     </section>
 
     <form [formGroup]="form">
-      <ngx-otp-input formControlName="otp" [length]="6" [status]="status" class="otp-input"
+      <ngx-otp-input formControlName="otp" [length]="6" [status]="status" [autoBlur]="false" class="otp-input"
         (otpComplete)="verifyOtp($event)"></ngx-otp-input>
     </form>
     <p class="register-copy ">

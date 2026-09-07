@@ -1,5 +1,5 @@
-import { Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, OnDestroy, PLATFORM_ID, computed, inject, signal } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import {
   FormBuilder,
   FormControl,
@@ -7,6 +7,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { NgxOtpInputComponent, type OtpStatus } from 'ngx-otp-input';
 import {
   SelectInputComponent,
   SelectInputOption,
@@ -33,12 +34,14 @@ interface PurposeOption {
     ButtonComponent,
     AppModalizeComponent,
     IconComponent,
+    NgxOtpInputComponent,
   ],
   templateUrl: 'estate-valuation.component.html',
   styleUrls: ['estate-valuation.component.scss'],
 })
-export class EstateValuationComponent {
+export class EstateValuationComponent implements OnDestroy {
   private readonly fb = inject(FormBuilder);
+  private readonly platformId = inject(PLATFORM_ID);
 
   activeTab: EstateTab = 'apartment';
 
@@ -87,6 +90,8 @@ export class EstateValuationComponent {
   }
 
   onSubmit(): void {
+    this.showPurposeModal = true;
+    return
     const form = this.activeTab === 'apartment' ? this.apartmentForm : this.landForm;
     form.markAllAsTouched();
 
@@ -113,11 +118,107 @@ export class EstateValuationComponent {
     }
 
     this.showPurposeModal = false;
-    this.showQuotaModal = true;
+    this.openOtpModal();
   }
 
   closeQuotaModal(): void {
     this.showQuotaModal = false;
+  }
+
+  readonly demoPhoneNumber = '0345765432';
+  readonly otpResendDuration = 119;
+
+  showOtpModal = false;
+  otpStatus: OtpStatus = 'idle';
+  otpValue = '';
+  readonly resendSeconds = signal(0);
+  otpForm = new FormGroup({
+    otp: new FormControl('', { nonNullable: true }),
+  });
+
+  private resendTimerId: ReturnType<typeof setInterval> | null = null;
+
+  get maskedPhoneNumber(): string {
+    const raw =
+      (this.apartmentForm.get('phoneNumber')?.value as string | null) || this.demoPhoneNumber;
+
+    return raw.length > 4 ? raw.slice(0, 4) + '*'.repeat(raw.length - 4) : raw;
+  }
+
+  readonly resendLabel = computed(() => {
+    const minutes = Math.floor(this.resendSeconds() / 60)
+      .toString()
+      .padStart(2, '0');
+    const seconds = (this.resendSeconds() % 60).toString().padStart(2, '0');
+    return `${minutes}:${seconds}`;
+  });
+
+  readonly canResendOtp = computed(() => this.resendSeconds() <= 0);
+
+  openOtpModal(): void {
+    this.otpForm.get('otp')?.reset('');
+    this.otpValue = '';
+    this.otpStatus = 'idle';
+    this.showOtpModal = true;
+    this.startResendCountdown();
+  }
+
+  closeOtpModal(): void {
+    this.showOtpModal = false;
+    this.stopResendCountdown();
+  }
+
+  onOtpComplete(code: string): void {
+    this.otpValue = code;
+    this.otpStatus = 'idle';
+  }
+
+  resendOtp(): void {
+    if (!this.canResendOtp()) {
+      return;
+    }
+
+    this.otpForm.get('otp')?.reset('');
+    this.otpValue = '';
+    this.otpStatus = 'idle';
+    this.startResendCountdown();
+  }
+
+  onConfirmOtp(): void {
+    if (this.otpValue.length !== 6) {
+      return;
+    }
+
+    this.showOtpModal = false;
+    this.stopResendCountdown();
+    this.showQuotaModal = true;
+  }
+
+  private startResendCountdown(): void {
+    this.stopResendCountdown();
+    this.resendSeconds.set(this.otpResendDuration);
+
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+
+    this.resendTimerId = setInterval(() => {
+      this.resendSeconds.update((seconds) => Math.max(seconds - 1, 0));
+      if (this.resendSeconds() === 0) {
+        this.stopResendCountdown();
+      }
+    }, 1000);
+  }
+
+  private stopResendCountdown(): void {
+    if (this.resendTimerId !== null) {
+      clearInterval(this.resendTimerId);
+      this.resendTimerId = null;
+    }
+  }
+
+  ngOnDestroy(): void {
+    this.stopResendCountdown();
   }
 
   showDownloadAppModal = false;
