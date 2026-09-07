@@ -30,10 +30,23 @@ export const routes: Routes = [
       },
       {
         path: 'estate-valuation',
-        loadComponent: () =>
-          import('./pages/estate-valuation/estate-valuation.component').then(
-            (m) => m.EstateValuationComponent,
-          ),
+        children: [
+          {
+            path: '',
+            pathMatch: 'full',
+            loadComponent: () =>
+              import('./pages/estate-valuation/estate-valuation.component').then(
+                (m) => m.EstateValuationComponent,
+              ),
+          },
+          {
+            path: 'result',
+            loadComponent: () =>
+              import('./pages/estate-result/estate-result.component').then(
+                (m) => m.EstateResultComponent,
+              ),
+          },
+        ],
       },
       {
         path: '**',

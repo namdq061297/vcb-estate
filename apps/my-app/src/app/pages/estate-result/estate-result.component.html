@@ -1,0 +1,141 @@
+<div class="estate-result">
+  <div class="body mx-auto">
+    <!-- <div class="top-bar flex items-center justify-between mt-6 px-4">
+      <button type="button" class="back-link" routerLink="../">
+        <app-icon
+          color="var(--color-text-brand-primary, #006b3b)"
+          name="ic_back"
+          [size]="16"
+        ></app-icon>
+        Tra cứu lại
+      </button>
+    </div> -->
+
+    <div class="wrap-title text-center mt-2 px-4">
+      <div class="top-bar flex items-center mt-6 px-4">
+        <button type="button" class="back-link" routerLink="../">
+          <app-icon
+            color="var(--color-text-brand-primary, #006b3b)"
+            name="ic_back"
+            [size]="16"
+          ></app-icon>
+          <span class="back-link__text">Tra cứu lại</span>
+        </button>
+        <p class="title">KẾT QUẢ ƯỚC GIÁ</p>
+      </div>
+      <p class="address">
+        <ng-container *ngFor="let part of addressParts; let last = last">
+          {{ part }}<span *ngIf="!last" class="address__dot">&bull;</span>
+        </ng-container>
+      </p>
+      <span class="quota-badge">Còn {{ remainingLookups }} lượt tra cứu</span>
+    </div>
+
+    <div class="flex justify-center">
+      <div class="card mt-4 rounded-2xl bg-white shadow-lg">
+        <!-- Thông tin căn hộ -->
+        <section class="section">
+          <div class="section__header">
+            <p class="section__title">Thông tin căn hộ</p>
+          </div>
+          <p class="section__desc">
+            Công cụ ước giá tự động cung cấp mức tiền tệ ước tính bởi hệ thống để tham khảo, giá trị
+            tài sản thực tế có thể chênh lệch tuỳ theo thời điểm tra cứu. Vietcombank không chịu
+            trách nhiệm về việc sử dụng các thông tin để giao dịch.
+          </p>
+
+          <div class="amenity-list">
+            <span class="amenity-tag" *ngFor="let tag of amenityTags">
+              <app-icon [name]="tag.icon" [size]="14"></app-icon>
+              {{ tag.label }}
+            </span>
+          </div>
+        </section>
+
+        <!-- Giá trị tài sản tra cứu -->
+        <section class="section">
+          <p class="section__title mb-3">Giá trị tài sản tra cứu</p>
+
+          <div class="value-groups">
+            <div class="value-group value-group--total">
+              <div class="value-group__item">
+                <p class="value-group__label">Từ</p>
+                <p class="value-group__value">{{ formatVnd(totalValueFrom) }} VND</p>
+                <p class="value-group__sub">
+                  {{ formatBillion(totalValueFrom) }}
+                </p>
+              </div>
+              <div class="value-group__item">
+                <p class="value-group__label">Đến</p>
+                <p class="value-group__value">{{ formatVnd(totalValueTo) }} VND</p>
+                <p class="value-group__sub">{{ formatBillion(totalValueTo) }}</p>
+              </div>
+            </div>
+
+            <div class="value-group value-group--unit">
+              <div class="value-group__item">
+                <p class="value-group__label">Từ</p>
+                <p class="value-group__value">{{ formatVnd(unitPriceFrom) }} VND/m²</p>
+                <p class="value-group__sub">
+                  {{ formatMillion(unitPriceFrom) }}
+                </p>
+              </div>
+              <div class="value-group__item">
+                <p class="value-group__label">Đến</p>
+                <p class="value-group__value">{{ formatVnd(unitPriceTo) }} VND/m²</p>
+                <p class="value-group__sub">{{ formatMillion(unitPriceTo) }}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Giá tham khảo -->
+        <section class="section">
+          <p class="section__title mb-3">
+            Giá tham khảo một số căn trong toà nhà (5 căn ngẫu nhiên)
+          </p>
+
+          <div class="table-wrapper">
+            <table class="reference-table">
+              <thead>
+                <tr>
+                  <th>STT</th>
+                  <th>Tầng</th>
+                  <th>Diện tích (m²)</th>
+                  <th>Phòng ngủ</th>
+                  <th>Vệ sinh</th>
+                  <th>Loại căn</th>
+                  <th>Đơn giá - tr đồng/m²</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let unit of referenceUnits">
+                  <td>{{ unit.stt }}</td>
+                  <td>{{ unit.floor }}</td>
+                  <td>{{ unit.area }}</td>
+                  <td>{{ unit.bedrooms }}</td>
+                  <td>{{ unit.bathrooms }}</td>
+                  <td>{{ unit.type }}</td>
+                  <td>{{ unit.priceFrom }} - {{ unit.priceTo }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- CTA tư vấn -->
+        <div class="consult-bar">
+          <p>
+            Vietcombank có thể tư vấn thêm các sản phẩm, dịch vụ phù hợp để hỗ trợ khách hàng trong
+            quá trình thế chấp vay vốn hoặc giao dịch bất động sản.
+          </p>
+          <app-button
+            label="Tư vấn ngay"
+            [isFullWidth]="false"
+            class="consult-bar__cta"
+          ></app-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
