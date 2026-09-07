@@ -1,4 +1,12 @@
-import { Component, OnDestroy, PLATFORM_ID, computed, inject, signal } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnDestroy,
+  PLATFORM_ID,
+  computed,
+  inject,
+  signal,
+} from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import {
   FormBuilder,
@@ -42,6 +50,7 @@ interface PurposeOption {
 export class EstateValuationComponent implements OnDestroy {
   private readonly fb = inject(FormBuilder);
   private readonly platformId = inject(PLATFORM_ID);
+  private readonly elementRef = inject(ElementRef);
 
   activeTab: EstateTab = 'apartment';
 
@@ -126,7 +135,7 @@ export class EstateValuationComponent implements OnDestroy {
   }
 
   readonly demoPhoneNumber = '0345765432';
-  readonly otpResendDuration = 119;
+  readonly otpResendDuration = 90;
 
   showOtpModal = false;
   otpStatus: OtpStatus = 'idle';
@@ -161,6 +170,7 @@ export class EstateValuationComponent implements OnDestroy {
     this.otpStatus = 'idle';
     this.showOtpModal = true;
     this.startResendCountdown();
+    this.focusOtpInput();
   }
 
   closeOtpModal(): void {
@@ -215,6 +225,19 @@ export class EstateValuationComponent implements OnDestroy {
       clearInterval(this.resendTimerId);
       this.resendTimerId = null;
     }
+  }
+
+  private focusOtpInput(): void {
+    if (!isPlatformBrowser(this.platformId)) {
+      return;
+    }
+
+    setTimeout(() => {
+      const input = (this.elementRef.nativeElement as HTMLElement).querySelector(
+        '.otp-modal__input input.ngx-otp-input-native',
+      );
+      (input as HTMLInputElement | null)?.focus();
+    });
   }
 
   ngOnDestroy(): void {
