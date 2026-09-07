@@ -71,7 +71,7 @@ import 'iconify-icon';
         color: var(--color-text-brand-primary, #006b3b);
       }
 
-      .app-button:not(.secondary):not(.secondary-grey):not(:disabled):hover {
+      .app-button:not(.secondary):not(.app-button.default):not(.secondary-grey):not(:disabled):hover {
         background: var(--Gradient-Hover, linear-gradient(90deg, var(--Gradient-bg-solid-leading_hover, #99C82A) 0%, var(--Gradient-bg-solid-trailing_hover, #2A9566) 100%));
       }
 
