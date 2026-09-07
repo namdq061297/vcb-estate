@@ -100,7 +100,7 @@ import 'iconify-icon';
       }
     
       .app-button.default {
-        background: var(--color-fg-brand-secondary, #6E9E00);
+        background: var(--color-blue-600, #156FEE);
       }
 
       .app-button__icon {

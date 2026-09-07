@@ -39,7 +39,7 @@ export class EstateResultComponent  {
   ];
 
   amenityTags: AmenityTag[] = [
-    { icon: 'iconBuilding', label: '100m²' },
+    { icon: 'iconUpDown', label: '100m²' },
     { icon: 'iconDoor', label: '3 Phòng ngủ' },
     { icon: 'iconWC', label: '2 Phòng vệ sinh' },
     { icon: 'iconCorner', label: 'Căn góc' },
