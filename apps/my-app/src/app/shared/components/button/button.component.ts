@@ -82,9 +82,9 @@ import 'iconify-icon';
       }
 
       .app-button.secondary {
-        border: 1px solid var(--color-border-brand-primary, #006b3b);
+        border: 1px solid var(--color-bg-primary);
         background: var(--color-bg-surface-primary, #ffffff);
-        color: var(--color-text-brand-primary, #006b3b);
+        color: var(--color-text-primary);
       }
 
       .app-button:not(.secondary):not(.app-button.default):not(.secondary-grey):not(
