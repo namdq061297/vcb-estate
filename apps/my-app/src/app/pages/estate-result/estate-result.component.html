@@ -24,9 +24,12 @@
         <p class="title">KẾT QUẢ ƯỚC GIÁ</p>
       </div>
       <p class="address">
-        <ng-container *ngFor="let part of addressParts; let last = last">
-          {{ part }}<span *ngIf="!last" class="address__dot">&bull;</span>
-        </ng-container>
+        @for (part of addressParts; track part; let last = $last) {
+          {{ part }}
+          @if (!last) {
+            <span class="address__dot">&bull;</span>
+          }
+        }
       </p>
       <span class="quota-badge">Còn {{ remainingLookups }} lượt tra cứu</span>
     </div>
@@ -46,10 +49,12 @@
           </p>
 
           <div class="amenity-list">
-            <span class="amenity-tag" *ngFor="let tag of amenityTags">
-              <app-icon [name]="tag.icon" [size]="14"></app-icon>
-              {{ tag.label }}
-            </span>
+            @for (tag of amenityTags; track tag.label) {
+              <span class="amenity-tag">
+                <app-icon [name]="tag.icon" [size]="14"></app-icon>
+                {{ tag.label }}
+              </span>
+            }
           </div>
         </section>
 
@@ -61,30 +66,30 @@
             <div class="value-group value-group--total">
               <div class="value-group__item">
                 <p class="value-group__label">Từ</p>
-                <p class="value-group__value">{{ formatVnd(totalValueFrom) }} VND</p>
+                <p class="value-group__value">{{ formatVnd(totalValueFrom) }} <span>VND</span></p>
                 <p class="value-group__sub">
-                  {{ formatBillion(totalValueFrom) }}
+                  {{ formatRoundedAmount(totalValueFrom) }}
                 </p>
               </div>
               <div class="value-group__item">
                 <p class="value-group__label">Đến</p>
-                <p class="value-group__value">{{ formatVnd(totalValueTo) }} VND</p>
-                <p class="value-group__sub">{{ formatBillion(totalValueTo) }}</p>
+                <p class="value-group__value">{{ formatVnd(totalValueTo) }} <span>VND</span></p>
+                <p class="value-group__sub">{{ formatRoundedAmount(totalValueTo) }}</p>
               </div>
             </div>
 
             <div class="value-group value-group--unit">
               <div class="value-group__item">
                 <p class="value-group__label">Từ</p>
-                <p class="value-group__value">{{ formatVnd(unitPriceFrom) }} VND/m²</p>
+                <p class="value-group__value">{{ formatVnd(unitPriceFrom) }} <span>VND/m²</span></p>
                 <p class="value-group__sub">
-                  {{ formatMillion(unitPriceFrom) }}
+                  {{ formatRoundedAmount(unitPriceFrom) }}
                 </p>
               </div>
               <div class="value-group__item">
                 <p class="value-group__label">Đến</p>
-                <p class="value-group__value">{{ formatVnd(unitPriceTo) }} VND/m²</p>
-                <p class="value-group__sub">{{ formatMillion(unitPriceTo) }}</p>
+                <p class="value-group__value">{{ formatVnd(unitPriceTo) }} <span>VND/m²</span></p>
+                <p class="value-group__sub">{{ formatRoundedAmount(unitPriceTo) }}</p>
               </div>
             </div>
           </div>
@@ -110,15 +115,17 @@
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let unit of referenceUnits">
-                  <td>{{ unit.stt }}</td>
-                  <td>{{ unit.floor }}</td>
-                  <td>{{ unit.area }}</td>
-                  <td>{{ unit.bedrooms }}</td>
-                  <td>{{ unit.bathrooms }}</td>
-                  <td>{{ unit.type }}</td>
-                  <td>{{ unit.priceFrom }} - {{ unit.priceTo }}</td>
-                </tr>
+                @for (unit of referenceUnits; track unit.stt) {
+                  <tr>
+                    <td>{{ unit.stt }}</td>
+                    <td>{{ unit.floor }}</td>
+                    <td>{{ unit.area }}</td>
+                    <td>{{ unit.bedrooms }}</td>
+                    <td>{{ unit.bathrooms }}</td>
+                    <td>{{ unit.type }}</td>
+                    <td>{{ unit.priceFrom }} - {{ unit.priceTo }}</td>
+                  </tr>
+                }
               </tbody>
             </table>
           </div>

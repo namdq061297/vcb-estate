@@ -22,31 +22,21 @@ export const routes: Routes = [
       {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'home',
+        loadComponent: () =>
+          import('./pages/estate-valuation/estate-valuation.component').then(
+            (m) => m.EstateValuationComponent,
+          ),
       },
       {
         path: 'home',
         loadComponent: () => import('./pages/home/home.page').then((m) => m.HomePage),
       },
       {
-        path: 'estate-valuation',
-        children: [
-          {
-            path: '',
-            pathMatch: 'full',
-            loadComponent: () =>
-              import('./pages/estate-valuation/estate-valuation.component').then(
-                (m) => m.EstateValuationComponent,
-              ),
-          },
-          {
-            path: 'result',
-            loadComponent: () =>
-              import('./pages/estate-result/estate-result.component').then(
-                (m) => m.EstateResultComponent,
-              ),
-          },
-        ],
+        path: 'result',
+        loadComponent: () =>
+          import('./pages/estate-result/estate-result.component').then(
+            (m) => m.EstateResultComponent,
+          ),
       },
       {
         path: '**',

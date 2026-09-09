@@ -24,6 +24,7 @@ import { TextInputComponent } from '../../shared/components/form/text-input/text
 import { ButtonComponent } from '../../shared/components/button/button.component';
 import { AppModalizeComponent } from '../../shared/components/modalize/modalize.component';
 import { IconComponent } from '../../shared/components/icon/icon.component';
+import { FooterComponent } from '../../shared/components/footer/footer.component';
 
 type EstateTab = 'apartment' | 'land';
 
@@ -43,6 +44,7 @@ interface PurposeOption {
     AppModalizeComponent,
     IconComponent,
     NgxOtpInputComponent,
+    FooterComponent
   ],
   templateUrl: 'estate-valuation.component.html',
   styleUrls: ['estate-valuation.component.scss'],

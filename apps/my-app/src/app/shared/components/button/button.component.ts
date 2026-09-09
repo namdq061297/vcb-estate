@@ -1,4 +1,11 @@
-import { CUSTOM_ELEMENTS_SCHEMA, ChangeDetectionStrategy, Component, computed, input, output } from '@angular/core';
+import {
+  CUSTOM_ELEMENTS_SCHEMA,
+  ChangeDetectionStrategy,
+  Component,
+  computed,
+  input,
+  output,
+} from '@angular/core';
 import 'iconify-icon';
 
 @Component({
@@ -16,7 +23,13 @@ import 'iconify-icon';
       (click)="pressed.emit()"
     >
       @if (leftIconName()) {
-        <iconify-icon class="app-button__icon" [icon]="leftIconName()" width="20" height="20" aria-hidden="true"></iconify-icon>
+        <iconify-icon
+          class="app-button__icon"
+          [icon]="leftIconName()"
+          width="20"
+          height="20"
+          aria-hidden="true"
+        ></iconify-icon>
       }
 
       {{ label() }}
@@ -44,8 +57,8 @@ import 'iconify-icon';
         );
         color: var(--color-text-inverse, #ffffff);
         font: inherit;
-        font-size: var(--font-size-16);
-        font-weight: 600;
+        font-size: var(--font-size-14);
+        font-weight: 500;
         line-height: 1.5;
         cursor: pointer;
         transition:
@@ -62,45 +75,57 @@ import 'iconify-icon';
         font-weight: 400;
         border-radius: 999px;
         font-size: var(--font-size-12);
-        background: var(--gradient-button, linear-gradient(246deg, #F6FFE5 15.23%, #B6E99C 46.88%, #91D9BA 84.77%));
+        background: var(
+          --gradient-button,
+          linear-gradient(246deg, #f6ffe5 15.23%, #b6e99c 46.88%, #91d9ba 84.77%)
+        );
       }
 
       .app-button.secondary {
-        border: 1px solid var(--color-border-brand-primary, #006B3B);
+        border: 1px solid var(--color-border-brand-primary, #006b3b);
         background: var(--color-bg-surface-primary, #ffffff);
         color: var(--color-text-brand-primary, #006b3b);
       }
 
-      .app-button:not(.secondary):not(.app-button.default):not(.secondary-grey):not(:disabled):hover {
-        background: var(--Gradient-Hover, linear-gradient(90deg, var(--Gradient-bg-solid-leading_hover, #99C82A) 0%, var(--Gradient-bg-solid-trailing_hover, #2A9566) 100%));
+      .app-button:not(.secondary):not(.app-button.default):not(.secondary-grey):not(
+          :disabled
+        ):hover {
+        background: var(
+          --Gradient-Hover,
+          linear-gradient(
+            90deg,
+            var(--Gradient-bg-solid-leading_hover, #99c82a) 0%,
+            var(--Gradient-bg-solid-trailing_hover, #2a9566) 100%
+          )
+        );
       }
 
       .app-button:disabled {
         color: var(--color-fg-disable, #717680);
-        background: var(--color-bg-disable, #F5F5F5);
+        background: var(--color-bg-disable, #f5f5f5);
         cursor: not-allowed;
         font-weight: 500;
       }
 
       .app-button.secondary:disabled {
-        border: 1px solid var(--color-border-primary-bold, #A4A7AE);
+        border: 1px solid var(--color-border-primary-bold, #a4a7ae);
         background: var(--color-bg-surface-primary, #ffffff);
         color: var(--color-text-disable, #717680);
       }
 
       .app-button.secondary-grey {
-        border: 1px solid var(--color-border-input-primary, #D9D9D9);
+        border: 1px solid var(--color-border-input-primary, #d9d9d9);
         background: var(--color-bg-surface-primary, #ffffff);
         color: var(--color-text-primary, #262626);
       }
 
       .app-button.secondary-grey:disabled {
-        background: var(--color-bg-disable, #F5F5F5);
+        background: var(--color-bg-disable, #f5f5f5);
         color: var(--color-text-disable, #717680);
       }
-    
+
       .app-button.default {
-        background: var(--color-blue-600, #156FEE);
+        background: var(--color-blue-600, #156fee);
       }
 
       .app-button__icon {

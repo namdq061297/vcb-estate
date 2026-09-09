@@ -55,6 +55,16 @@
   background: var(--color-bg-brand-primary);
 }
 
+@media (max-width: 768px) {
+  .footer__content {
+    padding: 0 24px;
+  }
+
+  .footer__button {
+    // max-width: 60%;
+  }
+}
+
 @media (max-width: 640px) {
   .footer__content {
     .label_medium_medium {

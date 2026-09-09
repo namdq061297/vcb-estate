@@ -138,13 +138,16 @@
     font-weight: 600;
     // font-size: 16px;
     color: var(--color-text-primary, #181d27);
+    span {
+      color: var(--color-text-secondary, #414651);
+    }
   }
 
   &__desc {
     margin-top: 8px;
-    font-size: 12.5px;
+    font-size: 12px;
     line-height: 1.5;
-    color: var(--color-gray-500, #717680);
+    color: var(--color-text-primary, #414651);
   }
 }
 
@@ -176,7 +179,7 @@
   border-radius: 999px;
   font-size: 12px;
   color: var(--color-text-secondary, #414651);
-
+  background: var(--color-bg-surface-primary, #ffffff);
   app-icon {
     color: var(--color-text-brand-primary, #006b3b);
   }
@@ -196,6 +199,10 @@
   background: linear-gradient(290deg, #eaf6ff 9.78%, #f3ffe9 109.56%);
   .value-group__value {
     color: var(--color-text-brand-primary, #006b3b);
+    span {
+      font-size: 14px;
+      font-weight: 400;
+    }
   }
 
   &--unit {
@@ -205,7 +212,7 @@
   &__item {
     flex: 1;
     min-width: 0;
-    padding: 14px 16px;
+    padding: 12px 16px;
 
     &:first-child {
       // border-right: 1px solid rgba(0, 0, 0, 0.06);
@@ -253,7 +260,7 @@
 .reference-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 12.5px;
+  font-size: 12px;
   white-space: nowrap;
 
   th,
@@ -266,8 +273,8 @@
     background: var(--color-bg-secondary, #fafafa);
 
     th {
-      font-weight: 600;
-      color: var(--color-gray-500, #717680);
+      font-weight: 500;
+      color: var(--color-text-secondary, #717680);
       border-bottom: 1px solid var(--color-border-disable-subtle, #e9eaeb);
 
       app-icon {
@@ -303,7 +310,7 @@
   background: var(--color-blue-50, #eff8ff);
 
   p {
-    font-size: 12.5px;
+    font-size: 12px;
     line-height: 1.5;
     color: var(--color-blue-600, #156fee);
     margin: 0;

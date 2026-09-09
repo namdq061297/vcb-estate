@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { type IconName } from '@icons';
 import { IconComponent } from '../../shared/components/icon/icon.component';
@@ -25,7 +24,7 @@ interface ReferenceUnit {
   selector: 'vcb-estate-result',
   templateUrl: './estate-result.component.html',
   styleUrls: ['./estate-result.component.scss'],
-  imports: [CommonModule, RouterLink, IconComponent, ButtonComponent],
+  imports: [RouterLink, IconComponent, ButtonComponent],
 })
 export class EstateResultComponent  {
   remainingLookups = 4;
@@ -110,13 +109,13 @@ export class EstateResultComponent  {
     return value.toLocaleString('en-US').replace(/,/g, '.');
   }
 
-  formatBillion(value: number): string {
-    const billions = value / 1_000_000_000;
-    return `${this.formatVnd(Number(billions.toFixed(3)))} tỷ đồng`;
-  }
+  formatRoundedAmount(value: number): string {
+    if (value >= 1000000000) {
+      const billions = value / 1000000000;
+      return `${this.formatVnd(Number(billions.toFixed(3)))} tỷ đồng`;
+    }
 
-  formatMillion(value: number): string {
-    const millions = value / 1_000_000;
+    const millions = value / 1000000;
     return `${this.formatVnd(Number(millions.toFixed(0)))} triệu đồng`;
   }
 }
