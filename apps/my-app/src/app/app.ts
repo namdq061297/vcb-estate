@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TuiRoot } from '@taiga-ui/core';
+import { LoadingComponent } from './shared/components/loading/loading.component';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TuiRoot],
+  imports: [RouterOutlet, TuiRoot, LoadingComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })

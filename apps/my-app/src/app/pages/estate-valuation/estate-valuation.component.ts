@@ -25,6 +25,7 @@ import { ButtonComponent } from '../../shared/components/button/button.component
 import { AppModalizeComponent } from '../../shared/components/modalize/modalize.component';
 import { IconComponent } from '../../shared/components/icon/icon.component';
 import { FooterComponent } from '../../shared/components/footer/footer.component';
+import { showLoading, hideLoading } from '../../shared/components/loading/loading.state';
 
 type EstateTab = 'apartment' | 'land';
 
@@ -101,7 +102,11 @@ export class EstateValuationComponent implements OnDestroy {
   }
 
   onSubmit(): void {
-    this.showPurposeModal = true;
+    showLoading();
+    setTimeout(() => {
+      hideLoading();
+      this.showPurposeModal = true;
+    }, 1200);
     return
     const form = this.activeTab === 'apartment' ? this.apartmentForm : this.landForm;
     form.markAllAsTouched();
