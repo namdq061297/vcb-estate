@@ -18,4 +18,8 @@ export const API_ENDPOINTS = {
     update: (id: number | string) => `users/${id}`,
     delete: (id: number | string) => `users/${id}`,
   },
+  avm : {
+    getValuationKcc: 'v1/avm/valuations/kcc',
+    getValuationKdt: 'v1/avm/valuations/kdt',
+  }
 } as const;

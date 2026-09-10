@@ -1,0 +1,81 @@
+{
+  "statusCode": 200,
+  "body": {
+    "request_id": "76a7ea59-cd3f-43f1-b18c-50d5dbb03a54",
+    "status": "SUCCESS",
+    "result": {
+      "Ten_du_an": "Vinhomes Ocean Park 2",
+      "Phan_khu": "Chà Là",
+      "So_nha_ma_can": "LK-03-18",
+      "Dien_tich": 120.0,
+      "So_mat_tien": 2,
+      "Don_gia_du_doan": 125000000,
+      "Min_don_gia_du_doan": 120000000,
+      "Max_don_gia_du_doan": 130000000,
+      "Min_uoc_gia": 14400000000,
+      "Max_uoc_gia": 15600000000
+    },
+    "recommendation": [
+      {
+        "Ten_du_an": "Vinhomes Ocean Park 2",
+        "Phan_khu": "Chà Là",
+        "So_nha_ma_can": "LK-03-12",
+        "Dien_tich": 115.0,
+        "So_mat_tien": 1,
+        "Don_gia_du_doan": 118000000,
+        "Min_don_gia_du_doan": 113000000,
+        "Max_don_gia_du_doan": 123000000,
+        "Min_uoc_gia": 12995000000,
+        "Max_uoc_gia": 14145000000
+      },
+      {
+        "Ten_du_an": "Vinhomes Ocean Park 2",
+        "Phan_khu": "Chà Là",
+        "So_nha_ma_can": "LK-03-15",
+        "Dien_tich": 120.0,
+        "So_mat_tien": 1,
+        "Don_gia_du_doan": 121000000,
+        "Min_don_gia_du_doan": 116000000,
+        "Max_don_gia_du_doan": 126000000,
+        "Min_uoc_gia": 13920000000,
+        "Max_uoc_gia": 15120000000
+      },
+      {
+        "Ten_du_an": "Vinhomes Ocean Park 2",
+        "Phan_khu": "Chà Là",
+        "So_nha_ma_can": "LK-04-02",
+        "Dien_tich": 125.0,
+        "So_mat_tien": 2,
+        "Don_gia_du_doan": 127000000,
+        "Min_don_gia_du_doan": 122000000,
+        "Max_don_gia_du_doan": 132000000,
+        "Min_uoc_gia": 15250000000,
+        "Max_uoc_gia": 16500000000
+      },
+      {
+        "Ten_du_an": "Vinhomes Ocean Park 2",
+        "Phan_khu": "Chà Là",
+        "So_nha_ma_can": "LK-04-06",
+        "Dien_tich": 110.0,
+        "So_mat_tien": 1,
+        "Don_gia_du_doan": 119000000,
+        "Min_don_gia_du_doan": 114000000,
+        "Max_don_gia_du_doan": 124000000,
+        "Min_uoc_gia": 12540000000,
+        "Max_uoc_gia": 13640000000
+      },
+      {
+        "Ten_du_an": "Vinhomes Ocean Park 2",
+        "Phan_khu": "Chà Là",
+        "So_nha_ma_can": "LK-05-01",
+        "Dien_tich": 130.0,
+        "So_mat_tien": 2,
+        "Don_gia_du_doan": 129000000,
+        "Min_don_gia_du_doan": 124000000,
+        "Max_don_gia_du_doan": 134000000,
+        "Min_uoc_gia": 16120000000,
+        "Max_uoc_gia": 17420000000
+      }
+    ]
+  }
+}

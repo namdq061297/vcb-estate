@@ -1,0 +1,12 @@
+{
+  "statusCode": 404,
+  "body": {
+    "request_id": "3cb5b979-4e2b-4e48-9f03-ef8bb99e648d",
+    "status": "ERROR",
+    "error": {
+      "code": "KCC_PROPERTY_NOT_FOUND",
+      "message": "Không tìm thấy căn hộ theo thông tin đã cung cấp.",
+      "details": []
+    }
+  }
+}

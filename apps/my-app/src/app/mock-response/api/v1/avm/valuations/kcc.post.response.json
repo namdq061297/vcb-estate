@@ -1,0 +1,99 @@
+{
+  "statusCode": 200,
+  "body": {
+    "request_id": "3cb5b979-4e2b-4e48-9f03-ef8bb99e648d",
+    "status": "SUCCESS",
+    "result": {
+      "Ten_du_an": "Vinhomes Riverside",
+      "Ten_toa_nha": "Tòa A1",
+      "So_can_ho": "A1-1208",
+      "Dien_tich": 75.2,
+      "So_phong_ngu": 2,
+      "So_phong_ve_sinh": 2,
+      "Tang": "12A",
+      "Vi_tri": "căn góc",
+      "Don_gia_du_doan": 65000000,
+      "Min_don_gia_du_doan": 62000000,
+      "Max_don_gia_du_doan": 68000000,
+      "Min_uoc_gia": 4662400000,
+      "Max_uoc_gia": 5113600000
+    },
+    "recommendation": [
+      {
+        "Ten_du_an": "Vinhomes Riverside",
+        "Ten_toa_nha": "Tòa A1",
+        "So_can_ho": "A1-1201",
+        "Dien_tich": 72.0,
+        "So_phong_ngu": 2,
+        "So_phong_ve_sinh": 2,
+        "Tang": "12A",
+        "Vi_tri": "căn thường",
+        "Don_gia_du_doan": 64000000,
+        "Min_don_gia_du_doan": 61000000,
+        "Max_don_gia_du_doan": 67000000,
+        "Min_uoc_gia": 4392000000,
+        "Max_uoc_gia": 4824000000
+      },
+      {
+        "Ten_du_an": "Vinhomes Riverside",
+        "Ten_toa_nha": "Tòa A2",
+        "So_can_ho": "A2-1203",
+        "Dien_tich": 76.0,
+        "So_phong_ngu": 2,
+        "So_phong_ve_sinh": 2,
+        "Tang": "12A",
+        "Vi_tri": "căn góc",
+        "Don_gia_du_doan": 66000000,
+        "Min_don_gia_du_doan": 63000000,
+        "Max_don_gia_du_doan": 69000000,
+        "Min_uoc_gia": 4788000000,
+        "Max_uoc_gia": 5244000000
+      },
+      {
+        "Ten_du_an": "Vinhomes Riverside",
+        "Ten_toa_nha": "Tòa A2",
+        "So_can_ho": "A2-1205",
+        "Dien_tich": 70.5,
+        "So_phong_ngu": 2,
+        "So_phong_ve_sinh": 2,
+        "Tang": "12A",
+        "Vi_tri": "căn thường",
+        "Don_gia_du_doan": 63500000,
+        "Min_don_gia_du_doan": 60500000,
+        "Max_don_gia_du_doan": 66500000,
+        "Min_uoc_gia": 4265250000,
+        "Max_uoc_gia": 4688250000
+      },
+      {
+        "Ten_du_an": "Vinhomes Riverside",
+        "Ten_toa_nha": "Tòa B1",
+        "So_can_ho": "B1-1202",
+        "Dien_tich": 80.0,
+        "So_phong_ngu": 3,
+        "So_phong_ve_sinh": 2,
+        "Tang": "12A",
+        "Vi_tri": "căn góc",
+        "Don_gia_du_doan": 67000000,
+        "Min_don_gia_du_doan": 64000000,
+        "Max_don_gia_du_doan": 70000000,
+        "Min_uoc_gia": 5120000000,
+        "Max_uoc_gia": 5600000000
+      },
+      {
+        "Ten_du_an": "Vinhomes Riverside",
+        "Ten_toa_nha": "Tòa B1",
+        "So_can_ho": "B1-1206",
+        "Dien_tich": 74.0,
+        "So_phong_ngu": 2,
+        "So_phong_ve_sinh": 2,
+        "Tang": "12A",
+        "Vi_tri": "căn thường",
+        "Don_gia_du_doan": 64500000,
+        "Min_don_gia_du_doan": 61500000,
+        "Max_don_gia_du_doan": 67500000,
+        "Min_uoc_gia": 4551000000,
+        "Max_uoc_gia": 4995000000
+      }
+    ]
+  }
+}

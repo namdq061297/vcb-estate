@@ -1,0 +1,12 @@
+{
+  "statusCode": 404,
+  "body": {
+    "request_id": "76a7ea59-cd3f-43f1-b18c-50d5dbb03a54",
+    "status": "ERROR",
+    "error": {
+      "code": "KDT_PROPERTY_NOT_FOUND",
+      "message": "Không tìm thấy thửa/lô theo thông tin đã cung cấp.",
+      "details": []
+    }
+  }
+}
