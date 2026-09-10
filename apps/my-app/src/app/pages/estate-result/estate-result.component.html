@@ -24,7 +24,7 @@
         <p class="title">KẾT QUẢ ƯỚC GIÁ</p>
       </div>
       <p class="address">
-        @for (part of addressParts; track part; let last = $last) {
+        @for (part of addressParts(); track part; let last = $last) {
           {{ part }}
           @if (!last) {
             <span class="address__dot">&bull;</span>
@@ -33,6 +33,10 @@
       </p>
       <span class="quota-badge">Còn {{ remainingLookups }} lượt tra cứu</span>
     </div>
+
+    @if (errorMessage()) {
+      <p class="error-message text-center px-4">{{ errorMessage() }}</p>
+    }
 
     <div class="flex justify-center">
       <div class="card mt-4 rounded-2xl bg-white shadow-lg">
@@ -49,7 +53,7 @@
           </p>
 
           <div class="amenity-list">
-            @for (tag of amenityTags; track tag.label) {
+            @for (tag of amenityTags(); track tag.label) {
               <span class="amenity-tag">
                 <app-icon [name]="tag.icon" [size]="14"></app-icon>
                 {{ tag.label }}
@@ -66,30 +70,30 @@
             <div class="value-group value-group--total">
               <div class="value-group__item">
                 <p class="value-group__label">Từ</p>
-                <p class="value-group__value">{{ formatVnd(totalValueFrom) }} <span>VND</span></p>
+                <p class="value-group__value">{{ formatVnd(totalValueFrom()) }} <span>VND</span></p>
                 <p class="value-group__sub">
-                  {{ formatRoundedAmount(totalValueFrom) }}
+                  {{ formatRoundedAmount(totalValueFrom()) }}
                 </p>
               </div>
               <div class="value-group__item">
                 <p class="value-group__label">Đến</p>
-                <p class="value-group__value">{{ formatVnd(totalValueTo) }} <span>VND</span></p>
-                <p class="value-group__sub">{{ formatRoundedAmount(totalValueTo) }}</p>
+                <p class="value-group__value">{{ formatVnd(totalValueTo()) }} <span>VND</span></p>
+                <p class="value-group__sub">{{ formatRoundedAmount(totalValueTo()) }}</p>
               </div>
             </div>
 
             <div class="value-group value-group--unit">
               <div class="value-group__item">
                 <p class="value-group__label">Từ</p>
-                <p class="value-group__value">{{ formatVnd(unitPriceFrom) }} <span>VND/m²</span></p>
+                <p class="value-group__value">{{ formatVnd(unitPriceFrom()) }} <span>VND/m²</span></p>
                 <p class="value-group__sub">
-                  {{ formatRoundedAmount(unitPriceFrom) }}
+                  {{ formatRoundedAmount(unitPriceFrom()) }}
                 </p>
               </div>
               <div class="value-group__item">
                 <p class="value-group__label">Đến</p>
-                <p class="value-group__value">{{ formatVnd(unitPriceTo) }} <span>VND/m²</span></p>
-                <p class="value-group__sub">{{ formatRoundedAmount(unitPriceTo) }}</p>
+                <p class="value-group__value">{{ formatVnd(unitPriceTo()) }} <span>VND/m²</span></p>
+                <p class="value-group__sub">{{ formatRoundedAmount(unitPriceTo()) }}</p>
               </div>
             </div>
           </div>
@@ -115,7 +119,7 @@
                 </tr>
               </thead>
               <tbody>
-                @for (unit of referenceUnits; track unit.stt) {
+                @for (unit of referenceUnits(); track unit.stt) {
                   <tr>
                     <td>{{ unit.stt }}</td>
                     <td>{{ unit.floor }}</td>

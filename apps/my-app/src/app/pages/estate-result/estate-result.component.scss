@@ -62,6 +62,12 @@
   margin-top: 8px;
 }
 
+.error-message {
+  margin-top: 16px;
+  color: var(--color-text-error, #d92d20);
+  font-size: 13px;
+}
+
 .wrap-title {
   .title {
     position: absolute;

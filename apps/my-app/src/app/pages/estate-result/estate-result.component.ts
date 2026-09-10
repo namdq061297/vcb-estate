@@ -1,8 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { type IconName } from '@icons';
 import { IconComponent } from '../../shared/components/icon/icon.component';
 import { ButtonComponent } from '../../shared/components/button/button.component';
+import { EstateService } from '../../core/services/api/estate.service';
+import { EstateKccValuationRequest, EstateKccValuationResult } from '../../core/models/estate.model';
+import { showLoading, hideLoading } from '../../shared/components/loading/loading.state';
 
 interface AmenityTag {
   icon: IconName;
@@ -26,84 +29,90 @@ interface ReferenceUnit {
   styleUrls: ['./estate-result.component.scss'],
   imports: [RouterLink, IconComponent, ButtonComponent],
 })
-export class EstateResultComponent  {
+export class EstateResultComponent implements OnInit {
+  private readonly estateService = inject(EstateService);
+
+  private readonly demoRequest: EstateKccValuationRequest = {
+    Tinh_Thanh_Pho: 'Hà Nội',
+    Phuong_xa: 'Phường Trâu Quỳ',
+    Ten_du_an: 'Vinhomes Ocean Park',
+    Ten_toa_nha: 'The Pavilion',
+    So_can_ho: '2004S1',
+  };
+
   remainingLookups = 4;
 
-  addressParts: string[] = [
-    'Hà Nội',
-    'Phường Trâu Quỳ',
-    'Vinhomes Ocean Park',
-    'The Pavilion',
-    '2004S1',
-  ];
+  readonly addressParts = signal<string[]>([]);
+  readonly amenityTags = signal<AmenityTag[]>([]);
+  readonly referenceUnits = signal<ReferenceUnit[]>([]);
 
-  amenityTags: AmenityTag[] = [
-    { icon: 'iconUpDown', label: '100m²' },
-    { icon: 'iconDoor', label: '3 Phòng ngủ' },
-    { icon: 'iconWC', label: '2 Phòng vệ sinh' },
-    { icon: 'iconCorner', label: 'Căn góc' },
-    { icon: 'iconBuilding', label: 'The Pavilion' },
-  ];
+  readonly totalValueFrom = signal(0);
+  readonly totalValueTo = signal(0);
+  readonly unitPriceFrom = signal(0);
+  readonly unitPriceTo = signal(0);
 
-  totalValueFrom = 12560000000;
-  totalValueTo = 15560000000;
+  readonly errorMessage = signal<string | null>(null);
 
-  unitPriceFrom = 125000000;
-  unitPriceTo = 150000000;
+  ngOnInit(): void {
+    this.loadValuation();
+  }
 
-  referenceUnits: ReferenceUnit[] = [
-    {
-      stt: 1,
-      floor: '08',
-      area: 88.5,
-      bedrooms: 2,
-      bathrooms: 1,
-      type: 'Căn thường',
-      priceFrom: 95.2,
-      priceTo: 102.4,
-    },
-    {
-      stt: 2,
-      floor: '10',
-      area: 75,
-      bedrooms: 2,
-      bathrooms: 1,
-      type: 'Căn góc',
-      priceFrom: 105,
-      priceTo: 110,
-    },
-    {
-      stt: 3,
-      floor: '12',
-      area: 92,
-      bedrooms: 3,
-      bathrooms: 2,
-      type: 'Xéo khe',
-      priceFrom: 115,
-      priceTo: 120,
-    },
-    {
-      stt: 4,
-      floor: '15',
-      area: 88.5,
-      bedrooms: 2,
-      bathrooms: 1,
-      type: 'Căn thường',
-      priceFrom: 125,
-      priceTo: 130,
-    },
-    {
-      stt: 5,
-      floor: '20',
-      area: 100,
-      bedrooms: 3,
-      bathrooms: 2,
-      type: 'Căn góc',
-      priceFrom: 135,
-      priceTo: 150,
-    },
-  ];
+  private loadValuation(): void {
+    this.errorMessage.set(null);
+    showLoading();
 
+    this.estateService.getValuationKcc(this.demoRequest).subscribe({
+      next: (response) => {
+        this.applyResult(response.result);
+        this.referenceUnits.set(
+          response.recommendation.map((item, index) => this.toReferenceUnit(item, index)),
+        );
+        hideLoading();
+      },
+      error: () => {
+        this.errorMessage.set('Không thể tải kết quả ước giá. Vui lòng thử lại.');
+        hideLoading();
+      },
+    });
+  }
+
+  private applyResult(result: EstateKccValuationResult): void {
+    this.addressParts.set(
+      [
+        this.demoRequest.Tinh_Thanh_Pho,
+        this.demoRequest.Phuong_xa,
+        result.Ten_du_an,
+        result.Ten_toa_nha,
+        result.So_can_ho,
+      ].filter((part): part is string => Boolean(part)),
+    );
+
+    this.amenityTags.set([
+      { icon: 'iconUpDown', label: `${result.Dien_tich}m²` },
+      { icon: 'iconDoor', label: `${result.So_phong_ngu} Phòng ngủ` },
+      { icon: 'iconWC', label: `${result.So_phong_ve_sinh} Phòng vệ sinh` },
+      { icon: 'iconCorner', label: result.Vi_tri },
+      { icon: 'iconBuilding', label: result.Ten_du_an },
+    ]);
+
+    this.totalValueFrom.set(result.Min_uoc_gia);
+    this.totalValueTo.set(result.Max_uoc_gia);
+    this.unitPriceFrom.set(result.Min_don_gia_du_doan);
+    this.unitPriceTo.set(result.Max_don_gia_du_doan);
+  }
+
+  private toReferenceUnit(item: EstateKccValuationResult, index: number): ReferenceUnit {
+    return {
+      stt: index + 1,
+      floor: item.Tang,
+      area: item.Dien_tich,
+      bedrooms: item.So_phong_ngu,
+      bathrooms: item.So_phong_ve_sinh,
+      type: item.Vi_tri,
+      priceFrom: item.Min_don_gia_du_doan / 1_000_000,
+      priceTo: item.Max_don_gia_du_doan / 1_000_000,
+    };
+  }
 
   formatVnd(value: number): string {
     return value.toLocaleString('en-US').replace(/,/g, '.');
